@@ -1,5 +1,9 @@
+import productsJson from "@/data/products.json";
 import { describe, expect, it } from "vitest";
 import { BAG_KEY, BAG_VERSION, bagReducer, bagSubtotal, parseStoredBag } from "@/lib/bag";
+import type { Product } from "@/lib/products";
+
+const products = productsJson as Product[];
 
 describe("bag", () => {
   it("uses the required versioned storage key", () => {
@@ -38,8 +42,8 @@ describe("bag", () => {
   });
 
   it("resets malformed and unsupported storage", () => {
-    expect(parseStoredBag("not json")).toEqual([]);
-    expect(parseStoredBag(JSON.stringify({ version: BAG_VERSION + 1, lines: [] }))).toEqual([]);
+    expect(parseStoredBag("not json", products)).toEqual([]);
+    expect(parseStoredBag(JSON.stringify({ version: BAG_VERSION + 1, lines: [] }), products)).toEqual([]);
   });
 
   it("rejects stored lines for unknown products and variants", () => {
@@ -53,11 +57,12 @@ describe("bag", () => {
             { productSlug: "vesper-tote", variantId: "oxblood", quantity: 1 },
           ],
         }),
+        products,
       ),
     ).toEqual([{ productSlug: "vesper-tote", variantId: "oxblood", quantity: 1 }]);
   });
 
   it("calculates integer subtotals", () => {
-    expect(bagSubtotal([{ productSlug: "vesper-tote", variantId: "oxblood", quantity: 2 }])).toBe(570000);
+    expect(bagSubtotal([{ productSlug: "vesper-tote", variantId: "oxblood", quantity: 2 }], products)).toBe(570000);
   });
 });

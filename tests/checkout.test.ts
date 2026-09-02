@@ -1,6 +1,10 @@
+import productsJson from "@/data/products.json";
 import { describe, expect, it } from "vitest";
 import { completeDemoCheckout, confirmationReference, validateDelivery } from "@/lib/checkout";
 import { readOrders } from "@/lib/orders";
+import type { Product } from "@/lib/products";
+
+const products = productsJson as Product[];
 
 describe("simulated checkout", () => {
   it("requires only delivery-contact fields", () => {
@@ -39,11 +43,12 @@ describe("simulated checkout", () => {
     const reference = completeDemoCheckout(
       storage,
       [{ productSlug: "vesper-tote", variantId: "stone", quantity: 1 }],
+      products,
       new Date("2026-04-11T12:00:00Z"),
       () => 0.1234,
     );
 
     expect(reference).toBe("DEMO-20260411-1234");
-    expect(readOrders(storage)[0]).toMatchObject({ reference, total: 285000 });
+    expect(readOrders(storage, products)[0]).toMatchObject({ reference, total: 285000 });
   });
 });

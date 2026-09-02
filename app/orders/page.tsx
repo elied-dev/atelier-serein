@@ -2,12 +2,15 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useProducts } from "@/components/product-provider";
 import { findProduct } from "@/lib/catalog";
 import { formatMoney } from "@/lib/money";
 import { readOrders, type DemoOrder } from "@/lib/orders";
 import { site } from "@/lib/site";
 
 export function OrderHistory({ orders }: { orders: DemoOrder[] }) {
+  const products = useProducts();
+
   if (!orders.length) {
     return (
       <div className="bag-empty">
@@ -27,7 +30,7 @@ export function OrderHistory({ orders }: { orders: DemoOrder[] }) {
           </header>
           <ul>
             {order.lines.map((line) => {
-              const product = findProduct(line.productSlug);
+              const product = findProduct(line.productSlug, products);
               const variant = product?.variants.find(({ id }) => id === line.variantId);
               if (!product || !variant) return null;
               return (
@@ -46,12 +49,13 @@ export function OrderHistory({ orders }: { orders: DemoOrder[] }) {
 }
 
 export default function OrdersPage() {
+  const products = useProducts();
   const [orders, setOrders] = useState<DemoOrder[]>([]);
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    setOrders(readOrders(localStorage));
-  }, []);
+    setOrders(readOrders(localStorage, products));
+  }, [products]);
 
   return (
     <section className="information-page">

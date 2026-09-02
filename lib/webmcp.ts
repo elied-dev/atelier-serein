@@ -1,5 +1,5 @@
 import { bagSubtotal, type BagLine } from "@/lib/bag";
-import { allProducts, filterProducts, findProduct, matchesSearchQuery } from "@/lib/catalog";
+import { filterProducts, findProduct, matchesSearchQuery } from "@/lib/catalog";
 import type { DemoOrder } from "@/lib/orders";
 import type { Product, ProductVariant } from "@/lib/products";
 import { storePolicies } from "@/lib/site";
@@ -61,13 +61,13 @@ function productDetails(product: Product) {
   };
 }
 
-function resolveProduct(value: unknown) {
+function resolveProduct(value: unknown, products: Product[]) {
   const query = normalize(value);
   if (!query) return { error: "Provide a product name or slug.", matches: [] };
-  const exact = findProduct(query) ?? allProducts.find((product) => normalize(product.name) === query);
+  const exact = findProduct(query, products) ?? products.find((product) => normalize(product.name) === query);
   if (exact) return { product: exact };
 
-  const matches = allProducts.filter((product) =>
+  const matches = products.filter((product) =>
     normalize(product.slug).includes(query) || normalize(product.name).includes(query),
   );
   return matches.length === 1
@@ -91,11 +91,11 @@ function resolveVariant(product: Product, variantValue: unknown, colorValue: unk
       };
 }
 
-function cartResult(lines: BagLine[]) {
+function cartResult(lines: BagLine[], products: Product[]) {
   return {
     count: lines.reduce((total, line) => total + line.quantity, 0),
     lines: lines.flatMap((line) => {
-      const product = findProduct(line.productSlug);
+      const product = findProduct(line.productSlug, products);
       const variant = product?.variants.find(({ id }) => id === line.variantId);
       return product && variant ? [{
         product: productSummary(product),
@@ -104,7 +104,7 @@ function cartResult(lines: BagLine[]) {
         lineTotal: product.price.amountMinor * line.quantity,
       }] : [];
     }),
-    subtotal: { amountMinor: bagSubtotal(lines), currency: "EUR" },
+    subtotal: { amountMinor: bagSubtotal(lines, products), currency: "EUR" },
     cartUrl: "/bag",
   };
 }
@@ -113,8 +113,11 @@ function variantOptions(variants: ProductVariant[]) {
   return variants.map(({ id, name, color, size, availability }) => ({ id, name, color, size, availability }));
 }
 
-export function createWebMcpTools(dependencies: WebMcpDependencies): WebMcpTool[] {
-  const getCart = () => cartResult(dependencies.getBag());
+export function createWebMcpTools(
+  dependencies: WebMcpDependencies,
+  products: Product[],
+): WebMcpTool[] {
+  const getCart = () => cartResult(dependencies.getBag(), products);
 
   return [
     {
@@ -129,11 +132,11 @@ export function createWebMcpTools(dependencies: WebMcpDependencies): WebMcpTool[
       execute: ({ query }) => {
         const q = text(query);
         if (!q) return { status: "error", message: "Provide a search query." };
-        const products = filterProducts({ q });
+        const matches = filterProducts({ q }, products);
         const params = new URLSearchParams({ q });
         return {
-          total: products.length,
-          products: products.slice(0, 8).map(productSummary),
+          total: matches.length,
+          products: matches.slice(0, 8).map(productSummary),
           collections: categories.filter((category) => matchesSearchQuery(q, [category])).map((slug) => ({
             slug, name: slug[0].toUpperCase() + slug.slice(1), url: `/collection/${slug}`,
           })),
@@ -163,7 +166,7 @@ export function createWebMcpTools(dependencies: WebMcpDependencies): WebMcpTool[
             collections: categories.map((slug) => ({
               slug,
               name: slug[0].toUpperCase() + slug.slice(1),
-              productCount: allProducts.filter((product) => product.category === slug).length,
+              productCount: products.filter((product) => product.category === slug).length,
               url: `/collection/${slug}`,
             })),
           };
@@ -172,12 +175,12 @@ export function createWebMcpTools(dependencies: WebMcpDependencies): WebMcpTool[
           return { status: "error", message: "Unknown collection. Choose bags, jewelry, watches, or fragrance." };
         }
         const route = `/collection/${selected}`;
-        const products = allProducts.filter((product) => product.category === selected);
+        const matches = products.filter((product) => product.category === selected);
         if (navigate === true) dependencies.navigate(route);
         return {
           collection: selected,
-          total: products.length,
-          products: products.slice(0, 8).map(productSummary),
+          total: matches.length,
+          products: matches.slice(0, 8).map(productSummary),
           collectionUrl: route,
         };
       },
@@ -195,7 +198,7 @@ export function createWebMcpTools(dependencies: WebMcpDependencies): WebMcpTool[
       },
       annotations: readOnly,
       execute: ({ product, navigate }) => {
-        const resolved = resolveProduct(product);
+        const resolved = resolveProduct(product, products);
         if (!resolved.product) {
           return { status: "clarification_required", message: resolved.error, options: resolved.matches?.map(productSummary) ?? [] };
         }
@@ -217,7 +220,7 @@ export function createWebMcpTools(dependencies: WebMcpDependencies): WebMcpTool[
       },
       annotations: readOnly,
       execute: ({ product, variant, color }) => {
-        const resolved = resolveProduct(product);
+        const resolved = resolveProduct(product, products);
         if (!resolved.product) {
           return { status: "clarification_required", message: resolved.error, options: resolved.matches?.map(productSummary) ?? [] };
         }
@@ -257,7 +260,7 @@ export function createWebMcpTools(dependencies: WebMcpDependencies): WebMcpTool[
         if (!new Set(["add", "set", "remove"]).has(nextOperation)) {
           return { status: "error", message: "Operation must be add, set, or remove." };
         }
-        const resolved = resolveProduct(product);
+        const resolved = resolveProduct(product, products);
         if (!resolved.product) {
           return { status: "clarification_required", message: resolved.error, options: resolved.matches?.map(productSummary) ?? [] };
         }

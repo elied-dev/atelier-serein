@@ -1,3 +1,4 @@
+import productsJson from "@/data/products.json";
 import { describe, expect, it } from "vitest";
 import { bagReducer, type BagLine } from "@/lib/bag";
 import {
@@ -7,6 +8,9 @@ import {
   type WebMcpTool,
 } from "@/lib/webmcp";
 import type { DemoOrder } from "@/lib/orders";
+import type { Product } from "@/lib/products";
+
+const products = productsJson as Product[];
 
 function setup() {
   let lines: BagLine[] = [];
@@ -30,7 +34,7 @@ function setup() {
     clear: () => { lines = bagReducer(lines, { type: "clear" }); },
     getOrders: () => orders,
   };
-  const tools = createWebMcpTools(dependencies);
+  const tools = createWebMcpTools(dependencies, products);
   const call = async (name: string, input: Record<string, unknown> = {}) => {
     const tool = tools.find((item) => item.name === name);
     if (!tool) throw new Error(`Missing tool ${name}`);

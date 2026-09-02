@@ -1,5 +1,6 @@
 import type { BagLine } from "@/lib/bag";
 import { recordOrder } from "@/lib/orders";
+import type { Product } from "@/lib/products";
 
 const value = (form: FormData, key: string) => String(form.get(key) || "").trim();
 
@@ -21,10 +22,11 @@ export function confirmationReference(now = new Date(), random = Math.random) {
 export function completeDemoCheckout(
   storage: Pick<Storage, "getItem" | "setItem">,
   lines: BagLine[],
+  products: Product[],
   now = new Date(),
   random = Math.random,
 ) {
   const reference = confirmationReference(now, random);
-  recordOrder(storage, lines, reference, now);
+  recordOrder(storage, lines, products, reference, now);
   return reference;
 }

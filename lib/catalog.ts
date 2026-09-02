@@ -1,10 +1,6 @@
-import products from "@/data/products.json";
 import type { Product, ProductCategory, ProductImage } from "@/lib/products";
 
-export const allProducts = products as Product[];
-
 const normalizeText = (value: string | undefined) => value?.trim().toLocaleLowerCase() ?? "";
-const bySlug = new Map(allProducts.map((product) => [normalizeText(product.slug), product]));
 
 const searchableText = (product: Product) => [
   product.name,
@@ -66,14 +62,13 @@ export function catalogQueryFromParams(params: Record<string, string | string[] 
   };
 }
 
-export function findProduct(slug: string, source: Product[] = allProducts) {
+export function findProduct(slug: string, source: Product[]) {
   const needle = normalizeText(slug);
   if (!needle) return undefined;
-  if (source === allProducts) return bySlug.get(needle);
   return source.find((product) => normalizeText(product.slug) === needle);
 }
 
-export function filterProducts(query: CatalogQuery, source: Product[] = allProducts) {
+export function filterProducts(query: CatalogQuery, source: Product[]) {
   const needle = normalizeText(query.q);
   const material = normalizeText(query.material);
   const color = normalizeText(query.color);
@@ -96,7 +91,7 @@ export function filterProducts(query: CatalogQuery, source: Product[] = allProdu
     });
 }
 
-export function compareProducts(slugs: string[], source: Product[] = allProducts) {
+export function compareProducts(slugs: string[], source: Product[]) {
   const unique: Product[] = [];
   const seen = new Set<string>();
 
@@ -116,17 +111,17 @@ export function compareProducts(slugs: string[], source: Product[] = allProducts
   return unique.length >= 2 ? unique : [];
 }
 
-export function relatedProducts(product: Product, source: Product[] = allProducts) {
+export function relatedProducts(product: Product, source: Product[]) {
   return product.relatedSlugs
     .map((slug) => findProduct(slug, source))
     .filter((item): item is Product => Boolean(item));
 }
 
-export function productPageModel(slug: string) {
-  const product = findProduct(slug);
-  return product ? { product, related: relatedProducts(product) } : undefined;
+export function productPageModel(slug: string, source: Product[]) {
+  const product = findProduct(slug, source);
+  return product ? { product, related: relatedProducts(product, source) } : undefined;
 }
 
-export function imageCredits(source: Product[] = allProducts): ImageCredit[] {
+export function imageCredits(source: Product[]): ImageCredit[] {
   return source.flatMap((product) => product.images.map((image) => ({ ...image, productName: product.name })));
 }

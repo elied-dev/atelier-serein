@@ -6,6 +6,7 @@ import { useId, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import { useBag } from "@/components/bag-provider";
+import { useProducts } from "@/components/product-provider";
 import { bagSubtotal } from "@/lib/bag";
 import { findProduct } from "@/lib/catalog";
 import { formatMoney } from "@/lib/money";
@@ -148,6 +149,7 @@ export function VariantAwareAddToBag({ product }: { product: Product }) {
 
 export function BagEditor() {
   const { lines, remove, setQuantity } = useBag();
+  const products = useProducts();
 
   if (lines.length === 0) {
     return (
@@ -162,7 +164,7 @@ export function BagEditor() {
     <div className="bag-editor">
       <ul className="bag-lines">
         {lines.map((line) => {
-          const product = findProduct(line.productSlug);
+          const product = findProduct(line.productSlug, products);
           const variant = product?.variants.find((item) => item.id === line.variantId);
           if (!product || !variant) return null;
 
@@ -208,7 +210,7 @@ export function BagEditor() {
         })}
       </ul>
       <div className="bag-summary">
-        <p><span>Subtotal</span><strong>{formatMoney(bagSubtotal(lines), "EUR")}</strong></p>
+        <p><span>Subtotal</span><strong>{formatMoney(bagSubtotal(lines, products), "EUR")}</strong></p>
         <p>Taxes and delivery are not calculated in this demonstration.</p>
         <Link className="button button-primary" href="/checkout">Continue to checkout</Link>
       </div>

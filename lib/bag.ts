@@ -1,4 +1,5 @@
 import { findProduct } from "@/lib/catalog";
+import type { Product } from "@/lib/products";
 
 export const BAG_KEY = "atelier-serein-bag-v1";
 export const BAG_VERSION = 1;
@@ -39,13 +40,13 @@ export function bagReducer(lines: BagLine[], action: BagAction): BagLine[] {
   );
 }
 
-export function parseStoredBag(raw: string | null): BagLine[] {
+export function parseStoredBag(raw: string | null, products: Product[]): BagLine[] {
   try {
     const value = JSON.parse(raw || "null");
     if (value?.version !== BAG_VERSION || !Array.isArray(value.lines)) return [];
 
     return value.lines.filter((line: BagLine) => {
-      const product = typeof line?.productSlug === "string" ? findProduct(line.productSlug) : undefined;
+      const product = typeof line?.productSlug === "string" ? findProduct(line.productSlug, products) : undefined;
       return (
         Boolean(product?.variants.some((variant) => variant.id === line?.variantId))
         && Number.isInteger(line?.quantity)
@@ -57,9 +58,9 @@ export function parseStoredBag(raw: string | null): BagLine[] {
   }
 }
 
-export function bagSubtotal(lines: BagLine[]) {
+export function bagSubtotal(lines: BagLine[], products: Product[]) {
   return lines.reduce(
-    (total, line) => total + (findProduct(line.productSlug)?.price.amountMinor || 0) * line.quantity,
+    (total, line) => total + (findProduct(line.productSlug, products)?.price.amountMinor || 0) * line.quantity,
     0,
   );
 }

@@ -3,21 +3,18 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { AddToBag, ProductGallery, ProductGrid, VariantAwareAddToBag } from "@/components/commerce";
-import { allProducts, findProduct, productPageModel } from "@/lib/catalog";
+import { productPageModel } from "@/lib/catalog";
 import { formatMoney } from "@/lib/money";
+import { getProductBySlug, listProducts } from "@/lib/product-repository";
 import { site } from "@/lib/site";
 
-export function generateStaticParams() {
-  return allProducts.map(({ slug }) => ({ slug }));
-}
-
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const product = findProduct((await params).slug);
+  const product = await getProductBySlug((await params).slug);
   return product ? { title: product.name, description: product.description } : {};
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
-  const model = productPageModel((await params).slug);
+  const model = productPageModel((await params).slug, await listProducts());
   if (!model) notFound();
 
   const { product, related } = model;

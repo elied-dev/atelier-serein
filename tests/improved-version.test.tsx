@@ -1,3 +1,4 @@
+import productsJson from "@/data/products.json";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { BagProvider } from "@/components/bag-provider";
@@ -5,7 +6,11 @@ import {
   ImprovedVersionProvider,
   useImprovedVersion,
 } from "@/components/improved-version-provider";
+import { ProductProvider } from "@/components/product-provider";
 import { SiteHeader } from "@/components/site-chrome";
+import type { Product } from "@/lib/products";
+
+const products = productsJson as Product[];
 
 function VersionStatus() {
   return <span>{useImprovedVersion() ? "improved" : "standard"}</span>;
@@ -29,9 +34,11 @@ describe("improved version", () => {
     const renderHeader = (enabled: boolean) =>
       renderToStaticMarkup(
         <ImprovedVersionProvider enabled={enabled}>
-          <BagProvider>
-            <SiteHeader />
-          </BagProvider>
+          <ProductProvider products={products}>
+            <BagProvider>
+              <SiteHeader />
+            </BagProvider>
+          </ProductProvider>
         </ImprovedVersionProvider>,
       );
 

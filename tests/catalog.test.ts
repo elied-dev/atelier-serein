@@ -1,6 +1,6 @@
+import productsJson from "@/data/products.json";
 import { describe, expect, it } from "vitest";
 import {
-  allProducts,
   catalogQueryFromParams,
   compareProducts,
   filterProducts,
@@ -11,6 +11,8 @@ import {
 } from "@/lib/catalog";
 import { formatMoney } from "@/lib/money";
 import type { Product, ProductCategory, ProductImage } from "@/lib/products";
+
+const products = productsJson as Product[];
 
 function createImage(src: string, alt: string, role: ProductImage["role"] = "hero"): ProductImage {
   return {
@@ -150,9 +152,9 @@ const fixtures: Product[] = [
 ];
 
 describe("catalog", () => {
-  it("defaults to the imported catalog and looks up fixture slugs", () => {
-    expect(allProducts).toHaveLength(95);
-    expect(findProduct("vesper-tote")?.sku).toBe("AS-BAG-001");
+  it("looks up fixture slugs from an explicit catalog", () => {
+    expect(products).toHaveLength(95);
+    expect(findProduct("vesper-tote", products)?.sku).toBe("AS-BAG-001");
     expect(findProduct("  VESPER-TOTE  ", fixtures)?.sku).toBe("AS-BAG-001");
     expect(findProduct("not-a-product", fixtures)).toBeUndefined();
   });
@@ -232,7 +234,7 @@ describe("catalog", () => {
     const product = findProduct("vesper-tote", fixtures)!;
 
     expect(relatedProducts(product, fixtures).map((item) => item.slug)).toEqual(product.relatedSlugs);
-    expect(imageCredits()).toHaveLength(allProducts.flatMap((item) => item.images).length);
+    expect(imageCredits(products)).toHaveLength(products.flatMap((item) => item.images).length);
     expect(imageCredits(fixtures)).toHaveLength(fixtures.flatMap((item) => item.images).length);
     expect(imageCredits(fixtures)[0]).toMatchObject({
       productName: "Vesper Tote",
@@ -241,10 +243,10 @@ describe("catalog", () => {
   });
 
   it("builds a complete product page model", () => {
-    const model = productPageModel("vesper-tote");
+    const model = productPageModel("vesper-tote", products);
     expect(model?.product.slug).toBe("vesper-tote");
     expect(model?.related).toHaveLength(2);
-    expect(productPageModel("missing")).toBeUndefined();
+    expect(productPageModel("missing", products)).toBeUndefined();
   });
 
   it("formats EUR minor units with native Intl", () => {

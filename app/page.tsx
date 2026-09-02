@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProductGrid } from "@/components/commerce";
-import { allProducts } from "@/lib/catalog";
+import { listProducts } from "@/lib/product-repository";
 import { site } from "@/lib/site";
 
 const categories = [
@@ -11,10 +11,11 @@ const categories = [
   ["Fragrance", "/collection/fragrance"],
 ] as const;
 
-export default function HomePage() {
-  const featured = allProducts.filter((product) => product.featured).slice(0, 4);
-  const heroImage = allProducts[0].images[0];
-  const craftImage = allProducts[13].images[0];
+export default async function HomePage() {
+  const products = await listProducts();
+  const featured = products.filter((product) => product.featured).slice(0, 4);
+  const heroImage = products[0].images[0];
+  const craftImage = products[13].images[0];
 
   return (
     <>

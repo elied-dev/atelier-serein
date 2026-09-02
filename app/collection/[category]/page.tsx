@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProductGrid } from "@/components/commerce";
-import { allProducts, filterProducts } from "@/lib/catalog";
+import { filterProducts } from "@/lib/catalog";
+import { listProducts } from "@/lib/product-repository";
 import type { ProductCategory } from "@/lib/products";
 import { site } from "@/lib/site";
 
@@ -50,7 +51,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
   const selectedCategory = category as ProductCategory;
   const story = stories[selectedCategory];
-  const products = filterProducts({ category: selectedCategory }, allProducts);
+  const products = filterProducts({ category: selectedCategory }, await listProducts());
 
   return (
     <section className="category-page">

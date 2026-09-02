@@ -4,7 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { ProductGrid } from "@/components/commerce";
-import { allProducts, catalogQueryFromParams, compareProducts, filterProducts } from "@/lib/catalog";
+import { useProducts } from "@/components/product-provider";
+import { catalogQueryFromParams, compareProducts, filterProducts } from "@/lib/catalog";
 import type { CatalogQuery } from "@/lib/catalog";
 import { formatMoney } from "@/lib/money";
 import type { Product } from "@/lib/products";
@@ -125,7 +126,7 @@ function dimensions(product: Product) {
 
 export function CompareView() {
   const selected = useSearchParams().get("products")?.split(",") ?? [];
-  const products = compareProducts(selected, allProducts);
+  const products = compareProducts(selected, useProducts());
 
   if (products.length < 2) {
     return (

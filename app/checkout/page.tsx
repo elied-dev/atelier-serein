@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useBag } from "@/components/bag-provider";
+import { useProducts } from "@/components/product-provider";
 import { bagSubtotal } from "@/lib/bag";
 import { completeDemoCheckout, validateDelivery } from "@/lib/checkout";
 import { formatMoney } from "@/lib/money";
@@ -18,6 +19,7 @@ const fields = [
 
 export default function CheckoutPage() {
   const { lines, clear } = useBag();
+  const products = useProducts();
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [reference, setReference] = useState<string>();
   const confirmationHeading = useRef<HTMLHeadingElement>(null);
@@ -38,7 +40,7 @@ export default function CheckoutPage() {
       return;
     }
 
-    setReference(completeDemoCheckout(localStorage, lines));
+    setReference(completeDemoCheckout(localStorage, lines, products));
     clear();
   }
 
@@ -94,7 +96,7 @@ export default function CheckoutPage() {
           })}
         </div>
         <div className="checkout-summary">
-          <p><span>Subtotal</span><strong>{formatMoney(bagSubtotal(lines), "EUR")}</strong></p>
+          <p><span>Subtotal</span><strong>{formatMoney(bagSubtotal(lines, products), "EUR")}</strong></p>
           <div className="checkout-submit">
             <button className="button button-primary" type="submit">Complete simulated checkout</button>
             <p>{site.checkoutNotice}</p>

@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useReducer, useState } from "react";
+import { useProducts } from "@/components/product-provider";
 import {
   BAG_KEY,
   BAG_VERSION,
@@ -21,17 +22,18 @@ type BagContextValue = {
 const BagContext = createContext<BagContextValue | undefined>(undefined);
 
 export function BagProvider({ children }: Readonly<{ children: React.ReactNode }>) {
+  const products = useProducts();
   const [lines, dispatch] = useReducer(bagReducer, []);
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
-    const storedLines = parseStoredBag(localStorage.getItem(BAG_KEY));
+    const storedLines = parseStoredBag(localStorage.getItem(BAG_KEY), products);
     dispatch({ type: "clear" });
     storedLines.forEach((line) => dispatch({ type: "add", line }));
     // Storage hydration intentionally completes after the stored lines are dispatched.
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setHydrated(true);
-  }, []);
+  }, [products]);
 
   useEffect(() => {
     if (hydrated) localStorage.setItem(BAG_KEY, JSON.stringify({ version: BAG_VERSION, lines }));

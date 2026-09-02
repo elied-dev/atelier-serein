@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { ProductBrowser } from "@/components/product-browser";
-import { allProducts } from "@/lib/catalog";
+import { listProducts } from "@/lib/product-repository";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -9,7 +9,9 @@ export const metadata: Metadata = {
   description: "Browse the fictional Atelier Serein collection.",
 };
 
-export default function CollectionPage() {
+export default async function CollectionPage() {
+  const products = await listProducts();
+
   return (
     <section className="collection-page">
       <header className="collection-header">
@@ -18,7 +20,7 @@ export default function CollectionPage() {
         <p>Twenty fictional objects shaped around material, proportion, and quiet daily rituals.</p>
       </header>
       <Suspense fallback={<p className="browser-loading">Loading collection…</p>}>
-        <ProductBrowser products={allProducts} />
+        <ProductBrowser products={products} />
       </Suspense>
       <p className="page-demo-notice">{site.demoNotice}</p>
     </section>
