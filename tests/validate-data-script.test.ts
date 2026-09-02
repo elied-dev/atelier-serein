@@ -5,13 +5,13 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
 describe("validate:data script", () => {
-  it("reports a valid empty catalog", () => {
+  it("reports the valid catalog size", () => {
     const output = execFileSync(process.execPath, ["scripts/validate-data.mjs"], {
       cwd: process.cwd(),
       encoding: "utf8",
     });
 
-    expect(output).toContain("Validated 0 products");
+    expect(output).toContain("Validated 20 products");
   });
 
   it("fails gracefully on malformed JSON", () => {

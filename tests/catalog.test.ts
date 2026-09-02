@@ -149,8 +149,8 @@ const fixtures: Product[] = [
 
 describe("catalog", () => {
   it("defaults to the imported catalog and looks up fixture slugs", () => {
-    expect(allProducts).toEqual([]);
-    expect(findProduct("vesper-tote")).toBeUndefined();
+    expect(allProducts).toHaveLength(20);
+    expect(findProduct("vesper-tote")?.sku).toBe("AS-BAG-001");
     expect(findProduct("  VESPER-TOTE  ", fixtures)?.sku).toBe("AS-BAG-001");
     expect(findProduct("not-a-product", fixtures)).toBeUndefined();
   });
@@ -204,7 +204,7 @@ describe("catalog", () => {
     const product = findProduct("vesper-tote", fixtures)!;
 
     expect(relatedProducts(product, fixtures).map((item) => item.slug)).toEqual(product.relatedSlugs);
-    expect(imageCredits()).toEqual([]);
+    expect(imageCredits()).toHaveLength(allProducts.flatMap((item) => item.images).length);
     expect(imageCredits(fixtures)).toHaveLength(fixtures.flatMap((item) => item.images).length);
     expect(imageCredits(fixtures)[0]).toMatchObject({
       productName: "Vesper Tote",

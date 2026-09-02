@@ -9,6 +9,13 @@ export type ProductImage = {
   role: "hero" | "detail" | "lifestyle";
   sourcePage?: string;
   creator?: string;
+  creatorUrl?: string;
+  licenseName?: string;
+  licenseUrl?: string;
+  attributionRequired?: boolean;
+  attributionText?: string;
+  reviewedAt?: string;
+  modifications?: string;
 };
 
 export type ProductVariant = {
