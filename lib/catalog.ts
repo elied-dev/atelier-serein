@@ -27,6 +27,33 @@ export type CatalogQuery = {
 
 export type ImageCredit = ProductImage & { productName: string };
 
+const categoryValues = new Set(["bags", "jewelry", "watches", "fragrance"]);
+const sortValues = new Set(["featured", "price-asc", "price-desc", "name"]);
+
+export function catalogQueryFromParams(params: Record<string, string | string[] | undefined>): CatalogQuery {
+  const one = (key: string) => typeof params[key] === "string" ? params[key] : undefined;
+  const category = one("category");
+  const sort = one("sort");
+  const positiveInteger = (key: string) => {
+    const raw = one(key);
+    if (!raw?.match(/^\d+$/)) return undefined;
+    const value = Number(raw);
+    return Number.isSafeInteger(value) ? value : undefined;
+  };
+  const min = positiveInteger("min");
+  const max = positiveInteger("max");
+
+  return {
+    ...(one("q")?.trim() ? { q: one("q")!.trim() } : {}),
+    ...(category && categoryValues.has(category) ? { category: category as ProductCategory } : {}),
+    ...(one("material") ? { material: one("material") } : {}),
+    ...(one("color") ? { color: one("color") } : {}),
+    ...(min !== undefined ? { min } : {}),
+    ...(max !== undefined ? { max } : {}),
+    ...(sort && sortValues.has(sort) ? { sort: sort as CatalogQuery["sort"] } : {}),
+  };
+}
+
 export function findProduct(slug: string, source: Product[] = allProducts) {
   const needle = normalizeText(slug);
   if (!needle) return undefined;

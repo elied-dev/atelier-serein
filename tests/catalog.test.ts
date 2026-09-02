@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   allProducts,
+  catalogQueryFromParams,
   compareProducts,
   filterProducts,
   findProduct,
@@ -186,6 +187,27 @@ describe("catalog", () => {
     ]);
 
     expect(fixtures.map((product) => product.slug)).toEqual(original);
+  });
+
+  it("normalizes supported URL filters and ignores invalid values", () => {
+    expect(
+      catalogQueryFromParams({
+        q: "vesper",
+        category: "bags",
+        color: "Oxblood",
+        min: "10000",
+        max: "300000",
+        sort: "price-desc",
+      }),
+    ).toEqual({
+      q: "vesper",
+      category: "bags",
+      color: "Oxblood",
+      min: 10000,
+      max: 300000,
+      sort: "price-desc",
+    });
+    expect(catalogQueryFromParams({ category: "shoes", min: "free", sort: "random" })).toEqual({});
   });
 
   it("normalizes comparison to two or three unique products", () => {

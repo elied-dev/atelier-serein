@@ -45,6 +45,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           <p className="product-tagline">{product.tagline}</p>
           <p className="product-price">{formatMoney(product.price.amountMinor, product.price.currency)}</p>
           <AddToBag product={product} />
+          {related[0] && (
+            <Link
+              className="button button-quiet product-compare-link"
+              href={{ pathname: "/compare", query: { products: `${product.slug},${related[0].slug}` } }}
+            >
+              Compare with {related[0].name}
+            </Link>
+          )}
           <p className="demo-note">{site.demoNotice}</p>
         </div>
       </div>
