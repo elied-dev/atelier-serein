@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+:root {
+  --ivory: #f5f0e7;
+  --ink: #171412;
+  --stone: #82786d;
+  --oxblood: #651c2a;
+  --champagne: #c8aa72;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--ivory); color: var(--ink); }
+body { margin: 0; font-family: var(--font-sans), sans-serif; }
+h1, h2, h3 { font-family: var(--font-display), serif; font-weight: 500; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--oxblood); outline-offset: 4px; }
+button, input, select, a { min-height: 44px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
