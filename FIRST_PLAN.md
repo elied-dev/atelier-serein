@@ -42,6 +42,7 @@
 2. **Implementation gate:** begin Task 1 only after the owner explicitly says to start implementation.
 3. **GitHub handoff:** after Tasks 1–9 pass, create or connect `elied-dev/atelier-serein` as a private GitHub repository and push the reviewed website code.
 4. **Vercel gate:** do not open or configure Vercel until the owner gives a separate explicit go after the private GitHub handoff is complete.
+5. **Owner scope amendment:** Tasks 9, 10, and 11 are cancelled. Stop implementation after Task 8. Do not build the credits page or release checklist, run the formal GitHub handoff task, or configure Vercel. Continue pushing each reviewed Task 3–8 checkpoint to the existing private `elied-dev/atelier-serein` repository as previously authorized.
 
 ## Required Customer Pages
 
