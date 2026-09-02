@@ -17,9 +17,9 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html lang="en" className={`${display.variable} ${sans.variable}`}>
       <body>
-        <header><Link href="/">{site.name}</Link></header>
+        <header><Link href="/" className="inline-flex min-h-11 items-center">{site.name}</Link></header>
         <main>{children}</main>
-        <footer><p>{site.demoNotice}</p><Link href="/credits">Image credits</Link></footer>
+        <footer><p>{site.demoNotice}</p><Link href="/credits" className="inline-flex min-h-11 items-center">Image credits</Link></footer>
       </body>
     </html>
   );
