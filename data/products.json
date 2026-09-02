@@ -71,7 +71,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Vesper Tote",
+        "alt": "Tan leather shoulder bag with dark straps on a neutral backdrop",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -154,7 +154,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/904350/pexels-photo-904350.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Serein Mini",
+        "alt": "White floral handbag with a chain strap against a white wall",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -237,7 +237,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Marais Shoulder",
+        "alt": "Hand browsing monochrome garments on a clothing rail",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -320,7 +320,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/1936848/pexels-photo-1936848.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Lune Clutch",
+        "alt": "Brown structured handbag carried beside a yellow dress",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -403,7 +403,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Rivage Weekender",
+        "alt": "Blue canvas backpack with tan leather straps outdoors",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -488,7 +488,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Halo Cuff",
+        "alt": "Silver charm bracelets worn on a wrist",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -526,11 +526,11 @@
         "availability": "available"
       },
       {
-        "id": "silver",
-        "name": "Silver",
+        "id": "champagne",
+        "name": "Champagne",
         "color": {
-          "name": "Silver",
-          "hex": "#a7a7a7"
+          "name": "Champagne",
+          "hex": "#c8aa72"
         },
         "availability": "available"
       }
@@ -571,7 +571,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/1457801/pexels-photo-1457801.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Élan Pendant",
+        "alt": "Two gold rings with clear stones on a dark surface",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -654,7 +654,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Sillage Ring",
+        "alt": "Stacked jeweled bangles resting on a flower",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -737,7 +737,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/248077/pexels-photo-248077.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Arc Studs",
+        "alt": "Gold leaf tiara framing two wedding rings",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -820,7 +820,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/10983783/pexels-photo-10983783.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Meridian Chain",
+        "alt": "Rose-gold drop earrings on a pale blue surface",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -840,7 +840,7 @@
     "name": "Meridian No. 1",
     "category": "watches",
     "collection": "Temps",
-    "tagline": "A composed watche study in black.",
+    "tagline": "A composed watch study in black.",
     "description": "Meridian No. 1 is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
     "story": "Created for the Atelier Serein demonstration, Meridian No. 1 explores proportion, material, and calm utility without representing a real manufactured product.",
     "price": {
@@ -905,7 +905,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Meridian No. 1",
+        "alt": "Steel chronograph watch with a dark dial on polished wood",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -925,7 +925,7 @@
     "name": "Aube 32",
     "category": "watches",
     "collection": "Temps",
-    "tagline": "A composed watche study in ivory.",
+    "tagline": "A composed watch study in ivory.",
     "description": "Aube 32 is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
     "story": "Created for the Atelier Serein demonstration, Aube 32 explores proportion, material, and calm utility without representing a real manufactured product.",
     "price": {
@@ -988,7 +988,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/280250/pexels-photo-280250.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Aube 32",
+        "alt": "Steel chronograph watch with a black dial on a pale surface",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -1008,7 +1008,7 @@
     "name": "Ligne 38",
     "category": "watches",
     "collection": "Temps",
-    "tagline": "A composed watche study in oxblood.",
+    "tagline": "A composed watch study in oxblood.",
     "description": "Ligne 38 is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
     "story": "Created for the Atelier Serein demonstration, Ligne 38 explores proportion, material, and calm utility without representing a real manufactured product.",
     "price": {
@@ -1071,7 +1071,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Ligne 38",
+        "alt": "Black mesh-strap watch displayed against a yellow backdrop",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -1091,7 +1091,7 @@
     "name": "Minuit Steel",
     "category": "watches",
     "collection": "Minuit",
-    "tagline": "A composed watche study in silver.",
+    "tagline": "A composed watch study in silver.",
     "description": "Minuit Steel is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
     "story": "Created for the Atelier Serein demonstration, Minuit Steel explores proportion, material, and calm utility without representing a real manufactured product.",
     "price": {
@@ -1154,7 +1154,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/1697214/pexels-photo-1697214.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Minuit Steel",
+        "alt": "Minimal white-dial watch worn on a wrist",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -1174,7 +1174,7 @@
     "name": "Serein Moon",
     "category": "watches",
     "collection": "Minuit",
-    "tagline": "A composed watche study in champagne.",
+    "tagline": "A composed watch study in champagne.",
     "description": "Serein Moon is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
     "story": "Created for the Atelier Serein demonstration, Serein Moon explores proportion, material, and calm utility without representing a real manufactured product.",
     "price": {
@@ -1237,7 +1237,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/125779/pexels-photo-125779.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Serein Moon",
+        "alt": "Silver watch with a white dial and black leather strap",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -1316,7 +1316,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Bois Calme",
+        "alt": "Assorted perfume bottles arranged on white faux fur",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -1393,7 +1393,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/1961792/pexels-photo-1961792.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Iris Serein",
+        "alt": "Pink perfume bottle standing on shimmering fabric",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -1470,7 +1470,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/3059609/pexels-photo-3059609.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Nuit Minérale",
+        "alt": "Amber perfume bottle casting a shadow on a dark table",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -1547,7 +1547,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/724635/pexels-photo-724635.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Thé d’Aube",
+        "alt": "Square pale-pink perfume bottle with petals on a wooden surface",
         "width": 1200,
         "height": 1500,
         "role": "hero",
@@ -1624,7 +1624,7 @@
     "images": [
       {
         "src": "https://images.pexels.com/photos/264870/pexels-photo-264870.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Editorial image representing Rose Silencieuse",
+        "alt": "Three glass perfume bottles in blue, amber, and clear tones",
         "width": 1200,
         "height": 1500,
         "role": "hero",

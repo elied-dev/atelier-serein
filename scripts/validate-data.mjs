@@ -20,6 +20,7 @@ function validDimensions(value) {
 }
 
 const pexelsImage = /^https:\/\/images\.pexels\.com\/photos\/\d+\//;
+const genericAlt = /^Editorial image representing\b/i;
 
 export function validateProducts(products) {
   const errors = [];
@@ -53,12 +54,17 @@ export function validateProducts(products) {
     if (!Array.isArray(product.variants) || product.variants.length === 0) {
       errors.push(`${label}: variants must be a non-empty array`);
     } else {
+      const variantIds = new Set();
       for (const [variantIndex, variant] of product.variants.entries()) {
         if (!record(variant)) {
           errors.push(`${label}: variant ${variantIndex + 1} must be an object`);
           continue;
         }
         if (!text(variant.id) || !text(variant.name) || !availability.has(variant.availability)) errors.push(`${label}: invalid variant`);
+        if (text(variant.id)) {
+          if (variantIds.has(variant.id)) errors.push(`${label}: duplicate variant id ${variant.id}`);
+          else variantIds.add(variant.id);
+        }
         if (variant.color !== undefined) {
           if (!record(variant.color) || !text(variant.color.name) || !color.test(variant.color.hex)) {
             errors.push(`${label}: invalid color ${record(variant.color) ? variant.color.hex : describe(variant.color)}`);
@@ -91,6 +97,7 @@ export function validateProducts(products) {
         if (!text(image.alt) || !Number.isInteger(image.width) || image.width <= 0 || !Number.isInteger(image.height) || image.height <= 0) {
           errors.push(`${label}: invalid image dimensions or alt text`);
         }
+        if (text(image.alt) && genericAlt.test(image.alt)) errors.push(`${label}: image ${imageIndex + 1} needs a useful description`);
         if (!roles.has(image.role)) errors.push(`${label}: invalid image role ${image.role}`);
       }
     }

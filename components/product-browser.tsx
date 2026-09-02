@@ -102,7 +102,10 @@ export function ProductBrowser({ products }: { products: Product[] }) {
 
       <p className="result-count" aria-live="polite">{results.length} {results.length === 1 ? "piece" : "pieces"}</p>
       {results.length > 0 ? (
-        <ProductGrid products={results} />
+        <>
+          <h2 className="sr-only">Products</h2>
+          <ProductGrid products={results} />
+        </>
       ) : (
         <div className="no-results">
           <h2>No pieces found</h2>

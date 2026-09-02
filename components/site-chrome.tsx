@@ -68,7 +68,6 @@ export function SiteFooter() {
       <p>{site.demoNotice}</p>
       <nav aria-label="Footer navigation">
         <Link href="/collection">Collection</Link>
-        <Link href="/credits">Credits</Link>
       </nav>
     </footer>
   );

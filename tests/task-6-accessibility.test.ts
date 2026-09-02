@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
 const chrome = readFileSync("components/site-chrome.tsx", "utf8");
+const browser = readFileSync("components/product-browser.tsx", "utf8");
 const css = readFileSync("app/globals.css", "utf8");
 
 function luminance(hex: string) {
@@ -36,7 +37,15 @@ describe("Task 6 accessibility regressions", () => {
     expect(contrast(stone!, ivory!)).toBeGreaterThanOrEqual(4.5);
   });
 
-  it.each([".product-meta h3 a", ".breadcrumbs a", ".bag-line-copy h2 a"])(
+  it("does not link to the cancelled credits page", () => {
+    expect(chrome).not.toContain('href="/credits"');
+  });
+
+  it("provides an h2 before listing-card h3 headings", () => {
+    expect(browser).toContain('<h2 className="sr-only">Products</h2>');
+  });
+
+  it.each([".product-meta h3 a", ".breadcrumbs a", ".bag-line-copy h2 a", ".site-footer nav a"])(
     "gives %s a rendered 44px touch target",
     (selector) => {
       const declaration = declarationFor(selector);

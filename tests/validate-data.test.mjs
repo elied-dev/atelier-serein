@@ -37,6 +37,17 @@ describe("validateProducts", () => {
     ]));
   });
 
+  it("rejects duplicate variant IDs and generic image alternatives", () => {
+    const malformed = structuredClone(product);
+    malformed.variants.push(structuredClone(malformed.variants[0]));
+    malformed.images[0].alt = "Editorial image representing Vesper Tote";
+
+    expect(validateProducts([malformed])).toEqual(expect.arrayContaining([
+      "vesper-tote: duplicate variant id black",
+      "vesper-tote: image 1 needs a useful description"
+    ]));
+  });
+
   it("reports structural contract errors instead of throwing", () => {
     const malformed = structuredClone(product);
     malformed.variants = [null];
@@ -89,11 +100,12 @@ describe("validateProducts", () => {
     ]));
   });
 
-  it("contains five products in every category", () => {
+  it("contains five polished products in every category", () => {
     const products = JSON.parse(readFileSync(new URL("../data/products.json", import.meta.url), "utf8"));
     expect(products).toHaveLength(20);
     for (const category of ["bags", "jewelry", "watches", "fragrance"]) {
       expect(products.filter((product) => product.category === category)).toHaveLength(5);
     }
+    expect(products.some((item) => /\bwatche\b/i.test(item.tagline))).toBe(false);
   });
 });
