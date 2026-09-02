@@ -83,6 +83,11 @@ export function relatedProducts(product: Product, source: Product[] = allProduct
     .filter((item): item is Product => Boolean(item));
 }
 
+export function productPageModel(slug: string) {
+  const product = findProduct(slug);
+  return product ? { product, related: relatedProducts(product) } : undefined;
+}
+
 export function imageCredits(source: Product[] = allProducts): ImageCredit[] {
   return source.flatMap((product) => product.images.map((image) => ({ ...image, productName: product.name })));
 }

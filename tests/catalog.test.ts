@@ -5,6 +5,7 @@ import {
   filterProducts,
   findProduct,
   imageCredits,
+  productPageModel,
   relatedProducts,
 } from "@/lib/catalog";
 import { formatMoney } from "@/lib/money";
@@ -210,6 +211,13 @@ describe("catalog", () => {
       productName: "Vesper Tote",
       src: "/images/products/vesper-tote-hero.webp",
     });
+  });
+
+  it("builds a complete product page model", () => {
+    const model = productPageModel("vesper-tote");
+    expect(model?.product.slug).toBe("vesper-tote");
+    expect(model?.related).toHaveLength(2);
+    expect(productPageModel("missing")).toBeUndefined();
   });
 
   it("formats EUR minor units with native Intl", () => {

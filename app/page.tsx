@@ -1,14 +1,20 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ProductGrid } from "@/components/commerce";
+import { allProducts } from "@/lib/catalog";
 import { site } from "@/lib/site";
 
-const categories = ["Bags", "Jewelry", "Watches", "Fragrance"];
-const featured = [
-  ["Vesper Tote", "Bags", "€2,850", "oxblood"],
-  ["Halo Cuff", "Jewelry", "€950", "champagne"],
-  ["Meridian No. 1", "Watches", "€4,100", "ink"],
-  ["Bois Calme", "Fragrance", "€185", "stone"],
+const categories = [
+  ["Bags", "/collection/bags"],
+  ["Jewelry", "/collection/jewelry"],
+  ["Watches", "/collection/watches"],
+  ["Fragrance", "/collection/fragrance"],
 ] as const;
 
 export default function HomePage() {
+  const featured = allProducts.filter((product) => product.featured).slice(0, 4);
+  const craftImage = allProducts[0].images[0];
+
   return (
     <>
       <section className="hero">
@@ -17,8 +23,8 @@ export default function HomePage() {
           <h1>Quiet objects,<br />made to endure.</h1>
           <p className="lede">{site.positioning} Discover a fictional collection where precise form meets tactile restraint.</p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#featured">Explore the collection</a>
-            <a className="button button-quiet" href="#craft">Our approach</a>
+            <Link className="button button-primary" href="/collection">Explore the collection</Link>
+            <Link className="button button-quiet" href="#craft">Our approach</Link>
           </div>
         </div>
         <div className="hero-art" aria-hidden="true">
@@ -29,34 +35,37 @@ export default function HomePage() {
       </section>
 
       <section className="intro" id="craft">
-        <p className="eyebrow">The Serein philosophy</p>
-        <h2>Luxury without noise.</h2>
-        <p>Material, proportion, and utility guide every imagined piece. Nothing is added without purpose.</p>
+        <div className="craft-image">
+          <Image
+            src={craftImage.src}
+            alt={craftImage.alt}
+            width={craftImage.width}
+            height={craftImage.height}
+            sizes="(max-width: 820px) 100vw, 38vw"
+          />
+        </div>
+        <div className="craft-copy">
+          <p className="eyebrow">The Serein philosophy</p>
+          <h2>Luxury without noise.</h2>
+          <p>Material, proportion, and utility guide every imagined piece. Nothing is added without purpose.</p>
+        </div>
       </section>
 
       <section className="section" id="collections">
         <div className="section-heading"><p className="eyebrow">Collections</p><h2>Objects for daily rituals</h2></div>
         <div className="category-grid">
-          {categories.map((category, index) => (
-            <a className="category-card" href="#featured" key={category}>
+          {categories.map(([category, href], index) => (
+            <Link className="category-card" href={href} key={category}>
               <span>0{index + 1}</span><strong>{category}</strong><span aria-hidden="true">↗</span>
-            </a>
+            </Link>
           ))}
         </div>
       </section>
 
       <section className="section" id="featured">
         <div className="section-heading"><p className="eyebrow">Selected pieces</p><h2>The first edit</h2></div>
-        <div className="product-grid">
-          {featured.map(([name, category, price, tone], index) => (
-            <article className="product-card" key={name}>
-              <div className={`product-art product-art-${tone}`} aria-hidden="true"><span>AS · 0{index + 1}</span></div>
-              <p className="product-category">{category}</p>
-              <div className="product-meta"><h3>{name}</h3><p>{price}</p></div>
-            </article>
-          ))}
-        </div>
-        <p className="preview-note">Interactive catalog, product details, bag, and checkout are being added to this preview.</p>
+        <ProductGrid products={featured} />
+        <div className="featured-link"><Link className="button button-quiet" href="/collection">View the full collection</Link></div>
       </section>
 
       <section className="manifesto">
