@@ -82,4 +82,23 @@ describe("validateProducts", () => {
       "vesper-tote: relatedSlugs must be an array of strings"
     ]));
   });
+
+  it("rejects windows-style image paths and invalid optional typed fields", () => {
+    const malformed = structuredClone(product);
+    malformed.weightGrams = "heavy";
+    malformed.variants = [{ ...malformed.variants[0], color: 0 }];
+    malformed.images = [
+      { ...image, creatorUrl: 42 },
+      { ...image, src: "/images/..\\..\\package.json", role: "detail" },
+      { ...image, src: "/images/C:/temp/x", role: "lifestyle" }
+    ];
+
+    expect(validateProducts([malformed], rootWithImage())).toEqual(expect.arrayContaining([
+      "vesper-tote: invalid color 0",
+      "vesper-tote: weightGrams must be a finite number",
+      "vesper-tote: image creatorUrl must be a non-empty string",
+      "vesper-tote: invalid image path /images/..\\..\\package.json",
+      "vesper-tote: invalid image path /images/C:/temp/x"
+    ]));
+  });
 });

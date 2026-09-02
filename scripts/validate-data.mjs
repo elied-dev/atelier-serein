@@ -1,5 +1,5 @@
 import { existsSync, readFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { isAbsolute, posix, relative, resolve, sep } from "node:path";
 import { pathToFileURL } from "node:url";
 
 const categories = new Set(["bags", "jewelry", "watches", "fragrance"]);
@@ -10,7 +10,9 @@ const color = /^#[0-9a-f]{6}$/i;
 const text = (value) => typeof value === "string" && value.trim().length > 0;
 const record = (value) => Boolean(value) && typeof value === "object" && !Array.isArray(value);
 const textArray = (value) => Array.isArray(value) && value.every(text);
-const positiveNumber = (value) => typeof value === "number" && Number.isFinite(value) && value > 0;
+const finiteNumber = (value) => typeof value === "number" && Number.isFinite(value);
+const positiveNumber = (value) => finiteNumber(value) && value > 0;
+const describe = (value) => String(value);
 
 function validDimensions(value) {
   return record(value)
@@ -19,12 +21,14 @@ function validDimensions(value) {
 }
 
 function localImageFile(src, rootDir) {
-  if (!text(src) || !src.startsWith("/images/") || /^https?:/i.test(src)) return;
-  const relativePath = src.slice("/images/".length);
-  if (!relativePath) return;
-  const segments = relativePath.split("/");
-  if (segments.some((segment) => !text(segment) || segment === "." || segment === "..")) return;
-  return resolve(rootDir, "public", "images", relativePath);
+  if (!text(src) || !src.startsWith("/images/") || /^https?:/i.test(src) || src.includes("\\")) return;
+  const relativePath = posix.normalize(src.slice("/images/".length));
+  if (!relativePath || relativePath === "." || relativePath === ".." || relativePath.startsWith("../") || relativePath.startsWith("/") || /^[A-Za-z]:\//.test(relativePath)) return;
+  const imagesRoot = resolve(rootDir, "public", "images");
+  const filePath = resolve(imagesRoot, relativePath);
+  const fromImagesRoot = relative(imagesRoot, filePath);
+  if (!fromImagesRoot || fromImagesRoot === ".." || fromImagesRoot.startsWith(`..${sep}`) || isAbsolute(fromImagesRoot)) return;
+  return filePath;
 }
 
 export function validateProducts(products, rootDir = process.cwd()) {
@@ -65,9 +69,9 @@ export function validateProducts(products, rootDir = process.cwd()) {
           continue;
         }
         if (!text(variant.id) || !text(variant.name) || !availability.has(variant.availability)) errors.push(`${label}: invalid variant`);
-        if (variant.color) {
+        if (variant.color !== undefined) {
           if (!record(variant.color) || !text(variant.color.name) || !color.test(variant.color.hex)) {
-            errors.push(`${label}: invalid color ${variant.color?.hex}`);
+            errors.push(`${label}: invalid color ${record(variant.color) ? variant.color.hex : describe(variant.color)}`);
           }
         }
         if (variant.size !== undefined && !text(variant.size)) errors.push(`${label}: invalid variant`);
@@ -79,6 +83,7 @@ export function validateProducts(products, rootDir = process.cwd()) {
     }
 
     if (!validDimensions(product.dimensions)) errors.push(`${label}: dimensions must use cm with positive numeric values`);
+    if (product.weightGrams !== undefined && !finiteNumber(product.weightGrams)) errors.push(`${label}: weightGrams must be a finite number`);
     if (!Array.isArray(product.badges) || product.badges.some((badge) => !badges.has(badge))) errors.push(`${label}: badges must use only new, exclusive, or limited`);
     if (typeof product.featured !== "boolean") errors.push(`${label}: featured must be a boolean`);
 
@@ -102,6 +107,7 @@ export function validateProducts(products, rootDir = process.cwd()) {
         for (const key of ["sourcePage", "creator", "licenseName", "licenseUrl", "attributionText", "reviewedAt", "modifications"]) {
           if (!text(image[key])) errors.push(`${label}: image missing ${key}`);
         }
+        if (image.creatorUrl !== undefined && !text(image.creatorUrl)) errors.push(`${label}: image creatorUrl must be a non-empty string`);
         if (typeof image.attributionRequired !== "boolean") errors.push(`${label}: image attributionRequired must be a boolean`);
         if (!roles.has(image.role)) errors.push(`${label}: invalid image role ${image.role}`);
       }
