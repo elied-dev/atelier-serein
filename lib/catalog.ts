@@ -15,6 +15,18 @@ const searchableText = (product: Product) => [
   ...product.styleTags,
 ];
 
+const ignoredSearchWords = new Set([
+  "about", "find", "have", "looking", "need", "offer", "please", "policies", "policy",
+  "show", "store", "that", "this", "want", "what", "with", "your", "you",
+]);
+
+export function matchesSearchQuery(query: string, values: Array<string | undefined>) {
+  const terms = normalizeText(query).match(/[\p{L}\p{N}]+/gu)
+    ?.filter((term) => term.length > 2 && !ignoredSearchWords.has(term)) ?? [];
+  const haystack = normalizeText(values.filter(Boolean).join(" "));
+  return terms.length > 0 && terms.every((term) => haystack.includes(term));
+}
+
 export type CatalogQuery = {
   q?: string;
   category?: ProductCategory;
@@ -69,7 +81,7 @@ export function filterProducts(query: CatalogQuery, source: Product[] = allProdu
 
   return source
     .filter((product) =>
-      (!needle || searchableText(product).some((value) => normalizeText(value).includes(needle)))
+      (!needle || matchesSearchQuery(needle, searchableText(product)))
       && (!category || normalizeText(product.category) === category)
       && (!material || product.materials.some((value) => normalizeText(value) === material))
       && (!color || product.variants.some((variant) => normalizeText(variant.color?.name) === color))

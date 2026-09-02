@@ -245,6 +245,16 @@ button { color: inherit; font: inherit; }
   .bag-line-actions { grid-column: 1 / -1; grid-template-columns: 1fr auto; align-items: end; justify-items: start; }
 }
 
+/* Store information */
+.information-page { min-height: 70svh; padding: clamp(3.5rem, 8vw, 7rem) clamp(1.25rem, 4vw, 5rem); }
+.information-page > h1 { margin-bottom: clamp(2rem, 5vw, 5rem); font-size: clamp(4rem, 8vw, 8rem); line-height: .8; letter-spacing: -.04em; }
+.information-list, .order-list { display: grid; gap: 1rem; margin: 0; padding: 0; list-style: none; }
+.information-list section, .order-list > li { padding: 1.5rem; border: 1px solid rgb(23 20 18 / 18%); }
+.information-list h2, .order-list h2 { margin-bottom: .5rem; font-size: 1.7rem; }
+.information-list p, .order-list time, .order-list li { color: #4f4943; line-height: 1.7; }
+.order-list header, .order-list > li > p, .order-list ul li { display: flex; justify-content: space-between; gap: 1rem; }
+.order-list ul { display: grid; gap: .5rem; margin-block: 1.5rem; padding: 0; list-style: none; }
+
 /* Simulated checkout */
 .checkout-page { min-height: 70svh; padding: clamp(3.5rem, 8vw, 7rem) clamp(1.25rem, 4vw, 5rem); }
 .checkout-heading { max-width: 48rem; margin-bottom: clamp(2.5rem, 5vw, 5rem); }
@@ -270,7 +280,7 @@ button { color: inherit; font: inherit; }
 }
 
 @media (max-width: 520px) {
-  .checkout-page { padding-inline: 1.1rem; }
+  .checkout-page, .information-page { padding-inline: 1.1rem; }
   .checkout-fields { grid-template-columns: 1fr; }
   .checkout-fields label:nth-child(3) { grid-column: auto; }
 }

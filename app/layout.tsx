@@ -5,6 +5,7 @@ import { BagProvider } from "@/components/bag-provider";
 import { ImprovedVersionProvider } from "@/components/improved-version-provider";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
 import { Toaster } from "@/components/ui/sonner";
+import { WebMcpTools } from "@/components/webmcp-tools";
 import { isImprovedVersion, site } from "@/lib/site";
 import "./globals.css";
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
       <body>
         <ImprovedVersionProvider enabled={isImprovedVersion(process.env.WEBMCP_IMPROVED)}>
           <BagProvider>
+            <WebMcpTools />
             <SiteHeader />
             <main>{children}</main>
             <SiteFooter />

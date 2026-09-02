@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useBag } from "@/components/bag-provider";
 import { bagSubtotal } from "@/lib/bag";
-import { confirmationReference, validateDelivery } from "@/lib/checkout";
+import { completeDemoCheckout, validateDelivery } from "@/lib/checkout";
 import { formatMoney } from "@/lib/money";
 import { site } from "@/lib/site";
 
@@ -38,7 +38,7 @@ export default function CheckoutPage() {
       return;
     }
 
-    setReference(confirmationReference());
+    setReference(completeDemoCheckout(localStorage, lines));
     clear();
   }
 

@@ -73,6 +73,8 @@ export function SiteFooter() {
       <p>{site.demoNotice}</p>
       <nav aria-label="Footer navigation">
         <Link href="/collection">Collection</Link>
+        <Link href="/policies">Policies</Link>
+        <Link href="/orders">Orders</Link>
       </nav>
     </footer>
   );

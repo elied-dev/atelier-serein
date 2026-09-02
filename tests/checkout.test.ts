@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { confirmationReference, validateDelivery } from "@/lib/checkout";
+import { completeDemoCheckout, confirmationReference, validateDelivery } from "@/lib/checkout";
+import { readOrders } from "@/lib/orders";
 
 describe("simulated checkout", () => {
   it("requires only delivery-contact fields", () => {
@@ -26,5 +27,23 @@ describe("simulated checkout", () => {
 
   it("creates a clearly fake deterministic reference", () => {
     expect(confirmationReference(new Date("2026-04-11T12:00:00Z"), () => 0.1234)).toBe("DEMO-20260411-1234");
+  });
+
+  it("records a local order when simulated checkout completes", () => {
+    const values = new Map<string, string>();
+    const storage = {
+      getItem: (key: string) => values.get(key) ?? null,
+      setItem: (key: string, value: string) => { values.set(key, value); },
+    };
+
+    const reference = completeDemoCheckout(
+      storage,
+      [{ productSlug: "vesper-tote", variantId: "stone", quantity: 1 }],
+      new Date("2026-04-11T12:00:00Z"),
+      () => 0.1234,
+    );
+
+    expect(reference).toBe("DEMO-20260411-1234");
+    expect(readOrders(storage)[0]).toMatchObject({ reference, total: 285000 });
   });
 });

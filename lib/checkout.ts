@@ -1,3 +1,6 @@
+import type { BagLine } from "@/lib/bag";
+import { recordOrder } from "@/lib/orders";
+
 const value = (form: FormData, key: string) => String(form.get(key) || "").trim();
 
 export function validateDelivery(form: FormData) {
@@ -13,4 +16,15 @@ export function validateDelivery(form: FormData) {
 export function confirmationReference(now = new Date(), random = Math.random) {
   const day = now.toISOString().slice(0, 10).replaceAll("-", "");
   return `DEMO-${day}-${String(Math.floor(random() * 10000)).padStart(4, "0")}`;
+}
+
+export function completeDemoCheckout(
+  storage: Pick<Storage, "getItem" | "setItem">,
+  lines: BagLine[],
+  now = new Date(),
+  random = Math.random,
+) {
+  const reference = confirmationReference(now, random);
+  recordOrder(storage, lines, reference, now);
+  return reference;
 }

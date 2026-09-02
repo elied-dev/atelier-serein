@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useId, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { toast } from "sonner";
 import { useBag } from "@/components/bag-provider";
 import { bagSubtotal } from "@/lib/bag";
@@ -109,8 +110,16 @@ export function VariantPicker({
   );
 }
 
-export function AddToBag({ product }: { product: Product }) {
-  const initialVariant = product.variants.find((variant) => variant.availability === "available");
+export function AddToBag({
+  product,
+  initialVariantId,
+}: {
+  product: Product;
+  initialVariantId?: string;
+}) {
+  const initialVariant = product.variants.find((variant) =>
+    variant.id === initialVariantId && variant.availability !== "preview",
+  ) ?? product.variants.find((variant) => variant.availability === "available");
   const [variantId, setVariantId] = useState(initialVariant?.id);
   const { add } = useBag();
   const selectedVariant = product.variants.find((variant) => variant.id === variantId);
@@ -130,6 +139,11 @@ export function AddToBag({ product }: { product: Product }) {
       </button>
     </div>
   );
+}
+
+export function VariantAwareAddToBag({ product }: { product: Product }) {
+  const variantId = useSearchParams().get("variant") ?? undefined;
+  return <AddToBag key={variantId} product={product} initialVariantId={variantId} />;
 }
 
 export function BagEditor() {

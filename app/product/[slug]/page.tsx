@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { AddToBag, ProductGallery, ProductGrid } from "@/components/commerce";
+import { Suspense } from "react";
+import { AddToBag, ProductGallery, ProductGrid, VariantAwareAddToBag } from "@/components/commerce";
 import { allProducts, findProduct, productPageModel } from "@/lib/catalog";
 import { formatMoney } from "@/lib/money";
 import { site } from "@/lib/site";
@@ -44,7 +45,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           <h1>{product.name}</h1>
           <p className="product-tagline">{product.tagline}</p>
           <p className="product-price">{formatMoney(product.price.amountMinor, product.price.currency)}</p>
-          <AddToBag product={product} />
+          <Suspense fallback={<AddToBag product={product} />}>
+            <VariantAwareAddToBag product={product} />
+          </Suspense>
           {related[0] && (
             <Link
               className="button button-quiet product-compare-link"

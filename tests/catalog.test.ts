@@ -174,6 +174,11 @@ describe("catalog", () => {
       ).map((product) => product.slug),
     ).toEqual(["vesper-tote", "serein-mini"]);
 
+    expect(filterProducts({ q: "find me a leather bag" }, fixtures).map((product) => product.slug)).toEqual([
+      "vesper-tote",
+      "serein-mini",
+    ]);
+
     expect(filterProducts({ min: 200000, sort: "price-asc" }, fixtures).map((product) => product.slug)).toEqual([
       "vesper-tote",
       "luma-watch",
