@@ -3,6 +3,7 @@
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import { useBag } from "@/components/bag-provider";
+import { useImprovedVersion } from "@/components/improved-version-provider";
 import {
   Sheet,
   SheetClose,
@@ -24,10 +25,14 @@ const navigation = [
 
 export function SiteHeader() {
   const { count } = useBag();
+  const improved = useImprovedVersion();
 
   return (
     <header className="site-header">
-      <Link href="/" className="wordmark">{site.name}</Link>
+      <Link href="/" className="wordmark">
+        {site.name}
+        {improved && <span className="demo-label">Improved</span>}
+      </Link>
       <nav className="desktop-nav" aria-label="Primary navigation">
         {navigation.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
       </nav>

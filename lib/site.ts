@@ -1,3 +1,7 @@
+export function isImprovedVersion(value: string | undefined) {
+  return value === "true";
+}
+
 export const site = {
   name: "Atelier Serein",
   positioning: "Quiet contemporary luxury, shaped by material and craft.",
