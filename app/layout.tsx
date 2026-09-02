@@ -17,9 +17,21 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
   return (
     <html lang="en" className={`${display.variable} ${sans.variable}`}>
       <body>
-        <header><Link href="/" className="inline-flex min-h-11 items-center">{site.name}</Link></header>
+        <header className="site-header">
+          <Link href="/" className="wordmark">{site.name}</Link>
+          <nav aria-label="Primary navigation">
+            <Link href="/#collections">Collections</Link>
+            <Link href="/#featured">The edit</Link>
+            <Link href="/#craft">Craft</Link>
+          </nav>
+          <span className="demo-label">Fictional maison</span>
+        </header>
         <main>{children}</main>
-        <footer><p>{site.demoNotice}</p><Link href="/credits" className="inline-flex min-h-11 items-center">Image credits</Link></footer>
+        <footer className="site-footer">
+          <Link href="/" className="wordmark">{site.name}</Link>
+          <p>{site.demoNotice}</p>
+          <p>© 2026 · Demo only</p>
+        </footer>
       </body>
     </html>
   );
