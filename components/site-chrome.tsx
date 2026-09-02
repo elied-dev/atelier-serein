@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useBag } from "@/components/bag-provider";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -44,8 +45,14 @@ export function SiteHeader() {
               <SheetDescription>Browse the fictional collection.</SheetDescription>
             </SheetHeader>
             <nav aria-label="Mobile navigation">
-              {navigation.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
-              <Link href="/bag" aria-label={`Bag, ${count} ${count === 1 ? "item" : "items"}`}>Bag ({count})</Link>
+              {navigation.map(([label, href]) => (
+                <SheetClose render={<Link href={href} />} key={href}>{label}</SheetClose>
+              ))}
+              <SheetClose
+                render={<Link href="/bag" aria-label={`Bag, ${count} ${count === 1 ? "item" : "items"}`} />}
+              >
+                Bag ({count})
+              </SheetClose>
             </nav>
           </SheetContent>
         </Sheet>
