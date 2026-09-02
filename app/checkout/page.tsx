@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { useBag } from "@/components/bag-provider";
 import { bagSubtotal } from "@/lib/bag";
 import { confirmationReference, validateDelivery } from "@/lib/checkout";
@@ -20,6 +20,11 @@ export default function CheckoutPage() {
   const { lines, clear } = useBag();
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [reference, setReference] = useState<string>();
+  const confirmationHeading = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    if (reference) confirmationHeading.current?.focus();
+  }, [reference]);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -41,7 +46,7 @@ export default function CheckoutPage() {
     return (
       <section className="checkout-page checkout-confirmation">
         <p className="eyebrow">Simulated checkout complete</p>
-        <h1>Thank you</h1>
+        <h1 ref={confirmationHeading} tabIndex={-1}>Thank you</h1>
         <p className="confirmation-reference">Reference <strong>{reference}</strong></p>
         <p>Nothing was charged or shipped.</p>
         <Link className="button button-primary" href="/">Return home</Link>
@@ -54,6 +59,7 @@ export default function CheckoutPage() {
       <section className="checkout-page">
         <p className="eyebrow">Simulated checkout</p>
         <h1>Your bag is empty</h1>
+        <p>{site.checkoutNotice}</p>
         <p>Add something to your bag before continuing.</p>
         <Link className="button button-primary" href="/collection">Explore the collection</Link>
       </section>
