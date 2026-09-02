@@ -1,15 +1,10 @@
-import { mkdtempSync, mkdirSync, writeFileSync } from "node:fs";
-import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { validateProducts } from "../scripts/validate-data.mjs";
 
 const image = {
-  src: "/images/products/item.webp", alt: "Black leather bag on ivory",
-  width: 1200, height: 1500, role: "hero", sourcePage: "https://example.com/item",
-  creator: "Example Creator", licenseName: "Example License",
-  licenseUrl: "https://example.com/license", attributionRequired: false,
-  attributionText: "Example Creator", reviewedAt: "2026-04-11", modifications: "Cropped and color graded"
+  src: "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  alt: "Black leather bag on ivory", width: 1200, height: 1500, role: "hero"
 };
 
 const product = {
@@ -24,28 +19,21 @@ const product = {
   images: [image], relatedSlugs: []
 };
 
-function rootWithImage() {
-  const root = mkdtempSync(join(tmpdir(), "atelier-"));
-  mkdirSync(join(root, "public/images/products"), { recursive: true });
-  writeFileSync(join(root, "public/images/products/item.webp"), "image");
-  return root;
-}
-
 describe("validateProducts", () => {
-  it("accepts a complete local-image record", () => {
-    expect(validateProducts([product], rootWithImage())).toEqual([]);
+  it("accepts a complete product with a remote Pexels image", () => {
+    expect(validateProducts([product])).toEqual([]);
   });
 
-  it("reports duplicate identity, bad relationships, colors, and missing files", () => {
+  it("reports duplicate identity, bad relationships, colors, and non-Pexels images", () => {
     const bad = structuredClone(product);
     bad.variants[0].color.hex = "black";
     bad.relatedSlugs = [bad.slug, "missing"];
-    bad.images[0].src = "/images/products/missing.webp";
-    const errors = validateProducts([bad, structuredClone(bad)], rootWithImage());
+    bad.images[0].src = "https://example.com/missing.webp";
+    const errors = validateProducts([bad, structuredClone(bad)]);
     expect(errors).toEqual(expect.arrayContaining([
       "duplicate id: bag-01", "duplicate slug: vesper-tote", "duplicate sku: AS-BAG-001",
       "vesper-tote: invalid color black", "vesper-tote: related product cannot reference itself",
-      "vesper-tote: unknown related slug missing", "vesper-tote: missing image file /images/products/missing.webp"
+      "vesper-tote: unknown related slug missing", "vesper-tote: invalid Pexels image URL https://example.com/missing.webp"
     ]));
   });
 
@@ -61,10 +49,10 @@ describe("validateProducts", () => {
     malformed.features = {};
     malformed.badges = ["sale"];
     malformed.featured = "yes";
-    malformed.images = [null, { ...image, src: "/images/../../package.json", attributionRequired: "no" }];
+    malformed.images = [null, { ...image, src: "/images/../../package.json" }];
     malformed.relatedSlugs = "vesper-tote";
 
-    expect(validateProducts([null, malformed], rootWithImage())).toEqual(expect.arrayContaining([
+    expect(validateProducts([null, malformed])).toEqual(expect.arrayContaining([
       "product 1: product must be an object",
       "vesper-tote: variant 1 must be an object",
       "vesper-tote: materials must be an array of strings",
@@ -77,28 +65,35 @@ describe("validateProducts", () => {
       "vesper-tote: badges must use only new, exclusive, or limited",
       "vesper-tote: featured must be a boolean",
       "vesper-tote: image 1 must be an object",
-      "vesper-tote: invalid image path /images/../../package.json",
-      "vesper-tote: image attributionRequired must be a boolean",
+      "vesper-tote: invalid Pexels image URL /images/../../package.json",
       "vesper-tote: relatedSlugs must be an array of strings"
     ]));
   });
 
-  it("rejects windows-style image paths and invalid optional typed fields", () => {
+  it("rejects non-Pexels image URLs and invalid optional typed fields", () => {
     const malformed = structuredClone(product);
     malformed.weightGrams = "heavy";
     malformed.variants = [{ ...malformed.variants[0], color: 0 }];
     malformed.images = [
-      { ...image, creatorUrl: 42 },
+      { ...image, src: "http://images.pexels.com/photos/1/image.jpeg" },
       { ...image, src: "/images/..\\..\\package.json", role: "detail" },
-      { ...image, src: "/images/C:/temp/x", role: "lifestyle" }
+      { ...image, src: "https://example.com/image.jpeg", role: "lifestyle" }
     ];
 
-    expect(validateProducts([malformed], rootWithImage())).toEqual(expect.arrayContaining([
+    expect(validateProducts([malformed])).toEqual(expect.arrayContaining([
       "vesper-tote: invalid color 0",
       "vesper-tote: weightGrams must be a finite number",
-      "vesper-tote: image creatorUrl must be a non-empty string",
-      "vesper-tote: invalid image path /images/..\\..\\package.json",
-      "vesper-tote: invalid image path /images/C:/temp/x"
+      "vesper-tote: invalid Pexels image URL http://images.pexels.com/photos/1/image.jpeg",
+      "vesper-tote: invalid Pexels image URL /images/..\\..\\package.json",
+      "vesper-tote: invalid Pexels image URL https://example.com/image.jpeg"
     ]));
+  });
+
+  it("contains five products in every category", () => {
+    const products = JSON.parse(readFileSync(new URL("../data/products.json", import.meta.url), "utf8"));
+    expect(products).toHaveLength(20);
+    for (const category of ["bags", "jewelry", "watches", "fragrance"]) {
+      expect(products.filter((product) => product.category === category)).toHaveLength(5);
+    }
   });
 });

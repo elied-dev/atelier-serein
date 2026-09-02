@@ -7,15 +7,8 @@ export type ProductImage = {
   width: number;
   height: number;
   role: "hero" | "detail" | "lifestyle";
-  sourcePage: string;
-  creator: string;
-  creatorUrl?: string;
-  licenseName: string;
-  licenseUrl: string;
-  attributionRequired: boolean;
-  attributionText: string;
-  reviewedAt: string;
-  modifications: string;
+  sourcePage?: string;
+  creator?: string;
 };
 
 export type ProductVariant = {

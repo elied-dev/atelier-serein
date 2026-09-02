@@ -1,1 +1,1640 @@
-[]
+[
+  {
+    "id": "bag-01",
+    "slug": "vesper-tote",
+    "sku": "AS-BAG-001",
+    "name": "Vesper Tote",
+    "category": "bags",
+    "collection": "Nocturne",
+    "tagline": "A composed bag study in oxblood.",
+    "description": "Vesper Tote is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Vesper Tote explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 285000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Full-grain leather",
+      "Cotton canvas lining"
+    ],
+    "craftsmanship": [
+      "Hand-finished edges",
+      "Reinforced artisan stitching"
+    ],
+    "dimensions": {
+      "width": 34,
+      "height": 26,
+      "depth": 12,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in a cool, dry place"
+    ],
+    "styleTags": [
+      "structured",
+      "quiet-luxury"
+    ],
+    "occasions": [
+      "daily",
+      "travel"
+    ],
+    "features": [
+      "Interior slip pocket",
+      "Structured magnetic closure"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": true,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Vesper Tote",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/1152077/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "serein-mini",
+      "marais-shoulder"
+    ]
+  },
+  {
+    "id": "bag-02",
+    "slug": "serein-mini",
+    "sku": "AS-BAG-002",
+    "name": "Serein Mini",
+    "category": "bags",
+    "collection": "Nocturne",
+    "tagline": "A composed bag study in ivory.",
+    "description": "Serein Mini is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Serein Mini explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 165000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Full-grain leather",
+      "Cotton canvas lining"
+    ],
+    "craftsmanship": [
+      "Hand-finished edges",
+      "Reinforced artisan stitching"
+    ],
+    "dimensions": {
+      "width": 34,
+      "height": 26,
+      "depth": 12,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in a cool, dry place"
+    ],
+    "styleTags": [
+      "structured",
+      "quiet-luxury"
+    ],
+    "occasions": [
+      "daily",
+      "travel"
+    ],
+    "features": [
+      "Interior slip pocket",
+      "Structured magnetic closure"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/904350/pexels-photo-904350.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Serein Mini",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/904350/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "marais-shoulder",
+      "lune-clutch"
+    ]
+  },
+  {
+    "id": "bag-03",
+    "slug": "marais-shoulder",
+    "sku": "AS-BAG-003",
+    "name": "Marais Shoulder",
+    "category": "bags",
+    "collection": "Ligne",
+    "tagline": "A composed bag study in black.",
+    "description": "Marais Shoulder is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Marais Shoulder explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 220000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Full-grain leather",
+      "Cotton canvas lining"
+    ],
+    "craftsmanship": [
+      "Hand-finished edges",
+      "Reinforced artisan stitching"
+    ],
+    "dimensions": {
+      "width": 34,
+      "height": 26,
+      "depth": 12,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in a cool, dry place"
+    ],
+    "styleTags": [
+      "structured",
+      "quiet-luxury"
+    ],
+    "occasions": [
+      "daily",
+      "travel"
+    ],
+    "features": [
+      "Interior slip pocket",
+      "Structured magnetic closure"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Marais Shoulder",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/994523/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "lune-clutch",
+      "rivage-weekender"
+    ]
+  },
+  {
+    "id": "bag-04",
+    "slug": "lune-clutch",
+    "sku": "AS-BAG-004",
+    "name": "Lune Clutch",
+    "category": "bags",
+    "collection": "Ligne",
+    "tagline": "A composed bag study in champagne.",
+    "description": "Lune Clutch is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Lune Clutch explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 145000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Full-grain leather",
+      "Cotton canvas lining"
+    ],
+    "craftsmanship": [
+      "Hand-finished edges",
+      "Reinforced artisan stitching"
+    ],
+    "dimensions": {
+      "width": 34,
+      "height": 26,
+      "depth": 12,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in a cool, dry place"
+    ],
+    "styleTags": [
+      "structured",
+      "quiet-luxury"
+    ],
+    "occasions": [
+      "daily",
+      "travel"
+    ],
+    "features": [
+      "Interior slip pocket",
+      "Structured magnetic closure"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/1936848/pexels-photo-1936848.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Lune Clutch",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/1936848/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "rivage-weekender",
+      "vesper-tote"
+    ]
+  },
+  {
+    "id": "bag-05",
+    "slug": "rivage-weekender",
+    "sku": "AS-BAG-005",
+    "name": "Rivage Weekender",
+    "category": "bags",
+    "collection": "Voyage",
+    "tagline": "A composed bag study in stone.",
+    "description": "Rivage Weekender is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Rivage Weekender explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 360000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Full-grain leather",
+      "Cotton canvas lining"
+    ],
+    "craftsmanship": [
+      "Hand-finished edges",
+      "Reinforced artisan stitching"
+    ],
+    "dimensions": {
+      "width": 34,
+      "height": 26,
+      "depth": 12,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in a cool, dry place"
+    ],
+    "styleTags": [
+      "structured",
+      "quiet-luxury"
+    ],
+    "occasions": [
+      "daily",
+      "travel"
+    ],
+    "features": [
+      "Interior slip pocket",
+      "Structured magnetic closure"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Rivage Weekender",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/2905238/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "vesper-tote",
+      "serein-mini"
+    ]
+  },
+  {
+    "id": "jewelry-01",
+    "slug": "halo-cuff",
+    "sku": "AS-JWL-001",
+    "name": "Halo Cuff",
+    "category": "jewelry",
+    "collection": "Orbite",
+    "tagline": "A composed jewelry study in champagne.",
+    "description": "Halo Cuff is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Halo Cuff explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 95000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "silver",
+        "name": "Silver",
+        "color": {
+          "name": "Silver",
+          "hex": "#a7a7a7"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Gold-tone brass",
+      "Sterling silver detail"
+    ],
+    "craftsmanship": [
+      "Hand-polished surface",
+      "Individually finished clasp"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.2,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "sculptural",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Nickel-free finish",
+      "Atelier presentation pouch"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": true,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/1191531/pexels-photo-1191531.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Halo Cuff",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/1191531/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "elan-pendant",
+      "sillage-ring"
+    ]
+  },
+  {
+    "id": "jewelry-02",
+    "slug": "elan-pendant",
+    "sku": "AS-JWL-002",
+    "name": "Élan Pendant",
+    "category": "jewelry",
+    "collection": "Orbite",
+    "tagline": "A composed jewelry study in silver.",
+    "description": "Élan Pendant is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Élan Pendant explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 78000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "silver",
+        "name": "Silver",
+        "color": {
+          "name": "Silver",
+          "hex": "#a7a7a7"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "silver",
+        "name": "Silver",
+        "color": {
+          "name": "Silver",
+          "hex": "#a7a7a7"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Gold-tone brass",
+      "Sterling silver detail"
+    ],
+    "craftsmanship": [
+      "Hand-polished surface",
+      "Individually finished clasp"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.2,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "sculptural",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Nickel-free finish",
+      "Atelier presentation pouch"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/1457801/pexels-photo-1457801.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Élan Pendant",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/1457801/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "sillage-ring",
+      "arc-studs"
+    ]
+  },
+  {
+    "id": "jewelry-03",
+    "slug": "sillage-ring",
+    "sku": "AS-JWL-003",
+    "name": "Sillage Ring",
+    "category": "jewelry",
+    "collection": "Trait",
+    "tagline": "A composed jewelry study in oxblood.",
+    "description": "Sillage Ring is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Sillage Ring explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 52000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "silver",
+        "name": "Silver",
+        "color": {
+          "name": "Silver",
+          "hex": "#a7a7a7"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Gold-tone brass",
+      "Sterling silver detail"
+    ],
+    "craftsmanship": [
+      "Hand-polished surface",
+      "Individually finished clasp"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.2,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "sculptural",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Nickel-free finish",
+      "Atelier presentation pouch"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/265906/pexels-photo-265906.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Sillage Ring",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/265906/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "arc-studs",
+      "meridian-chain"
+    ]
+  },
+  {
+    "id": "jewelry-04",
+    "slug": "arc-studs",
+    "sku": "AS-JWL-004",
+    "name": "Arc Studs",
+    "category": "jewelry",
+    "collection": "Trait",
+    "tagline": "A composed jewelry study in gold.",
+    "description": "Arc Studs is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Arc Studs explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 46000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "gold",
+        "name": "Gold",
+        "color": {
+          "name": "Gold",
+          "hex": "#b08d57"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "silver",
+        "name": "Silver",
+        "color": {
+          "name": "Silver",
+          "hex": "#a7a7a7"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Gold-tone brass",
+      "Sterling silver detail"
+    ],
+    "craftsmanship": [
+      "Hand-polished surface",
+      "Individually finished clasp"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.2,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "sculptural",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Nickel-free finish",
+      "Atelier presentation pouch"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/248077/pexels-photo-248077.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Arc Studs",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/248077/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "meridian-chain",
+      "halo-cuff"
+    ]
+  },
+  {
+    "id": "jewelry-05",
+    "slug": "meridian-chain",
+    "sku": "AS-JWL-005",
+    "name": "Meridian Chain",
+    "category": "jewelry",
+    "collection": "Orbite",
+    "tagline": "A composed jewelry study in gold.",
+    "description": "Meridian Chain is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Meridian Chain explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 125000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "gold",
+        "name": "Gold",
+        "color": {
+          "name": "Gold",
+          "hex": "#b08d57"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "silver",
+        "name": "Silver",
+        "color": {
+          "name": "Silver",
+          "hex": "#a7a7a7"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Gold-tone brass",
+      "Sterling silver detail"
+    ],
+    "craftsmanship": [
+      "Hand-polished surface",
+      "Individually finished clasp"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.2,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "sculptural",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Nickel-free finish",
+      "Atelier presentation pouch"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/10983783/pexels-photo-10983783.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Meridian Chain",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/10983783/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "halo-cuff",
+      "elan-pendant"
+    ]
+  },
+  {
+    "id": "watch-01",
+    "slug": "meridian-no-1",
+    "sku": "AS-WAT-001",
+    "name": "Meridian No. 1",
+    "category": "watches",
+    "collection": "Temps",
+    "tagline": "A composed watche study in black.",
+    "description": "Meridian No. 1 is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Meridian No. 1 explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 410000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Stainless steel",
+      "Mineral crystal"
+    ],
+    "craftsmanship": [
+      "Brushed and polished case",
+      "Hand-fitted fictional dial"
+    ],
+    "dimensions": {
+      "width": 3.8,
+      "height": 4.4,
+      "depth": 1.0,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "architectural",
+      "timeless"
+    ],
+    "occasions": [
+      "business",
+      "daily"
+    ],
+    "features": [
+      "Quartz demonstration movement",
+      "Adjustable strap"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": true,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Meridian No. 1",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/190819/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "aube-32",
+      "ligne-38"
+    ]
+  },
+  {
+    "id": "watch-02",
+    "slug": "aube-32",
+    "sku": "AS-WAT-002",
+    "name": "Aube 32",
+    "category": "watches",
+    "collection": "Temps",
+    "tagline": "A composed watche study in ivory.",
+    "description": "Aube 32 is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Aube 32 explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 365000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Stainless steel",
+      "Mineral crystal"
+    ],
+    "craftsmanship": [
+      "Brushed and polished case",
+      "Hand-fitted fictional dial"
+    ],
+    "dimensions": {
+      "width": 3.8,
+      "height": 4.4,
+      "depth": 1.0,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "architectural",
+      "timeless"
+    ],
+    "occasions": [
+      "business",
+      "daily"
+    ],
+    "features": [
+      "Quartz demonstration movement",
+      "Adjustable strap"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/280250/pexels-photo-280250.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Aube 32",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/280250/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "ligne-38",
+      "minuit-steel"
+    ]
+  },
+  {
+    "id": "watch-03",
+    "slug": "ligne-38",
+    "sku": "AS-WAT-003",
+    "name": "Ligne 38",
+    "category": "watches",
+    "collection": "Temps",
+    "tagline": "A composed watche study in oxblood.",
+    "description": "Ligne 38 is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Ligne 38 explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 440000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Stainless steel",
+      "Mineral crystal"
+    ],
+    "craftsmanship": [
+      "Brushed and polished case",
+      "Hand-fitted fictional dial"
+    ],
+    "dimensions": {
+      "width": 3.8,
+      "height": 4.4,
+      "depth": 1.0,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "architectural",
+      "timeless"
+    ],
+    "occasions": [
+      "business",
+      "daily"
+    ],
+    "features": [
+      "Quartz demonstration movement",
+      "Adjustable strap"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/277390/pexels-photo-277390.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Ligne 38",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/277390/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "minuit-steel",
+      "serein-moon"
+    ]
+  },
+  {
+    "id": "watch-04",
+    "slug": "minuit-steel",
+    "sku": "AS-WAT-004",
+    "name": "Minuit Steel",
+    "category": "watches",
+    "collection": "Minuit",
+    "tagline": "A composed watche study in silver.",
+    "description": "Minuit Steel is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Minuit Steel explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 395000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "silver",
+        "name": "Silver",
+        "color": {
+          "name": "Silver",
+          "hex": "#a7a7a7"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Stainless steel",
+      "Mineral crystal"
+    ],
+    "craftsmanship": [
+      "Brushed and polished case",
+      "Hand-fitted fictional dial"
+    ],
+    "dimensions": {
+      "width": 3.8,
+      "height": 4.4,
+      "depth": 1.0,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "architectural",
+      "timeless"
+    ],
+    "occasions": [
+      "business",
+      "daily"
+    ],
+    "features": [
+      "Quartz demonstration movement",
+      "Adjustable strap"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/1697214/pexels-photo-1697214.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Minuit Steel",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/1697214/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "serein-moon",
+      "meridian-no-1"
+    ]
+  },
+  {
+    "id": "watch-05",
+    "slug": "serein-moon",
+    "sku": "AS-WAT-005",
+    "name": "Serein Moon",
+    "category": "watches",
+    "collection": "Minuit",
+    "tagline": "A composed watche study in champagne.",
+    "description": "Serein Moon is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Serein Moon explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 520000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Stainless steel",
+      "Mineral crystal"
+    ],
+    "craftsmanship": [
+      "Brushed and polished case",
+      "Hand-fitted fictional dial"
+    ],
+    "dimensions": {
+      "width": 3.8,
+      "height": 4.4,
+      "depth": 1.0,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "architectural",
+      "timeless"
+    ],
+    "occasions": [
+      "business",
+      "daily"
+    ],
+    "features": [
+      "Quartz demonstration movement",
+      "Adjustable strap"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/125779/pexels-photo-125779.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Serein Moon",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/125779/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "meridian-no-1",
+      "aube-32"
+    ]
+  },
+  {
+    "id": "fragrance-01",
+    "slug": "bois-calme",
+    "sku": "AS-FRG-001",
+    "name": "Bois Calme",
+    "category": "fragrance",
+    "collection": "Essences",
+    "tagline": "A composed fragrance study in amber.",
+    "description": "Bois Calme is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Bois Calme explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 18500,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Eau de parfum",
+      "Glass flacon"
+    ],
+    "craftsmanship": [
+      "Layered fictional composition",
+      "Small-batch presentation"
+    ],
+    "dimensions": {
+      "width": 6.2,
+      "height": 11.5,
+      "depth": 3.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "woody",
+      "atmospheric"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Fictional eau de parfum",
+      "Reusable presentation box"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": true,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Bois Calme",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/965989/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "iris-serein",
+      "nuit-minerale"
+    ]
+  },
+  {
+    "id": "fragrance-02",
+    "slug": "iris-serein",
+    "sku": "AS-FRG-002",
+    "name": "Iris Serein",
+    "category": "fragrance",
+    "collection": "Essences",
+    "tagline": "A composed fragrance study in ivory.",
+    "description": "Iris Serein is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Iris Serein explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 19500,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Eau de parfum",
+      "Glass flacon"
+    ],
+    "craftsmanship": [
+      "Layered fictional composition",
+      "Small-batch presentation"
+    ],
+    "dimensions": {
+      "width": 6.2,
+      "height": 11.5,
+      "depth": 3.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "woody",
+      "atmospheric"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Fictional eau de parfum",
+      "Reusable presentation box"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/1961792/pexels-photo-1961792.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Iris Serein",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/1961792/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "nuit-minerale",
+      "the-d-aube"
+    ]
+  },
+  {
+    "id": "fragrance-03",
+    "slug": "nuit-minerale",
+    "sku": "AS-FRG-003",
+    "name": "Nuit Minérale",
+    "category": "fragrance",
+    "collection": "Essences",
+    "tagline": "A composed fragrance study in black.",
+    "description": "Nuit Minérale is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Nuit Minérale explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 21000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Eau de parfum",
+      "Glass flacon"
+    ],
+    "craftsmanship": [
+      "Layered fictional composition",
+      "Small-batch presentation"
+    ],
+    "dimensions": {
+      "width": 6.2,
+      "height": 11.5,
+      "depth": 3.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "woody",
+      "atmospheric"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Fictional eau de parfum",
+      "Reusable presentation box"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/3059609/pexels-photo-3059609.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Nuit Minérale",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/3059609/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "the-d-aube",
+      "rose-silencieuse"
+    ]
+  },
+  {
+    "id": "fragrance-04",
+    "slug": "the-d-aube",
+    "sku": "AS-FRG-004",
+    "name": "Thé d’Aube",
+    "category": "fragrance",
+    "collection": "Jardin",
+    "tagline": "A composed fragrance study in green.",
+    "description": "Thé d’Aube is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Thé d’Aube explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 17500,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Eau de parfum",
+      "Glass flacon"
+    ],
+    "craftsmanship": [
+      "Layered fictional composition",
+      "Small-batch presentation"
+    ],
+    "dimensions": {
+      "width": 6.2,
+      "height": 11.5,
+      "depth": 3.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "woody",
+      "atmospheric"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Fictional eau de parfum",
+      "Reusable presentation box"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/724635/pexels-photo-724635.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Thé d’Aube",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/724635/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "rose-silencieuse",
+      "bois-calme"
+    ]
+  },
+  {
+    "id": "fragrance-05",
+    "slug": "rose-silencieuse",
+    "sku": "AS-FRG-005",
+    "name": "Rose Silencieuse",
+    "category": "fragrance",
+    "collection": "Jardin",
+    "tagline": "A composed fragrance study in oxblood.",
+    "description": "Rose Silencieuse is a fictional Atelier Serein piece balancing restrained lines with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Rose Silencieuse explores proportion, material, and calm utility without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 20500,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Eau de parfum",
+      "Glass flacon"
+    ],
+    "craftsmanship": [
+      "Layered fictional composition",
+      "Small-batch presentation"
+    ],
+    "dimensions": {
+      "width": 6.2,
+      "height": 11.5,
+      "depth": 3.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "woody",
+      "atmospheric"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Fictional eau de parfum",
+      "Reusable presentation box"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/264870/pexels-photo-264870.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Editorial image representing Rose Silencieuse",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/264870/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "bois-calme",
+      "iris-serein"
+    ]
+  }
+]

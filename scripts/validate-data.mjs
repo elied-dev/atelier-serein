@@ -1,5 +1,4 @@
-import { existsSync, readFileSync } from "node:fs";
-import { isAbsolute, posix, relative, resolve, sep } from "node:path";
+import { readFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 
 const categories = new Set(["bags", "jewelry", "watches", "fragrance"]);
@@ -20,18 +19,9 @@ function validDimensions(value) {
     && ["width", "height", "depth"].every((key) => value[key] === undefined || positiveNumber(value[key]));
 }
 
-function localImageFile(src, rootDir) {
-  if (!text(src) || !src.startsWith("/images/") || /^https?:/i.test(src) || src.includes("\\")) return;
-  const relativePath = posix.normalize(src.slice("/images/".length));
-  if (!relativePath || relativePath === "." || relativePath === ".." || relativePath.startsWith("../") || relativePath.startsWith("/") || /^[A-Za-z]:\//.test(relativePath)) return;
-  const imagesRoot = resolve(rootDir, "public", "images");
-  const filePath = resolve(imagesRoot, relativePath);
-  const fromImagesRoot = relative(imagesRoot, filePath);
-  if (!fromImagesRoot || fromImagesRoot === ".." || fromImagesRoot.startsWith(`..${sep}`) || isAbsolute(fromImagesRoot)) return;
-  return filePath;
-}
+const pexelsImage = /^https:\/\/images\.pexels\.com\/photos\/\d+\//;
 
-export function validateProducts(products, rootDir = process.cwd()) {
+export function validateProducts(products) {
   const errors = [];
   if (!Array.isArray(products)) return ["catalog must be an array"];
   const seen = { id: new Set(), slug: new Set(), sku: new Set() };
@@ -97,18 +87,10 @@ export function validateProducts(products, rootDir = process.cwd()) {
           continue;
         }
 
-        const filePath = localImageFile(image.src, rootDir);
-        if (!filePath) errors.push(`${label}: invalid image path ${image.src}`);
-        else if (!existsSync(filePath)) errors.push(`${label}: missing image file ${image.src}`);
-
+        if (!text(image.src) || !pexelsImage.test(image.src)) errors.push(`${label}: invalid Pexels image URL ${image.src}`);
         if (!text(image.alt) || !Number.isInteger(image.width) || image.width <= 0 || !Number.isInteger(image.height) || image.height <= 0) {
           errors.push(`${label}: invalid image dimensions or alt text`);
         }
-        for (const key of ["sourcePage", "creator", "licenseName", "licenseUrl", "attributionText", "reviewedAt", "modifications"]) {
-          if (!text(image[key])) errors.push(`${label}: image missing ${key}`);
-        }
-        if (image.creatorUrl !== undefined && !text(image.creatorUrl)) errors.push(`${label}: image creatorUrl must be a non-empty string`);
-        if (typeof image.attributionRequired !== "boolean") errors.push(`${label}: image attributionRequired must be a boolean`);
         if (!roles.has(image.role)) errors.push(`${label}: invalid image role ${image.role}`);
       }
     }
