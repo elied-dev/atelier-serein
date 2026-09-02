@@ -13,7 +13,8 @@ const categories = [
 
 export default function HomePage() {
   const featured = allProducts.filter((product) => product.featured).slice(0, 4);
-  const craftImage = allProducts[0].images[0];
+  const heroImage = allProducts[0].images[0];
+  const craftImage = allProducts[13].images[0];
 
   return (
     <>
@@ -27,9 +28,15 @@ export default function HomePage() {
             <Link className="button button-quiet" href="#craft">Our approach</Link>
           </div>
         </div>
-        <div className="hero-art" aria-hidden="true">
-          <span className="hero-orbit" />
-          <span className="hero-object" />
+        <div className="hero-art">
+          <Image
+            className="hero-image"
+            src={heroImage.src}
+            alt={heroImage.alt}
+            fill
+            priority
+            sizes="(max-width: 820px) 100vw, 48vw"
+          />
           <span className="hero-caption">Atelier study · No. 01</span>
         </div>
       </section>
