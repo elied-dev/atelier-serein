@@ -25,15 +25,13 @@
 - Store the bag in guarded, versioned local storage under `atelier-serein-bag-v1`; malformed or unsupported data resets safely.
 - Use native HTML inputs and browser validation where sufficient.
 - Use only the shadcn/ui components named in Task 1 and the icon package they install.
-- Use local images only; no hotlinked product or editorial assets.
-- Every image needs source, creator, license, review date, dimensions, alt text, and modification metadata.
-- Reject logos, watermarks, recognizable protected designs, editorial-only restrictions, unclear authorship, and identifiable people without clear usage rights.
+- Use remote `https://images.pexels.com/` image URLs directly in product data; local image files and provenance auditing are not required.
+- Every product image needs a URL, dimensions, role, and useful alt text.
 - Styling uses warm ivory, near-black, muted stone, oxblood, and restrained champagne; typography uses a display serif and readable sans-serif loaded through `next/font`.
 - Respect `prefers-reduced-motion`; provide visible focus, semantic headings, labelled swatches, adequate contrast, keyboard operation, and 44px touch targets.
 - Do not use fake scarcity timers, misleading sustainability claims, or a real brand’s visual identity.
-- Publish the completed website to the private GitHub repository `elied-dev/atelier-serein` before any Vercel work.
-- Deploy the same repository branch and commit to three Vercel projects; do not create market branches, market-specific content, or storefront copies.
-- Three Vercel URLs do not prove region-pinned static hosting; do not add a meaningless regional server function.
+- Push each reviewed Task 3–8 checkpoint to the private GitHub repository `elied-dev/atelier-serein`.
+- Do not configure Vercel; deployment configuration is owner-managed.
 - Do not add an end-to-end test framework unless one is already present.
 
 ## Execution Gates
