@@ -151,7 +151,7 @@ const fixtures: Product[] = [
 
 describe("catalog", () => {
   it("defaults to the imported catalog and looks up fixture slugs", () => {
-    expect(allProducts).toHaveLength(20);
+    expect(allProducts).toHaveLength(95);
     expect(findProduct("vesper-tote")?.sku).toBe("AS-BAG-001");
     expect(findProduct("  VESPER-TOTE  ", fixtures)?.sku).toBe("AS-BAG-001");
     expect(findProduct("not-a-product", fixtures)).toBeUndefined();

@@ -1636,5 +1636,6184 @@
       "bois-calme",
       "iris-serein"
     ]
+  },
+  {
+    "id": "bag-06",
+    "slug": "solstice-top-handle",
+    "sku": "AS-BAG-006",
+    "name": "Solstice Top Handle",
+    "category": "bags",
+    "collection": "Nocturne",
+    "tagline": "A composed bag study in black.",
+    "description": "Solstice Top Handle is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Solstice Top Handle expands the Nocturne collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 248000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Full-grain leather",
+      "Cotton canvas lining"
+    ],
+    "craftsmanship": [
+      "Hand-finished edges",
+      "Reinforced artisan stitching"
+    ],
+    "dimensions": {
+      "width": 30,
+      "height": 22,
+      "depth": 11,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "structured",
+      "quiet-luxury"
+    ],
+    "occasions": [
+      "daily",
+      "business"
+    ],
+    "features": [
+      "Interior slip pocket",
+      "Magnetic closure"
+    ],
+    "badges": [
+      "limited"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36356649/pexels-photo-36356649.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Light blue leather top-handle bag on a white background",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-light-blue-leather-handbag-on-white-36356649/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "clair-crossbody",
+      "opale-bucket"
+    ]
+  },
+  {
+    "id": "bag-07",
+    "slug": "clair-crossbody",
+    "sku": "AS-BAG-007",
+    "name": "Clair Crossbody",
+    "category": "bags",
+    "collection": "Ligne",
+    "tagline": "A composed bag study in stone.",
+    "description": "Clair Crossbody is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Clair Crossbody expands the Ligne collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 172000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Grained calfskin",
+      "Suede lining"
+    ],
+    "craftsmanship": [
+      "Turned-edge construction",
+      "Hand-set metal hardware"
+    ],
+    "dimensions": {
+      "width": 24,
+      "height": 18,
+      "depth": 8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "soft",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "occasion"
+    ],
+    "features": [
+      "Adjustable leather strap",
+      "Secure zip closure"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34997537/pexels-photo-34997537.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Brown handbag with a gold chain beside a perfume set",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-brown-handbag-with-perfume-set-display-34997537/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "opale-bucket",
+      "rive-gauche-satchel"
+    ]
+  },
+  {
+    "id": "bag-08",
+    "slug": "opale-bucket",
+    "sku": "AS-BAG-008",
+    "name": "Opale Bucket",
+    "category": "bags",
+    "collection": "Voyage",
+    "tagline": "A composed bag study in oxblood.",
+    "description": "Opale Bucket is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Opale Bucket expands the Voyage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 198000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "navy",
+        "name": "Navy",
+        "color": {
+          "name": "Navy",
+          "hex": "#1f2d3d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Vegetable-tanned leather",
+      "Linen lining"
+    ],
+    "craftsmanship": [
+      "Panel-cut construction",
+      "Polished edge paint"
+    ],
+    "dimensions": {
+      "width": 38,
+      "height": 28,
+      "depth": 14,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "travel",
+      "functional"
+    ],
+    "occasions": [
+      "daily",
+      "travel"
+    ],
+    "features": [
+      "Detachable shoulder strap",
+      "Protective metal feet"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36492469/pexels-photo-36492469.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Brown leather messenger bag carried on a bridge",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/stylish-leather-messenger-bag-on-bridge-36492469/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "rive-gauche-satchel",
+      "eclipse-hobo"
+    ]
+  },
+  {
+    "id": "bag-09",
+    "slug": "rive-gauche-satchel",
+    "sku": "AS-BAG-009",
+    "name": "Rive Gauche Satchel",
+    "category": "bags",
+    "collection": "Rivage",
+    "tagline": "A composed bag study in champagne.",
+    "description": "Rive Gauche Satchel is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Rive Gauche Satchel expands the Rivage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 265000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "sage",
+        "name": "Sage",
+        "color": {
+          "name": "Sage",
+          "hex": "#77846f"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Full-grain leather",
+      "Cotton canvas lining"
+    ],
+    "craftsmanship": [
+      "Hand-finished edges",
+      "Reinforced artisan stitching"
+    ],
+    "dimensions": {
+      "width": 30,
+      "height": 22,
+      "depth": 11,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "structured",
+      "quiet-luxury"
+    ],
+    "occasions": [
+      "daily",
+      "business"
+    ],
+    "features": [
+      "Interior slip pocket",
+      "Magnetic closure"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34862017/pexels-photo-34862017.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Woman in pink carrying a structured fashion bag",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-woman-holding-luxury-fashion-bag-34862017/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "eclipse-hobo",
+      "celeste-frame-bag"
+    ]
+  },
+  {
+    "id": "bag-10",
+    "slug": "eclipse-hobo",
+    "sku": "AS-BAG-010",
+    "name": "Éclipse Hobo",
+    "category": "bags",
+    "collection": "Nocturne",
+    "tagline": "A composed bag study in ivory.",
+    "description": "Éclipse Hobo is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Éclipse Hobo expands the Nocturne collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 235000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "cognac",
+        "name": "Cognac",
+        "color": {
+          "name": "Cognac",
+          "hex": "#8b572a"
+        },
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Grained calfskin",
+      "Suede lining"
+    ],
+    "craftsmanship": [
+      "Turned-edge construction",
+      "Hand-set metal hardware"
+    ],
+    "dimensions": {
+      "width": 24,
+      "height": 18,
+      "depth": 8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "soft",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "occasion"
+    ],
+    "features": [
+      "Adjustable leather strap",
+      "Secure zip closure"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36492558/pexels-photo-36492558.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Leather and canvas satchel styled for an urban commute",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/stylish-leather-and-canvas-satchel-for-urban-commuters-36492558/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "celeste-frame-bag",
+      "aurore-shopper"
+    ]
+  },
+  {
+    "id": "bag-11",
+    "slug": "celeste-frame-bag",
+    "sku": "AS-BAG-011",
+    "name": "Céleste Frame Bag",
+    "category": "bags",
+    "collection": "Ligne",
+    "tagline": "A composed bag study in navy.",
+    "description": "Céleste Frame Bag is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Céleste Frame Bag expands the Ligne collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 289000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "navy",
+        "name": "Navy",
+        "color": {
+          "name": "Navy",
+          "hex": "#1f2d3d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Vegetable-tanned leather",
+      "Linen lining"
+    ],
+    "craftsmanship": [
+      "Panel-cut construction",
+      "Polished edge paint"
+    ],
+    "dimensions": {
+      "width": 38,
+      "height": 28,
+      "depth": 14,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "travel",
+      "functional"
+    ],
+    "occasions": [
+      "daily",
+      "travel"
+    ],
+    "features": [
+      "Detachable shoulder strap",
+      "Protective metal feet"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36277379/pexels-photo-36277379.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Leather handbags displayed in an elegant fashion storefront",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/luxury-fashion-storefront-display-with-mannequin-36277379/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "aurore-shopper",
+      "mistral-messenger"
+    ]
+  },
+  {
+    "id": "bag-12",
+    "slug": "aurore-shopper",
+    "sku": "AS-BAG-012",
+    "name": "Aurore Shopper",
+    "category": "bags",
+    "collection": "Voyage",
+    "tagline": "A composed bag study in sage.",
+    "description": "Aurore Shopper is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Aurore Shopper expands the Voyage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 210000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "sage",
+        "name": "Sage",
+        "color": {
+          "name": "Sage",
+          "hex": "#77846f"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Full-grain leather",
+      "Cotton canvas lining"
+    ],
+    "craftsmanship": [
+      "Hand-finished edges",
+      "Reinforced artisan stitching"
+    ],
+    "dimensions": {
+      "width": 30,
+      "height": 22,
+      "depth": 11,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "structured",
+      "quiet-luxury"
+    ],
+    "occasions": [
+      "daily",
+      "business"
+    ],
+    "features": [
+      "Interior slip pocket",
+      "Magnetic closure"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34027231/pexels-photo-34027231.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Handbag and sunglasses arranged in a stylish flat lay",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/flat-lay-of-stylish-accessories-with-handbag-34027231/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "mistral-messenger",
+      "nacre-pouch"
+    ]
+  },
+  {
+    "id": "bag-13",
+    "slug": "mistral-messenger",
+    "sku": "AS-BAG-013",
+    "name": "Mistral Messenger",
+    "category": "bags",
+    "collection": "Rivage",
+    "tagline": "A composed bag study in cognac.",
+    "description": "Mistral Messenger is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Mistral Messenger expands the Rivage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 255000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "cognac",
+        "name": "Cognac",
+        "color": {
+          "name": "Cognac",
+          "hex": "#8b572a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Grained calfskin",
+      "Suede lining"
+    ],
+    "craftsmanship": [
+      "Turned-edge construction",
+      "Hand-set metal hardware"
+    ],
+    "dimensions": {
+      "width": 24,
+      "height": 18,
+      "depth": 8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "soft",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "occasion"
+    ],
+    "features": [
+      "Adjustable leather strap",
+      "Secure zip closure"
+    ],
+    "badges": [
+      "exclusive"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36425965/pexels-photo-36425965.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Fashion shopper carrying bags on a city street",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/street-fashion-shopper-carrying-luxury-bags-36425965/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "nacre-pouch",
+      "palais-doctor-bag"
+    ]
+  },
+  {
+    "id": "bag-14",
+    "slug": "nacre-pouch",
+    "sku": "AS-BAG-014",
+    "name": "Nacre Pouch",
+    "category": "bags",
+    "collection": "Nocturne",
+    "tagline": "A composed bag study in black.",
+    "description": "Nacre Pouch is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Nacre Pouch expands the Nocturne collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 125000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Vegetable-tanned leather",
+      "Linen lining"
+    ],
+    "craftsmanship": [
+      "Panel-cut construction",
+      "Polished edge paint"
+    ],
+    "dimensions": {
+      "width": 38,
+      "height": 28,
+      "depth": 14,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "travel",
+      "functional"
+    ],
+    "occasions": [
+      "daily",
+      "travel"
+    ],
+    "features": [
+      "Detachable shoulder strap",
+      "Protective metal feet"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/33852637/pexels-photo-33852637.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Woman in sunglasses carrying a leather handbag",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/stylish-woman-walking-with-sunglasses-and-fashionable-bag-33852637/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "palais-doctor-bag",
+      "dune-camera-bag"
+    ]
+  },
+  {
+    "id": "bag-15",
+    "slug": "palais-doctor-bag",
+    "sku": "AS-BAG-015",
+    "name": "Palais Doctor Bag",
+    "category": "bags",
+    "collection": "Ligne",
+    "tagline": "A composed bag study in stone.",
+    "description": "Palais Doctor Bag is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Palais Doctor Bag expands the Ligne collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 315000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Full-grain leather",
+      "Cotton canvas lining"
+    ],
+    "craftsmanship": [
+      "Hand-finished edges",
+      "Reinforced artisan stitching"
+    ],
+    "dimensions": {
+      "width": 30,
+      "height": 22,
+      "depth": 11,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "structured",
+      "quiet-luxury"
+    ],
+    "occasions": [
+      "daily",
+      "business"
+    ],
+    "features": [
+      "Interior slip pocket",
+      "Magnetic closure"
+    ],
+    "badges": [
+      "limited"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/33776624/pexels-photo-33776624.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Hand holding a brown leather purse with gold hardware",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-hand-with-watch-and-brown-purse-33776624/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "dune-camera-bag",
+      "velours-clutch"
+    ]
+  },
+  {
+    "id": "bag-16",
+    "slug": "dune-camera-bag",
+    "sku": "AS-BAG-016",
+    "name": "Dune Camera Bag",
+    "category": "bags",
+    "collection": "Voyage",
+    "tagline": "A composed bag study in oxblood.",
+    "description": "Dune Camera Bag is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Dune Camera Bag expands the Voyage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 168000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "navy",
+        "name": "Navy",
+        "color": {
+          "name": "Navy",
+          "hex": "#1f2d3d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Grained calfskin",
+      "Suede lining"
+    ],
+    "craftsmanship": [
+      "Turned-edge construction",
+      "Hand-set metal hardware"
+    ],
+    "dimensions": {
+      "width": 24,
+      "height": 18,
+      "depth": 8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "soft",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "occasion"
+    ],
+    "features": [
+      "Adjustable leather strap",
+      "Secure zip closure"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35697360/pexels-photo-35697360.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Clutch purse hanging from a red door handle",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-red-door-with-hanging-clutch-purse-35697360/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "velours-clutch",
+      "passage-briefcase"
+    ]
+  },
+  {
+    "id": "bag-17",
+    "slug": "velours-clutch",
+    "sku": "AS-BAG-017",
+    "name": "Velours Clutch",
+    "category": "bags",
+    "collection": "Rivage",
+    "tagline": "A composed bag study in champagne.",
+    "description": "Velours Clutch is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Velours Clutch expands the Rivage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 138000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "sage",
+        "name": "Sage",
+        "color": {
+          "name": "Sage",
+          "hex": "#77846f"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Vegetable-tanned leather",
+      "Linen lining"
+    ],
+    "craftsmanship": [
+      "Panel-cut construction",
+      "Polished edge paint"
+    ],
+    "dimensions": {
+      "width": 38,
+      "height": 28,
+      "depth": 14,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "travel",
+      "functional"
+    ],
+    "occasions": [
+      "daily",
+      "travel"
+    ],
+    "features": [
+      "Detachable shoulder strap",
+      "Protective metal feet"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/33853703/pexels-photo-33853703.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Pink leather handbag with floral details held outdoors",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/stylish-handbag-with-dog-and-flower-designs-outdoors-33853703/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "passage-briefcase",
+      "cassis-saddle-bag"
+    ]
+  },
+  {
+    "id": "bag-18",
+    "slug": "passage-briefcase",
+    "sku": "AS-BAG-018",
+    "name": "Passage Briefcase",
+    "category": "bags",
+    "collection": "Nocturne",
+    "tagline": "A composed bag study in ivory.",
+    "description": "Passage Briefcase is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Passage Briefcase expands the Nocturne collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 325000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "cognac",
+        "name": "Cognac",
+        "color": {
+          "name": "Cognac",
+          "hex": "#8b572a"
+        },
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Full-grain leather",
+      "Cotton canvas lining"
+    ],
+    "craftsmanship": [
+      "Hand-finished edges",
+      "Reinforced artisan stitching"
+    ],
+    "dimensions": {
+      "width": 30,
+      "height": 22,
+      "depth": 11,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "structured",
+      "quiet-luxury"
+    ],
+    "occasions": [
+      "daily",
+      "business"
+    ],
+    "features": [
+      "Interior slip pocket",
+      "Magnetic closure"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34993794/pexels-photo-34993794.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Woman in red carrying a set of fashion bags",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/young-woman-with-shopping-bags-in-luxury-fashion-34993794/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "cassis-saddle-bag",
+      "alize-backpack"
+    ]
+  },
+  {
+    "id": "bag-19",
+    "slug": "cassis-saddle-bag",
+    "sku": "AS-BAG-019",
+    "name": "Cassis Saddle Bag",
+    "category": "bags",
+    "collection": "Ligne",
+    "tagline": "A composed bag study in navy.",
+    "description": "Cassis Saddle Bag is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Cassis Saddle Bag expands the Ligne collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 205000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "navy",
+        "name": "Navy",
+        "color": {
+          "name": "Navy",
+          "hex": "#1f2d3d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Grained calfskin",
+      "Suede lining"
+    ],
+    "craftsmanship": [
+      "Turned-edge construction",
+      "Hand-set metal hardware"
+    ],
+    "dimensions": {
+      "width": 24,
+      "height": 18,
+      "depth": 8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "soft",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "occasion"
+    ],
+    "features": [
+      "Adjustable leather strap",
+      "Secure zip closure"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35095780/pexels-photo-35095780.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Handcrafted leather bag displayed on a wooden chair",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/artisanal-leather-bag-on-wooden-chair-in-hue-vietnam-35095780/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "alize-backpack",
+      "montmartre-carryall"
+    ]
+  },
+  {
+    "id": "bag-20",
+    "slug": "alize-backpack",
+    "sku": "AS-BAG-020",
+    "name": "Alizé Backpack",
+    "category": "bags",
+    "collection": "Voyage",
+    "tagline": "A composed bag study in sage.",
+    "description": "Alizé Backpack is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Alizé Backpack expands the Voyage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 275000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "sage",
+        "name": "Sage",
+        "color": {
+          "name": "Sage",
+          "hex": "#77846f"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Vegetable-tanned leather",
+      "Linen lining"
+    ],
+    "craftsmanship": [
+      "Panel-cut construction",
+      "Polished edge paint"
+    ],
+    "dimensions": {
+      "width": 38,
+      "height": 28,
+      "depth": 14,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "travel",
+      "functional"
+    ],
+    "occasions": [
+      "daily",
+      "travel"
+    ],
+    "features": [
+      "Detachable shoulder strap",
+      "Protective metal feet"
+    ],
+    "badges": [
+      "exclusive"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34326848/pexels-photo-34326848.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Woman holding a beaded clutch in an elegant room",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-woman-holding-clutch-in-chic-room-34326848/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "montmartre-carryall",
+      "epure-belt-bag"
+    ]
+  },
+  {
+    "id": "bag-21",
+    "slug": "montmartre-carryall",
+    "sku": "AS-BAG-021",
+    "name": "Montmartre Carryall",
+    "category": "bags",
+    "collection": "Rivage",
+    "tagline": "A composed bag study in cognac.",
+    "description": "Montmartre Carryall is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Montmartre Carryall expands the Rivage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 340000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "cognac",
+        "name": "Cognac",
+        "color": {
+          "name": "Cognac",
+          "hex": "#8b572a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Full-grain leather",
+      "Cotton canvas lining"
+    ],
+    "craftsmanship": [
+      "Hand-finished edges",
+      "Reinforced artisan stitching"
+    ],
+    "dimensions": {
+      "width": 30,
+      "height": 22,
+      "depth": 11,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "structured",
+      "quiet-luxury"
+    ],
+    "occasions": [
+      "daily",
+      "business"
+    ],
+    "features": [
+      "Interior slip pocket",
+      "Magnetic closure"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/37022318/pexels-photo-37022318.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Two models presenting a collection of fashion bags",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/fashionable-shopping-bags-displayed-by-diverse-models-37022318/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "epure-belt-bag",
+      "rivoli-vanity-case"
+    ]
+  },
+  {
+    "id": "bag-22",
+    "slug": "epure-belt-bag",
+    "sku": "AS-BAG-022",
+    "name": "Épure Belt Bag",
+    "category": "bags",
+    "collection": "Nocturne",
+    "tagline": "A composed bag study in black.",
+    "description": "Épure Belt Bag is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Épure Belt Bag expands the Nocturne collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 115000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Grained calfskin",
+      "Suede lining"
+    ],
+    "craftsmanship": [
+      "Turned-edge construction",
+      "Hand-set metal hardware"
+    ],
+    "dimensions": {
+      "width": 24,
+      "height": 18,
+      "depth": 8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "soft",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "occasion"
+    ],
+    "features": [
+      "Adjustable leather strap",
+      "Secure zip closure"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35605094/pexels-photo-35605094.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Woman in a floral dress holding a patterned handbag",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-woman-in-floral-dress-holding-handbag-35605094/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "rivoli-vanity-case",
+      "horizon-travel-tote"
+    ]
+  },
+  {
+    "id": "bag-23",
+    "slug": "rivoli-vanity-case",
+    "sku": "AS-BAG-023",
+    "name": "Rivoli Vanity Case",
+    "category": "bags",
+    "collection": "Ligne",
+    "tagline": "A composed bag study in stone.",
+    "description": "Rivoli Vanity Case is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Rivoli Vanity Case expands the Ligne collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 185000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Vegetable-tanned leather",
+      "Linen lining"
+    ],
+    "craftsmanship": [
+      "Panel-cut construction",
+      "Polished edge paint"
+    ],
+    "dimensions": {
+      "width": 38,
+      "height": 28,
+      "depth": 14,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "travel",
+      "functional"
+    ],
+    "occasions": [
+      "daily",
+      "travel"
+    ],
+    "features": [
+      "Detachable shoulder strap",
+      "Protective metal feet"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34409487/pexels-photo-34409487.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Handbag carried with an embroidered jacket in sunlight",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/fashionable-handbag-with-embroidered-jacket-in-sunlight-34409487/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "horizon-travel-tote",
+      "solstice-top-handle"
+    ]
+  },
+  {
+    "id": "bag-24",
+    "slug": "horizon-travel-tote",
+    "sku": "AS-BAG-024",
+    "name": "Horizon Travel Tote",
+    "category": "bags",
+    "collection": "Voyage",
+    "tagline": "A composed bag study in oxblood.",
+    "description": "Horizon Travel Tote is a fictional Atelier Serein bag balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Horizon Travel Tote expands the Voyage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 390000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "navy",
+        "name": "Navy",
+        "color": {
+          "name": "Navy",
+          "hex": "#1f2d3d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Full-grain leather",
+      "Cotton canvas lining"
+    ],
+    "craftsmanship": [
+      "Hand-finished edges",
+      "Reinforced artisan stitching"
+    ],
+    "dimensions": {
+      "width": 30,
+      "height": 22,
+      "depth": 11,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Wipe gently with a soft dry cloth",
+      "Store in the supplied dust bag"
+    ],
+    "styleTags": [
+      "structured",
+      "quiet-luxury"
+    ],
+    "occasions": [
+      "daily",
+      "business"
+    ],
+    "features": [
+      "Interior slip pocket",
+      "Magnetic closure"
+    ],
+    "badges": [
+      "limited"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/38964131/pexels-photo-38964131.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Woman carrying a white bag beside a window at sunset",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/stylish-woman-viewed-through-window-at-sunset-38964131/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "solstice-top-handle",
+      "clair-crossbody"
+    ]
+  },
+  {
+    "id": "jewelry-06",
+    "slug": "aster-pendant",
+    "sku": "AS-JWL-006",
+    "name": "Aster Pendant",
+    "category": "jewelry",
+    "collection": "Orbite",
+    "tagline": "A composed jewelry study in black.",
+    "description": "Aster Pendant is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Aster Pendant expands the Orbite collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 68000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Gold-tone brass",
+      "Sterling silver detail"
+    ],
+    "craftsmanship": [
+      "Hand-polished surface",
+      "Individually finished clasp"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.2,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "sculptural",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Nickel-free finish",
+      "Atelier presentation pouch"
+    ],
+    "badges": [
+      "limited"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34399028/pexels-photo-34399028.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Gold pendant and earring set in a red velvet box",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-gold-pendant-set-in-red-velvet-box-34399028/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "crescent-hoops",
+      "eclat-signet"
+    ]
+  },
+  {
+    "id": "jewelry-07",
+    "slug": "crescent-hoops",
+    "sku": "AS-JWL-007",
+    "name": "Crescent Hoops",
+    "category": "jewelry",
+    "collection": "Trait",
+    "tagline": "A composed jewelry study in stone.",
+    "description": "Crescent Hoops is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Crescent Hoops expands the Trait collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 54000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Recycled sterling silver",
+      "Polished vermeil"
+    ],
+    "craftsmanship": [
+      "Hand-set decorative stones",
+      "Mirror-polished finish"
+    ],
+    "dimensions": {
+      "width": 2.4,
+      "height": 4.8,
+      "depth": 0.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "luminous",
+      "refined"
+    ],
+    "occasions": [
+      "occasion",
+      "evening"
+    ],
+    "features": [
+      "Adjustable fastening",
+      "Protective presentation box"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36195253/pexels-photo-36195253.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Woman wearing a statement necklace and ring",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-woman-posing-with-luxurious-jewelry-36195253/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "eclat-signet",
+      "perle-drop-earrings"
+    ]
+  },
+  {
+    "id": "jewelry-08",
+    "slug": "eclat-signet",
+    "sku": "AS-JWL-008",
+    "name": "Éclat Signet",
+    "category": "jewelry",
+    "collection": "Lumière",
+    "tagline": "A composed jewelry study in oxblood.",
+    "description": "Éclat Signet is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Éclat Signet expands the Lumière collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 62000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "navy",
+        "name": "Navy",
+        "color": {
+          "name": "Navy",
+          "hex": "#1f2d3d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Freshwater pearl",
+      "Gold-plated clasp"
+    ],
+    "craftsmanship": [
+      "Hand-strung elements",
+      "Artisan-finished links"
+    ],
+    "dimensions": {
+      "width": 18,
+      "height": 1.2,
+      "depth": 0.4,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "statement",
+      "modern"
+    ],
+    "occasions": [
+      "daily",
+      "business"
+    ],
+    "features": [
+      "Lightweight construction",
+      "Hand-finished closure"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36553500/pexels-photo-36553500.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Pearl earrings and diamond jewelry arranged on wood",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-jewelry-arrangement-with-pearls-and-diamonds-36553500/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "perle-drop-earrings",
+      "vortex-bangle"
+    ]
+  },
+  {
+    "id": "jewelry-09",
+    "slug": "perle-drop-earrings",
+    "sku": "AS-JWL-009",
+    "name": "Perle Drop Earrings",
+    "category": "jewelry",
+    "collection": "Constellation",
+    "tagline": "A composed jewelry study in champagne.",
+    "description": "Perle Drop Earrings is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Perle Drop Earrings expands the Constellation collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 72000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "sage",
+        "name": "Sage",
+        "color": {
+          "name": "Sage",
+          "hex": "#77846f"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Gold-tone brass",
+      "Sterling silver detail"
+    ],
+    "craftsmanship": [
+      "Hand-polished surface",
+      "Individually finished clasp"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.2,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "sculptural",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Nickel-free finish",
+      "Atelier presentation pouch"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35528702/pexels-photo-35528702.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Green stone jewelry displayed on dark green fabric",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-green-stone-jewelry-on-a-dark-background-35528702/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "vortex-bangle",
+      "nova-lariat"
+    ]
+  },
+  {
+    "id": "jewelry-10",
+    "slug": "vortex-bangle",
+    "sku": "AS-JWL-010",
+    "name": "Vortex Bangle",
+    "category": "jewelry",
+    "collection": "Orbite",
+    "tagline": "A composed jewelry study in ivory.",
+    "description": "Vortex Bangle is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Vortex Bangle expands the Orbite collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 89000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "cognac",
+        "name": "Cognac",
+        "color": {
+          "name": "Cognac",
+          "hex": "#8b572a"
+        },
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Recycled sterling silver",
+      "Polished vermeil"
+    ],
+    "craftsmanship": [
+      "Hand-set decorative stones",
+      "Mirror-polished finish"
+    ],
+    "dimensions": {
+      "width": 2.4,
+      "height": 4.8,
+      "depth": 0.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "luminous",
+      "refined"
+    ],
+    "occasions": [
+      "occasion",
+      "evening"
+    ],
+    "features": [
+      "Adjustable fastening",
+      "Protective presentation box"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35270153/pexels-photo-35270153.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Diamond bow ring worn on a hand",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/exquisite-diamond-bow-ring-on-woman-s-hand-35270153/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "nova-lariat",
+      "plisse-brooch"
+    ]
+  },
+  {
+    "id": "jewelry-11",
+    "slug": "nova-lariat",
+    "sku": "AS-JWL-011",
+    "name": "Nova Lariat",
+    "category": "jewelry",
+    "collection": "Trait",
+    "tagline": "A composed jewelry study in navy.",
+    "description": "Nova Lariat is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Nova Lariat expands the Trait collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 98000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "navy",
+        "name": "Navy",
+        "color": {
+          "name": "Navy",
+          "hex": "#1f2d3d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Freshwater pearl",
+      "Gold-plated clasp"
+    ],
+    "craftsmanship": [
+      "Hand-strung elements",
+      "Artisan-finished links"
+    ],
+    "dimensions": {
+      "width": 18,
+      "height": 1.2,
+      "depth": 0.4,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "statement",
+      "modern"
+    ],
+    "occasions": [
+      "daily",
+      "business"
+    ],
+    "features": [
+      "Lightweight construction",
+      "Hand-finished closure"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35270159/pexels-photo-35270159.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Gold earring with diamond details worn on an ear",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-gold-earring-with-diamond-detailing-35270159/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "plisse-brooch",
+      "lumiere-tennis-bracelet"
+    ]
+  },
+  {
+    "id": "jewelry-12",
+    "slug": "plisse-brooch",
+    "sku": "AS-JWL-012",
+    "name": "Plissé Brooch",
+    "category": "jewelry",
+    "collection": "Lumière",
+    "tagline": "A composed jewelry study in sage.",
+    "description": "Plissé Brooch is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Plissé Brooch expands the Lumière collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 58000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "sage",
+        "name": "Sage",
+        "color": {
+          "name": "Sage",
+          "hex": "#77846f"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Gold-tone brass",
+      "Sterling silver detail"
+    ],
+    "craftsmanship": [
+      "Hand-polished surface",
+      "Individually finished clasp"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.2,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "sculptural",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Nickel-free finish",
+      "Atelier presentation pouch"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35528701/pexels-photo-35528701.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Jewelry presented by black-gloved hands on green",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/creative-jewelry-display-with-black-gloves-35528701/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "lumiere-tennis-bracelet",
+      "ondine-cocktail-ring"
+    ]
+  },
+  {
+    "id": "jewelry-13",
+    "slug": "lumiere-tennis-bracelet",
+    "sku": "AS-JWL-013",
+    "name": "Lumière Tennis Bracelet",
+    "category": "jewelry",
+    "collection": "Constellation",
+    "tagline": "A composed jewelry study in cognac.",
+    "description": "Lumière Tennis Bracelet is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Lumière Tennis Bracelet expands the Constellation collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 145000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "cognac",
+        "name": "Cognac",
+        "color": {
+          "name": "Cognac",
+          "hex": "#8b572a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Recycled sterling silver",
+      "Polished vermeil"
+    ],
+    "craftsmanship": [
+      "Hand-set decorative stones",
+      "Mirror-polished finish"
+    ],
+    "dimensions": {
+      "width": 2.4,
+      "height": 4.8,
+      "depth": 0.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "luminous",
+      "refined"
+    ],
+    "occasions": [
+      "occasion",
+      "evening"
+    ],
+    "features": [
+      "Adjustable fastening",
+      "Protective presentation box"
+    ],
+    "badges": [
+      "exclusive"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34118124/pexels-photo-34118124.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Gold bracelet, ring, and earring styled on a model",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-african-jewelry-on-model-s-arm-34118124/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "ondine-cocktail-ring",
+      "axis-ear-cuff"
+    ]
+  },
+  {
+    "id": "jewelry-14",
+    "slug": "ondine-cocktail-ring",
+    "sku": "AS-JWL-014",
+    "name": "Ondine Cocktail Ring",
+    "category": "jewelry",
+    "collection": "Orbite",
+    "tagline": "A composed jewelry study in black.",
+    "description": "Ondine Cocktail Ring is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Ondine Cocktail Ring expands the Orbite collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 84000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Freshwater pearl",
+      "Gold-plated clasp"
+    ],
+    "craftsmanship": [
+      "Hand-strung elements",
+      "Artisan-finished links"
+    ],
+    "dimensions": {
+      "width": 18,
+      "height": 1.2,
+      "depth": 0.4,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "statement",
+      "modern"
+    ],
+    "occasions": [
+      "daily",
+      "business"
+    ],
+    "features": [
+      "Lightweight construction",
+      "Hand-finished closure"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34330821/pexels-photo-34330821.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Hand holding an open locket in black and white",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/black-and-white-hand-holding-open-locket-34330821/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "axis-ear-cuff",
+      "rosee-pearl-strand"
+    ]
+  },
+  {
+    "id": "jewelry-15",
+    "slug": "axis-ear-cuff",
+    "sku": "AS-JWL-015",
+    "name": "Axis Ear Cuff",
+    "category": "jewelry",
+    "collection": "Trait",
+    "tagline": "A composed jewelry study in stone.",
+    "description": "Axis Ear Cuff is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Axis Ear Cuff expands the Trait collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 39000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Gold-tone brass",
+      "Sterling silver detail"
+    ],
+    "craftsmanship": [
+      "Hand-polished surface",
+      "Individually finished clasp"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.2,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "sculptural",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Nickel-free finish",
+      "Atelier presentation pouch"
+    ],
+    "badges": [
+      "limited"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/38909365/pexels-photo-38909365.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Silver rings reflected on a polished surface",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-silver-rings-with-reflection-38909365/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "rosee-pearl-strand",
+      "comete-charm"
+    ]
+  },
+  {
+    "id": "jewelry-16",
+    "slug": "rosee-pearl-strand",
+    "sku": "AS-JWL-016",
+    "name": "Rosée Pearl Strand",
+    "category": "jewelry",
+    "collection": "Lumière",
+    "tagline": "A composed jewelry study in oxblood.",
+    "description": "Rosée Pearl Strand is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Rosée Pearl Strand expands the Lumière collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 132000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "navy",
+        "name": "Navy",
+        "color": {
+          "name": "Navy",
+          "hex": "#1f2d3d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Recycled sterling silver",
+      "Polished vermeil"
+    ],
+    "craftsmanship": [
+      "Hand-set decorative stones",
+      "Mirror-polished finish"
+    ],
+    "dimensions": {
+      "width": 2.4,
+      "height": 4.8,
+      "depth": 0.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "luminous",
+      "refined"
+    ],
+    "occasions": [
+      "occasion",
+      "evening"
+    ],
+    "features": [
+      "Adjustable fastening",
+      "Protective presentation box"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36854159/pexels-photo-36854159.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Freshwater pearl necklace arranged on a white dish",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-freshwater-pearl-necklace-on-white-dish-36854159/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "comete-charm",
+      "equinoxe-band"
+    ]
+  },
+  {
+    "id": "jewelry-17",
+    "slug": "comete-charm",
+    "sku": "AS-JWL-017",
+    "name": "Comète Charm",
+    "category": "jewelry",
+    "collection": "Constellation",
+    "tagline": "A composed jewelry study in champagne.",
+    "description": "Comète Charm is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Comète Charm expands the Constellation collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 42000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "sage",
+        "name": "Sage",
+        "color": {
+          "name": "Sage",
+          "hex": "#77846f"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Freshwater pearl",
+      "Gold-plated clasp"
+    ],
+    "craftsmanship": [
+      "Hand-strung elements",
+      "Artisan-finished links"
+    ],
+    "dimensions": {
+      "width": 18,
+      "height": 1.2,
+      "depth": 0.4,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "statement",
+      "modern"
+    ],
+    "occasions": [
+      "daily",
+      "business"
+    ],
+    "features": [
+      "Lightweight construction",
+      "Hand-finished closure"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/37478922/pexels-photo-37478922.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Gold rings resting on a white rose",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-gold-wedding-rings-on-white-rose-37478922/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "equinoxe-band",
+      "vela-chandelier-earrings"
+    ]
+  },
+  {
+    "id": "jewelry-18",
+    "slug": "equinoxe-band",
+    "sku": "AS-JWL-018",
+    "name": "Équinoxe Band",
+    "category": "jewelry",
+    "collection": "Orbite",
+    "tagline": "A composed jewelry study in ivory.",
+    "description": "Équinoxe Band is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Équinoxe Band expands the Orbite collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 56000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "cognac",
+        "name": "Cognac",
+        "color": {
+          "name": "Cognac",
+          "hex": "#8b572a"
+        },
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Gold-tone brass",
+      "Sterling silver detail"
+    ],
+    "craftsmanship": [
+      "Hand-polished surface",
+      "Individually finished clasp"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.2,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "sculptural",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Nickel-free finish",
+      "Atelier presentation pouch"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35870512/pexels-photo-35870512.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Rings displayed in a box on white lace",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-wedding-rings-on-lace-background-35870512/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "vela-chandelier-earrings",
+      "sphere-collar"
+    ]
+  },
+  {
+    "id": "jewelry-19",
+    "slug": "vela-chandelier-earrings",
+    "sku": "AS-JWL-019",
+    "name": "Vela Chandelier Earrings",
+    "category": "jewelry",
+    "collection": "Trait",
+    "tagline": "A composed jewelry study in navy.",
+    "description": "Vela Chandelier Earrings is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Vela Chandelier Earrings expands the Trait collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 108000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "navy",
+        "name": "Navy",
+        "color": {
+          "name": "Navy",
+          "hex": "#1f2d3d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Recycled sterling silver",
+      "Polished vermeil"
+    ],
+    "craftsmanship": [
+      "Hand-set decorative stones",
+      "Mirror-polished finish"
+    ],
+    "dimensions": {
+      "width": 2.4,
+      "height": 4.8,
+      "depth": 0.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "luminous",
+      "refined"
+    ],
+    "occasions": [
+      "occasion",
+      "evening"
+    ],
+    "features": [
+      "Adjustable fastening",
+      "Protective presentation box"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34483830/pexels-photo-34483830.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Hand holding a sparkling star-shaped necklace",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/hand-holding-a-dazzling-star-necklace-34483830/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "sphere-collar",
+      "lyre-chain-bracelet"
+    ]
+  },
+  {
+    "id": "jewelry-20",
+    "slug": "sphere-collar",
+    "sku": "AS-JWL-020",
+    "name": "Sphère Collar",
+    "category": "jewelry",
+    "collection": "Lumière",
+    "tagline": "A composed jewelry study in sage.",
+    "description": "Sphère Collar is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Sphère Collar expands the Lumière collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 118000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "sage",
+        "name": "Sage",
+        "color": {
+          "name": "Sage",
+          "hex": "#77846f"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Freshwater pearl",
+      "Gold-plated clasp"
+    ],
+    "craftsmanship": [
+      "Hand-strung elements",
+      "Artisan-finished links"
+    ],
+    "dimensions": {
+      "width": 18,
+      "height": 1.2,
+      "depth": 0.4,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "statement",
+      "modern"
+    ],
+    "occasions": [
+      "daily",
+      "business"
+    ],
+    "features": [
+      "Lightweight construction",
+      "Hand-finished closure"
+    ],
+    "badges": [
+      "exclusive"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34534912/pexels-photo-34534912.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Woman adjusting an elegant pair of earrings",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-portrait-of-woman-adjusting-earrings-34534912/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "lyre-chain-bracelet",
+      "solaris-medallion"
+    ]
+  },
+  {
+    "id": "jewelry-21",
+    "slug": "lyre-chain-bracelet",
+    "sku": "AS-JWL-021",
+    "name": "Lyre Chain Bracelet",
+    "category": "jewelry",
+    "collection": "Constellation",
+    "tagline": "A composed jewelry study in cognac.",
+    "description": "Lyre Chain Bracelet is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Lyre Chain Bracelet expands the Constellation collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 92000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "cognac",
+        "name": "Cognac",
+        "color": {
+          "name": "Cognac",
+          "hex": "#8b572a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Gold-tone brass",
+      "Sterling silver detail"
+    ],
+    "craftsmanship": [
+      "Hand-polished surface",
+      "Individually finished clasp"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.2,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "sculptural",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Nickel-free finish",
+      "Atelier presentation pouch"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36731802/pexels-photo-36731802.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Woman wearing jewelry with a warm-toned dress",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/smiling-woman-posing-with-elegant-jewelry-36731802/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "solaris-medallion",
+      "miroir-ring-set"
+    ]
+  },
+  {
+    "id": "jewelry-22",
+    "slug": "solaris-medallion",
+    "sku": "AS-JWL-022",
+    "name": "Solaris Medallion",
+    "category": "jewelry",
+    "collection": "Orbite",
+    "tagline": "A composed jewelry study in black.",
+    "description": "Solaris Medallion is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Solaris Medallion expands the Orbite collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 76000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Recycled sterling silver",
+      "Polished vermeil"
+    ],
+    "craftsmanship": [
+      "Hand-set decorative stones",
+      "Mirror-polished finish"
+    ],
+    "dimensions": {
+      "width": 2.4,
+      "height": 4.8,
+      "depth": 0.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "luminous",
+      "refined"
+    ],
+    "occasions": [
+      "occasion",
+      "evening"
+    ],
+    "features": [
+      "Adjustable fastening",
+      "Protective presentation box"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/38712968/pexels-photo-38712968.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Hands arranging a pearl necklace on embroidered fabric",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/traditional-jewelry-adornment-with-red-stained-hands-38712968/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "miroir-ring-set",
+      "ariane-beaded-necklace"
+    ]
+  },
+  {
+    "id": "jewelry-23",
+    "slug": "miroir-ring-set",
+    "sku": "AS-JWL-023",
+    "name": "Miroir Ring Set",
+    "category": "jewelry",
+    "collection": "Trait",
+    "tagline": "A composed jewelry study in stone.",
+    "description": "Miroir Ring Set is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Miroir Ring Set expands the Trait collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 104000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Freshwater pearl",
+      "Gold-plated clasp"
+    ],
+    "craftsmanship": [
+      "Hand-strung elements",
+      "Artisan-finished links"
+    ],
+    "dimensions": {
+      "width": 18,
+      "height": 1.2,
+      "depth": 0.4,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "statement",
+      "modern"
+    ],
+    "occasions": [
+      "daily",
+      "business"
+    ],
+    "features": [
+      "Lightweight construction",
+      "Hand-finished closure"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36174142/pexels-photo-36174142.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Woman in a straw hat wearing a pearl necklace",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-woman-posing-with-large-straw-hat-and-jewelry-36174142/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "ariane-beaded-necklace",
+      "aster-pendant"
+    ]
+  },
+  {
+    "id": "jewelry-24",
+    "slug": "ariane-beaded-necklace",
+    "sku": "AS-JWL-024",
+    "name": "Ariane Beaded Necklace",
+    "category": "jewelry",
+    "collection": "Lumière",
+    "tagline": "A composed jewelry study in oxblood.",
+    "description": "Ariane Beaded Necklace is a fictional Atelier Serein jewelry balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Ariane Beaded Necklace expands the Lumière collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 128000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "navy",
+        "name": "Navy",
+        "color": {
+          "name": "Navy",
+          "hex": "#1f2d3d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Gold-tone brass",
+      "Sterling silver detail"
+    ],
+    "craftsmanship": [
+      "Hand-polished surface",
+      "Individually finished clasp"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.2,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Avoid water and fragrance",
+      "Polish with a jewelry cloth"
+    ],
+    "styleTags": [
+      "sculptural",
+      "minimal"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Nickel-free finish",
+      "Atelier presentation pouch"
+    ],
+    "badges": [
+      "limited"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/33737457/pexels-photo-33737457.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Handcrafted beaded necklaces arranged for display",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-display-of-handcrafted-bohemian-necklaces-33737457/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "aster-pendant",
+      "crescent-hoops"
+    ]
+  },
+  {
+    "id": "watch-06",
+    "slug": "aube-petite",
+    "sku": "AS-WAT-006",
+    "name": "Aube Petite",
+    "category": "watches",
+    "collection": "Temps",
+    "tagline": "A composed watch study in black.",
+    "description": "Aube Petite is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Aube Petite expands the Temps collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 325000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Stainless steel",
+      "Mineral crystal"
+    ],
+    "craftsmanship": [
+      "Brushed and polished case",
+      "Hand-fitted fictional dial"
+    ],
+    "dimensions": {
+      "width": 3.6,
+      "height": 4.2,
+      "depth": 0.9,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "architectural",
+      "timeless"
+    ],
+    "occasions": [
+      "business",
+      "daily"
+    ],
+    "features": [
+      "Quartz demonstration movement",
+      "Adjustable strap"
+    ],
+    "badges": [
+      "limited"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35463232/pexels-photo-35463232.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Close view of an intricate watch dial with gold accents",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/close-up-of-luxurious-swiss-watch-dial-35463232/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "minuit-chronograph",
+      "rivage-automatic"
+    ]
+  },
+  {
+    "id": "watch-07",
+    "slug": "minuit-chronograph",
+    "sku": "AS-WAT-007",
+    "name": "Minuit Chronograph",
+    "category": "watches",
+    "collection": "Minuit",
+    "tagline": "A composed watch study in stone.",
+    "description": "Minuit Chronograph is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Minuit Chronograph expands the Minuit collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 485000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Brushed steel",
+      "Sapphire-coated crystal"
+    ],
+    "craftsmanship": [
+      "Radially brushed dial",
+      "Individually fitted hands"
+    ],
+    "dimensions": {
+      "width": 4,
+      "height": 4.6,
+      "depth": 1.1,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "technical",
+      "refined"
+    ],
+    "occasions": [
+      "travel",
+      "daily"
+    ],
+    "features": [
+      "Automatic demonstration movement",
+      "Date display"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35463234/pexels-photo-35463234.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Gold watch with a moon-phase dial in a display box",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/luxury-gold-watch-in-display-box-35463234/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "rivage-automatic",
+      "epure-square"
+    ]
+  },
+  {
+    "id": "watch-08",
+    "slug": "rivage-automatic",
+    "sku": "AS-WAT-008",
+    "name": "Rivage Automatic",
+    "category": "watches",
+    "collection": "Voyage",
+    "tagline": "A composed watch study in oxblood.",
+    "description": "Rivage Automatic is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Rivage Automatic expands the Voyage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 535000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "navy",
+        "name": "Navy",
+        "color": {
+          "name": "Navy",
+          "hex": "#1f2d3d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Gold-tone steel",
+      "Leather strap"
+    ],
+    "craftsmanship": [
+      "Polished bezel",
+      "Hand-finished leather strap"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.8,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "minimal",
+      "classic"
+    ],
+    "occasions": [
+      "evening",
+      "occasion"
+    ],
+    "features": [
+      "Dual-time demonstration dial",
+      "Interchangeable strap"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35289481/pexels-photo-35289481.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Hand wearing an elegant watch and ring",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-male-hand-with-luxury-watch-and-ring-35289481/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "epure-square",
+      "solstice-gmt"
+    ]
+  },
+  {
+    "id": "watch-09",
+    "slug": "epure-square",
+    "sku": "AS-WAT-009",
+    "name": "Épure Square",
+    "category": "watches",
+    "collection": "Orbite",
+    "tagline": "A composed watch study in champagne.",
+    "description": "Épure Square is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Épure Square expands the Orbite collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 370000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "sage",
+        "name": "Sage",
+        "color": {
+          "name": "Sage",
+          "hex": "#77846f"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Stainless steel",
+      "Mineral crystal"
+    ],
+    "craftsmanship": [
+      "Brushed and polished case",
+      "Hand-fitted fictional dial"
+    ],
+    "dimensions": {
+      "width": 3.6,
+      "height": 4.2,
+      "depth": 0.9,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "architectural",
+      "timeless"
+    ],
+    "occasions": [
+      "business",
+      "daily"
+    ],
+    "features": [
+      "Quartz demonstration movement",
+      "Adjustable strap"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/37906286/pexels-photo-37906286.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Person in formal dress adjusting a wristwatch",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegantly-dressed-man-adjusting-wristwatch-close-up-37906286/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "solstice-gmt",
+      "ligne-petite"
+    ]
+  },
+  {
+    "id": "watch-10",
+    "slug": "solstice-gmt",
+    "sku": "AS-WAT-010",
+    "name": "Solstice GMT",
+    "category": "watches",
+    "collection": "Temps",
+    "tagline": "A composed watch study in ivory.",
+    "description": "Solstice GMT is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Solstice GMT expands the Temps collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 590000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "cognac",
+        "name": "Cognac",
+        "color": {
+          "name": "Cognac",
+          "hex": "#8b572a"
+        },
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Brushed steel",
+      "Sapphire-coated crystal"
+    ],
+    "craftsmanship": [
+      "Radially brushed dial",
+      "Individually fitted hands"
+    ],
+    "dimensions": {
+      "width": 4,
+      "height": 4.6,
+      "depth": 1.1,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "technical",
+      "refined"
+    ],
+    "occasions": [
+      "travel",
+      "daily"
+    ],
+    "features": [
+      "Automatic demonstration movement",
+      "Date display"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34948923/pexels-photo-34948923.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Watch resting on stone against a soft bokeh background",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-watch-on-stone-with-bokeh-background-34948923/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "ligne-petite",
+      "nocturne-reserve"
+    ]
+  },
+  {
+    "id": "watch-11",
+    "slug": "ligne-petite",
+    "sku": "AS-WAT-011",
+    "name": "Ligne Petite",
+    "category": "watches",
+    "collection": "Minuit",
+    "tagline": "A composed watch study in navy.",
+    "description": "Ligne Petite is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Ligne Petite expands the Minuit collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 345000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "navy",
+        "name": "Navy",
+        "color": {
+          "name": "Navy",
+          "hex": "#1f2d3d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Gold-tone steel",
+      "Leather strap"
+    ],
+    "craftsmanship": [
+      "Polished bezel",
+      "Hand-finished leather strap"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.8,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "minimal",
+      "classic"
+    ],
+    "occasions": [
+      "evening",
+      "occasion"
+    ],
+    "features": [
+      "Dual-time demonstration dial",
+      "Interchangeable strap"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34171708/pexels-photo-34171708.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Wristwatch worn while reading a book",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/close-up-of-wristwatch-on-person-reading-book-34171708/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "nocturne-reserve",
+      "halo-skeleton"
+    ]
+  },
+  {
+    "id": "watch-12",
+    "slug": "nocturne-reserve",
+    "sku": "AS-WAT-012",
+    "name": "Nocturne Reserve",
+    "category": "watches",
+    "collection": "Voyage",
+    "tagline": "A composed watch study in sage.",
+    "description": "Nocturne Reserve is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Nocturne Reserve expands the Voyage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 525000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "sage",
+        "name": "Sage",
+        "color": {
+          "name": "Sage",
+          "hex": "#77846f"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Stainless steel",
+      "Mineral crystal"
+    ],
+    "craftsmanship": [
+      "Brushed and polished case",
+      "Hand-fitted fictional dial"
+    ],
+    "dimensions": {
+      "width": 3.6,
+      "height": 4.2,
+      "depth": 0.9,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "architectural",
+      "timeless"
+    ],
+    "occasions": [
+      "business",
+      "daily"
+    ],
+    "features": [
+      "Quartz demonstration movement",
+      "Adjustable strap"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34186691/pexels-photo-34186691.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Steel wristwatch with a teal dial on dark fabric",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/stylish-citizen-watch-with-teal-dial-on-dark-fabric-34186691/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "halo-skeleton",
+      "passage-dual-time"
+    ]
+  },
+  {
+    "id": "watch-13",
+    "slug": "halo-skeleton",
+    "sku": "AS-WAT-013",
+    "name": "Halo Skeleton",
+    "category": "watches",
+    "collection": "Orbite",
+    "tagline": "A composed watch study in cognac.",
+    "description": "Halo Skeleton is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Halo Skeleton expands the Orbite collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 680000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "cognac",
+        "name": "Cognac",
+        "color": {
+          "name": "Cognac",
+          "hex": "#8b572a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Brushed steel",
+      "Sapphire-coated crystal"
+    ],
+    "craftsmanship": [
+      "Radially brushed dial",
+      "Individually fitted hands"
+    ],
+    "dimensions": {
+      "width": 4,
+      "height": 4.6,
+      "depth": 1.1,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "technical",
+      "refined"
+    ],
+    "occasions": [
+      "travel",
+      "daily"
+    ],
+    "features": [
+      "Automatic demonstration movement",
+      "Date display"
+    ],
+    "badges": [
+      "exclusive"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36684851/pexels-photo-36684851.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Green wristwatch worn inside a refined car interior",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/luxury-car-interior-with-wristwatch-focus-36684851/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "passage-dual-time",
+      "meridian-36"
+    ]
+  },
+  {
+    "id": "watch-14",
+    "slug": "passage-dual-time",
+    "sku": "AS-WAT-014",
+    "name": "Passage Dual Time",
+    "category": "watches",
+    "collection": "Temps",
+    "tagline": "A composed watch study in black.",
+    "description": "Passage Dual Time is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Passage Dual Time expands the Temps collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 510000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Gold-tone steel",
+      "Leather strap"
+    ],
+    "craftsmanship": [
+      "Polished bezel",
+      "Hand-finished leather strap"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.8,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "minimal",
+      "classic"
+    ],
+    "occasions": [
+      "evening",
+      "occasion"
+    ],
+    "features": [
+      "Dual-time demonstration dial",
+      "Interchangeable strap"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36617472/pexels-photo-36617472.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Titanium wristwatch with a detailed dark dial",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/citizen-eco-drive-titanium-watch-close-up-36617472/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "meridian-36",
+      "celeste-moonphase"
+    ]
+  },
+  {
+    "id": "watch-15",
+    "slug": "meridian-36",
+    "sku": "AS-WAT-015",
+    "name": "Meridian 36",
+    "category": "watches",
+    "collection": "Minuit",
+    "tagline": "A composed watch study in stone.",
+    "description": "Meridian 36 is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Meridian 36 expands the Minuit collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 420000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Stainless steel",
+      "Mineral crystal"
+    ],
+    "craftsmanship": [
+      "Brushed and polished case",
+      "Hand-fitted fictional dial"
+    ],
+    "dimensions": {
+      "width": 3.6,
+      "height": 4.2,
+      "depth": 0.9,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "architectural",
+      "timeless"
+    ],
+    "occasions": [
+      "business",
+      "daily"
+    ],
+    "features": [
+      "Quartz demonstration movement",
+      "Adjustable strap"
+    ],
+    "badges": [
+      "limited"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34069472/pexels-photo-34069472.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Silver watch with a black face displayed on wood",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-silver-watch-displayed-on-wooden-surface-34069472/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "celeste-moonphase",
+      "atelier-field"
+    ]
+  },
+  {
+    "id": "watch-16",
+    "slug": "celeste-moonphase",
+    "sku": "AS-WAT-016",
+    "name": "Céleste Moonphase",
+    "category": "watches",
+    "collection": "Voyage",
+    "tagline": "A composed watch study in oxblood.",
+    "description": "Céleste Moonphase is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Céleste Moonphase expands the Voyage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 615000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "navy",
+        "name": "Navy",
+        "color": {
+          "name": "Navy",
+          "hex": "#1f2d3d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Brushed steel",
+      "Sapphire-coated crystal"
+    ],
+    "craftsmanship": [
+      "Radially brushed dial",
+      "Individually fitted hands"
+    ],
+    "dimensions": {
+      "width": 4,
+      "height": 4.6,
+      "depth": 1.1,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "technical",
+      "refined"
+    ],
+    "occasions": [
+      "travel",
+      "daily"
+    ],
+    "features": [
+      "Automatic demonstration movement",
+      "Date display"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35675692/pexels-photo-35675692.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Gold watch and pearl bracelet in a brown flat lay",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/brown-shirt-top-with-gold-watch-flat-lay-35675692/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "atelier-field",
+      "nacre-oval"
+    ]
+  },
+  {
+    "id": "watch-17",
+    "slug": "atelier-field",
+    "sku": "AS-WAT-017",
+    "name": "Atelier Field",
+    "category": "watches",
+    "collection": "Orbite",
+    "tagline": "A composed watch study in champagne.",
+    "description": "Atelier Field is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Atelier Field expands the Orbite collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 395000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "sage",
+        "name": "Sage",
+        "color": {
+          "name": "Sage",
+          "hex": "#77846f"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Gold-tone steel",
+      "Leather strap"
+    ],
+    "craftsmanship": [
+      "Polished bezel",
+      "Hand-finished leather strap"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.8,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "minimal",
+      "classic"
+    ],
+    "occasions": [
+      "evening",
+      "occasion"
+    ],
+    "features": [
+      "Dual-time demonstration dial",
+      "Interchangeable strap"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/37096026/pexels-photo-37096026.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Classic wristwatch photographed in black and white",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/close-up-of-a-timex-wristwatch-in-black-and-white-37096026/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "nacre-oval",
+      "orbite-calendar"
+    ]
+  },
+  {
+    "id": "watch-18",
+    "slug": "nacre-oval",
+    "sku": "AS-WAT-018",
+    "name": "Nacre Oval",
+    "category": "watches",
+    "collection": "Temps",
+    "tagline": "A composed watch study in ivory.",
+    "description": "Nacre Oval is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Nacre Oval expands the Temps collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 360000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "cognac",
+        "name": "Cognac",
+        "color": {
+          "name": "Cognac",
+          "hex": "#8b572a"
+        },
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Stainless steel",
+      "Mineral crystal"
+    ],
+    "craftsmanship": [
+      "Brushed and polished case",
+      "Hand-fitted fictional dial"
+    ],
+    "dimensions": {
+      "width": 3.6,
+      "height": 4.2,
+      "depth": 0.9,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "architectural",
+      "timeless"
+    ],
+    "occasions": [
+      "business",
+      "daily"
+    ],
+    "features": [
+      "Quartz demonstration movement",
+      "Adjustable strap"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34968267/pexels-photo-34968267.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Watch and cufflinks arranged with formal accessories",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-men-s-accessories-with-watch-and-cufflinks-34968267/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "orbite-calendar",
+      "serein-diver"
+    ]
+  },
+  {
+    "id": "watch-19",
+    "slug": "orbite-calendar",
+    "sku": "AS-WAT-019",
+    "name": "Orbite Calendar",
+    "category": "watches",
+    "collection": "Minuit",
+    "tagline": "A composed watch study in navy.",
+    "description": "Orbite Calendar is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Orbite Calendar expands the Minuit collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 550000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "navy",
+        "name": "Navy",
+        "color": {
+          "name": "Navy",
+          "hex": "#1f2d3d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Brushed steel",
+      "Sapphire-coated crystal"
+    ],
+    "craftsmanship": [
+      "Radially brushed dial",
+      "Individually fitted hands"
+    ],
+    "dimensions": {
+      "width": 4,
+      "height": 4.6,
+      "depth": 1.1,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "technical",
+      "refined"
+    ],
+    "occasions": [
+      "travel",
+      "daily"
+    ],
+    "features": [
+      "Automatic demonstration movement",
+      "Date display"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/33860143/pexels-photo-33860143.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Metal wristwatch on a colorful geometric background",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/stylish-wristwatch-on-colorful-abstract-background-33860143/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "serein-diver",
+      "trait-rectangular"
+    ]
+  },
+  {
+    "id": "watch-20",
+    "slug": "serein-diver",
+    "sku": "AS-WAT-020",
+    "name": "Serein Diver",
+    "category": "watches",
+    "collection": "Voyage",
+    "tagline": "A composed watch study in sage.",
+    "description": "Serein Diver is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Serein Diver expands the Voyage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 495000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "sage",
+        "name": "Sage",
+        "color": {
+          "name": "Sage",
+          "hex": "#77846f"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Gold-tone steel",
+      "Leather strap"
+    ],
+    "craftsmanship": [
+      "Polished bezel",
+      "Hand-finished leather strap"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.8,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "minimal",
+      "classic"
+    ],
+    "occasions": [
+      "evening",
+      "occasion"
+    ],
+    "features": [
+      "Dual-time demonstration dial",
+      "Interchangeable strap"
+    ],
+    "badges": [
+      "exclusive"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/33860169/pexels-photo-33860169.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Steel wristwatch on a vibrant color-block background",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/stylish-watch-on-colorful-background-33860169/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "trait-rectangular",
+      "voyage-worldtimer"
+    ]
+  },
+  {
+    "id": "watch-21",
+    "slug": "trait-rectangular",
+    "sku": "AS-WAT-021",
+    "name": "Trait Rectangular",
+    "category": "watches",
+    "collection": "Orbite",
+    "tagline": "A composed watch study in cognac.",
+    "description": "Trait Rectangular is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Trait Rectangular expands the Orbite collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 405000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "cognac",
+        "name": "Cognac",
+        "color": {
+          "name": "Cognac",
+          "hex": "#8b572a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Stainless steel",
+      "Mineral crystal"
+    ],
+    "craftsmanship": [
+      "Brushed and polished case",
+      "Hand-fitted fictional dial"
+    ],
+    "dimensions": {
+      "width": 3.6,
+      "height": 4.2,
+      "depth": 0.9,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "architectural",
+      "timeless"
+    ],
+    "occasions": [
+      "business",
+      "daily"
+    ],
+    "features": [
+      "Quartz demonstration movement",
+      "Adjustable strap"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35114552/pexels-photo-35114552.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Gold watch and jewelry styled on a hand",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-african-style-with-gold-watch-and-jewelry-35114552/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "voyage-worldtimer",
+      "aurore-classic"
+    ]
+  },
+  {
+    "id": "watch-22",
+    "slug": "voyage-worldtimer",
+    "sku": "AS-WAT-022",
+    "name": "Voyage Worldtimer",
+    "category": "watches",
+    "collection": "Temps",
+    "tagline": "A composed watch study in black.",
+    "description": "Voyage Worldtimer is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Voyage Worldtimer expands the Temps collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 640000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "black",
+        "name": "Black",
+        "color": {
+          "name": "Black",
+          "hex": "#171412"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "champagne",
+        "name": "Champagne",
+        "color": {
+          "name": "Champagne",
+          "hex": "#c8aa72"
+        },
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Brushed steel",
+      "Sapphire-coated crystal"
+    ],
+    "craftsmanship": [
+      "Radially brushed dial",
+      "Individually fitted hands"
+    ],
+    "dimensions": {
+      "width": 4,
+      "height": 4.6,
+      "depth": 1.1,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "technical",
+      "refined"
+    ],
+    "occasions": [
+      "travel",
+      "daily"
+    ],
+    "features": [
+      "Automatic demonstration movement",
+      "Date display"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/37901002/pexels-photo-37901002.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Groom adjusting an elegant watch before a wedding",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/close-up-of-groom-adjusting-watch-on-wedding-day-37901002/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "aurore-classic",
+      "temps-bleu"
+    ]
+  },
+  {
+    "id": "watch-23",
+    "slug": "aurore-classic",
+    "sku": "AS-WAT-023",
+    "name": "Aurore Classic",
+    "category": "watches",
+    "collection": "Minuit",
+    "tagline": "A composed watch study in stone.",
+    "description": "Aurore Classic is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Aurore Classic expands the Minuit collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 385000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "stone",
+        "name": "Stone",
+        "color": {
+          "name": "Stone",
+          "hex": "#82786d"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "ivory",
+        "name": "Ivory",
+        "color": {
+          "name": "Ivory",
+          "hex": "#f5f0e7"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Gold-tone steel",
+      "Leather strap"
+    ],
+    "craftsmanship": [
+      "Polished bezel",
+      "Hand-finished leather strap"
+    ],
+    "dimensions": {
+      "width": 3.2,
+      "height": 3.8,
+      "depth": 0.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "minimal",
+      "classic"
+    ],
+    "occasions": [
+      "evening",
+      "occasion"
+    ],
+    "features": [
+      "Dual-time demonstration dial",
+      "Interchangeable strap"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/37055868/pexels-photo-37055868.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Vintage watch and eyeglasses arranged in a leather case",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/vintage-watch-and-eyeglasses-in-leather-case-37055868/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "temps-bleu",
+      "aube-petite"
+    ]
+  },
+  {
+    "id": "watch-24",
+    "slug": "temps-bleu",
+    "sku": "AS-WAT-024",
+    "name": "Temps Bleu",
+    "category": "watches",
+    "collection": "Voyage",
+    "tagline": "A composed watch study in oxblood.",
+    "description": "Temps Bleu is a fictional Atelier Serein watch balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Temps Bleu expands the Voyage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 455000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "oxblood",
+        "name": "Oxblood",
+        "color": {
+          "name": "Oxblood",
+          "hex": "#651c2a"
+        },
+        "availability": "available"
+      },
+      {
+        "id": "navy",
+        "name": "Navy",
+        "color": {
+          "name": "Navy",
+          "hex": "#1f2d3d"
+        },
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Stainless steel",
+      "Mineral crystal"
+    ],
+    "craftsmanship": [
+      "Brushed and polished case",
+      "Hand-fitted fictional dial"
+    ],
+    "dimensions": {
+      "width": 3.6,
+      "height": 4.2,
+      "depth": 0.9,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Keep away from strong magnetic fields",
+      "Clean with a dry microfiber cloth"
+    ],
+    "styleTags": [
+      "architectural",
+      "timeless"
+    ],
+    "occasions": [
+      "business",
+      "daily"
+    ],
+    "features": [
+      "Quartz demonstration movement",
+      "Adjustable strap"
+    ],
+    "badges": [
+      "limited"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34186692/pexels-photo-34186692.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Steel wristwatch with a teal dial in studio lighting",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-wrist-watch-with-teal-dial-in-studio-lighting-34186692/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "aube-petite",
+      "minuit-chronograph"
+    ]
+  },
+  {
+    "id": "fragrance-06",
+    "slug": "ambre-voile",
+    "sku": "AS-FRG-006",
+    "name": "Ambre Voilé",
+    "category": "fragrance",
+    "collection": "Essences",
+    "tagline": "A composed fragrance study in woody.",
+    "description": "Ambre Voilé is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Ambre Voilé expands the Essences collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 19800,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Eau de parfum",
+      "Glass flacon"
+    ],
+    "craftsmanship": [
+      "Layered fictional composition",
+      "Small-batch presentation"
+    ],
+    "dimensions": {
+      "width": 6.2,
+      "height": 11.5,
+      "depth": 3.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "woody",
+      "atmospheric"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Fictional eau de parfum",
+      "Reusable presentation box"
+    ],
+    "badges": [
+      "limited"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36389344/pexels-photo-36389344.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Ornate glass perfume bottle on a reflective surface",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/ornate-glass-perfume-bottle-with-elegant-design-36389344/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "cedre-blanc",
+      "fleur-de-minuit"
+    ]
+  },
+  {
+    "id": "fragrance-07",
+    "slug": "cedre-blanc",
+    "sku": "AS-FRG-007",
+    "name": "Cèdre Blanc",
+    "category": "fragrance",
+    "collection": "Jardin",
+    "tagline": "A composed fragrance study in floral.",
+    "description": "Cèdre Blanc is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Cèdre Blanc expands the Jardin collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 20500,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Alcohol-based fragrance",
+      "Frosted glass flacon"
+    ],
+    "craftsmanship": [
+      "Fictional extrait blending",
+      "Hand-finished presentation label"
+    ],
+    "dimensions": {
+      "width": 5.8,
+      "height": 10.8,
+      "depth": 3.2,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "floral",
+      "luminous"
+    ],
+    "occasions": [
+      "daily",
+      "occasion"
+    ],
+    "features": [
+      "Fictional fragrance composition",
+      "Recyclable glass bottle"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35237609/pexels-photo-35237609.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Perfume bottle with delicate flowers in dramatic light",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-perfume-bottle-in-dramatic-lighting-35237609/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "fleur-de-minuit",
+      "sel-marin"
+    ]
+  },
+  {
+    "id": "fragrance-08",
+    "slug": "fleur-de-minuit",
+    "sku": "AS-FRG-008",
+    "name": "Fleur de Minuit",
+    "category": "fragrance",
+    "collection": "Nocturne",
+    "tagline": "A composed fragrance study in fresh.",
+    "description": "Fleur de Minuit is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Fleur de Minuit expands the Nocturne collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 21500,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Botanical fragrance accord",
+      "Refillable glass flacon"
+    ],
+    "craftsmanship": [
+      "Balanced fictional accord",
+      "Small-series bottling"
+    ],
+    "dimensions": {
+      "width": 6.5,
+      "height": 12,
+      "depth": 3.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "fresh",
+      "mineral"
+    ],
+    "occasions": [
+      "travel",
+      "daily"
+    ],
+    "features": [
+      "Fictional scent concentrate",
+      "Travel-ready presentation case"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/33376722/pexels-photo-33376722.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Black perfume bottle displayed on a wooden surface",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-black-perfume-bottle-on-wooden-surface-33376722/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "sel-marin",
+      "mousse-diris"
+    ]
+  },
+  {
+    "id": "fragrance-09",
+    "slug": "sel-marin",
+    "sku": "AS-FRG-009",
+    "name": "Sel Marin",
+    "category": "fragrance",
+    "collection": "Rivage",
+    "tagline": "A composed fragrance study in woody.",
+    "description": "Sel Marin is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Sel Marin expands the Rivage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 18200,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Eau de parfum",
+      "Glass flacon"
+    ],
+    "craftsmanship": [
+      "Layered fictional composition",
+      "Small-batch presentation"
+    ],
+    "dimensions": {
+      "width": 6.2,
+      "height": 11.5,
+      "depth": 3.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "woody",
+      "atmospheric"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Fictional eau de parfum",
+      "Reusable presentation box"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36779957/pexels-photo-36779957.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Glass perfume bottle illuminated on textured fabric",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-glass-perfume-bottle-on-textured-fabric-36779957/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "mousse-diris",
+      "neroli-calme"
+    ]
+  },
+  {
+    "id": "fragrance-10",
+    "slug": "mousse-diris",
+    "sku": "AS-FRG-010",
+    "name": "Mousse d’Iris",
+    "category": "fragrance",
+    "collection": "Essences",
+    "tagline": "A composed fragrance study in floral.",
+    "description": "Mousse d’Iris is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Mousse d’Iris expands the Essences collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 21000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Alcohol-based fragrance",
+      "Frosted glass flacon"
+    ],
+    "craftsmanship": [
+      "Fictional extrait blending",
+      "Hand-finished presentation label"
+    ],
+    "dimensions": {
+      "width": 5.8,
+      "height": 10.8,
+      "depth": 3.2,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "floral",
+      "luminous"
+    ],
+    "occasions": [
+      "daily",
+      "occasion"
+    ],
+    "features": [
+      "Fictional fragrance composition",
+      "Recyclable glass bottle"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36779956/pexels-photo-36779956.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Elegant perfume bottle resting on soft fabric",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-perfume-bottle-on-luxurious-fabric-36779956/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "neroli-calme",
+      "vetiver-serein"
+    ]
+  },
+  {
+    "id": "fragrance-11",
+    "slug": "neroli-calme",
+    "sku": "AS-FRG-011",
+    "name": "Néroli Calme",
+    "category": "fragrance",
+    "collection": "Jardin",
+    "tagline": "A composed fragrance study in fresh.",
+    "description": "Néroli Calme is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Néroli Calme expands the Jardin collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 18800,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Botanical fragrance accord",
+      "Refillable glass flacon"
+    ],
+    "craftsmanship": [
+      "Balanced fictional accord",
+      "Small-series bottling"
+    ],
+    "dimensions": {
+      "width": 6.5,
+      "height": 12,
+      "depth": 3.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "fresh",
+      "mineral"
+    ],
+    "occasions": [
+      "travel",
+      "daily"
+    ],
+    "features": [
+      "Fictional scent concentrate",
+      "Travel-ready presentation case"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34089128/pexels-photo-34089128.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Frosted perfume bottle against a textured background",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-frosted-perfume-bottle-with-artistic-background-34089128/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "vetiver-serein",
+      "the-noir"
+    ]
+  },
+  {
+    "id": "fragrance-12",
+    "slug": "vetiver-serein",
+    "sku": "AS-FRG-012",
+    "name": "Vétiver Serein",
+    "category": "fragrance",
+    "collection": "Nocturne",
+    "tagline": "A composed fragrance study in woody.",
+    "description": "Vétiver Serein is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Vétiver Serein expands the Nocturne collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 22000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Eau de parfum",
+      "Glass flacon"
+    ],
+    "craftsmanship": [
+      "Layered fictional composition",
+      "Small-batch presentation"
+    ],
+    "dimensions": {
+      "width": 6.2,
+      "height": 11.5,
+      "depth": 3.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "woody",
+      "atmospheric"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Fictional eau de parfum",
+      "Reusable presentation box"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36779954/pexels-photo-36779954.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Minimal glass perfume bottle displayed on lush fabric",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-glass-perfume-bottle-on-soft-fabric-36779954/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "the-noir",
+      "rose-de-pierre"
+    ]
+  },
+  {
+    "id": "fragrance-13",
+    "slug": "the-noir",
+    "sku": "AS-FRG-013",
+    "name": "Thé Noir",
+    "category": "fragrance",
+    "collection": "Rivage",
+    "tagline": "A composed fragrance study in floral.",
+    "description": "Thé Noir is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Thé Noir expands the Rivage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 19500,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Alcohol-based fragrance",
+      "Frosted glass flacon"
+    ],
+    "craftsmanship": [
+      "Fictional extrait blending",
+      "Hand-finished presentation label"
+    ],
+    "dimensions": {
+      "width": 5.8,
+      "height": 10.8,
+      "depth": 3.2,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "floral",
+      "luminous"
+    ],
+    "occasions": [
+      "daily",
+      "occasion"
+    ],
+    "features": [
+      "Fictional fragrance composition",
+      "Recyclable glass bottle"
+    ],
+    "badges": [
+      "exclusive"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34485559/pexels-photo-34485559.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Blue perfume bottle with flowers and earrings on marble",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-blue-perfume-bottle-with-flowers-34485559/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "rose-de-pierre",
+      "jasmin-daube"
+    ]
+  },
+  {
+    "id": "fragrance-14",
+    "slug": "rose-de-pierre",
+    "sku": "AS-FRG-014",
+    "name": "Rose de Pierre",
+    "category": "fragrance",
+    "collection": "Essences",
+    "tagline": "A composed fragrance study in fresh.",
+    "description": "Rose de Pierre is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Rose de Pierre expands the Essences collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 20800,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Botanical fragrance accord",
+      "Refillable glass flacon"
+    ],
+    "craftsmanship": [
+      "Balanced fictional accord",
+      "Small-series bottling"
+    ],
+    "dimensions": {
+      "width": 6.5,
+      "height": 12,
+      "depth": 3.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "fresh",
+      "mineral"
+    ],
+    "occasions": [
+      "travel",
+      "daily"
+    ],
+    "features": [
+      "Fictional scent concentrate",
+      "Travel-ready presentation case"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36779951/pexels-photo-36779951.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Clear perfume bottle arranged on softly folded fabric",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-glass-perfume-bottle-on-soft-fabric-36779951/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "jasmin-daube",
+      "cuir-poudre"
+    ]
+  },
+  {
+    "id": "fragrance-15",
+    "slug": "jasmin-daube",
+    "sku": "AS-FRG-015",
+    "name": "Jasmin d’Aube",
+    "category": "fragrance",
+    "collection": "Jardin",
+    "tagline": "A composed fragrance study in woody.",
+    "description": "Jasmin d’Aube is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Jasmin d’Aube expands the Jardin collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 19000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Eau de parfum",
+      "Glass flacon"
+    ],
+    "craftsmanship": [
+      "Layered fictional composition",
+      "Small-batch presentation"
+    ],
+    "dimensions": {
+      "width": 6.2,
+      "height": 11.5,
+      "depth": 3.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "woody",
+      "atmospheric"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Fictional eau de parfum",
+      "Reusable presentation box"
+    ],
+    "badges": [
+      "limited"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34051691/pexels-photo-34051691.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Three diamond-cut perfume bottles on white fabric",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-diamond-cut-perfume-bottles-display-34051691/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "cuir-poudre",
+      "figue-nocturne"
+    ]
+  },
+  {
+    "id": "fragrance-16",
+    "slug": "cuir-poudre",
+    "sku": "AS-FRG-016",
+    "name": "Cuir Poudré",
+    "category": "fragrance",
+    "collection": "Nocturne",
+    "tagline": "A composed fragrance study in floral.",
+    "description": "Cuir Poudré is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Cuir Poudré expands the Nocturne collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 22500,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Alcohol-based fragrance",
+      "Frosted glass flacon"
+    ],
+    "craftsmanship": [
+      "Fictional extrait blending",
+      "Hand-finished presentation label"
+    ],
+    "dimensions": {
+      "width": 5.8,
+      "height": 10.8,
+      "depth": 3.2,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "floral",
+      "luminous"
+    ],
+    "occasions": [
+      "daily",
+      "occasion"
+    ],
+    "features": [
+      "Fictional fragrance composition",
+      "Recyclable glass bottle"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35432546/pexels-photo-35432546.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Perfume bottles arranged with a white lily",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-perfume-bottles-with-exotic-lily-35432546/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "figue-nocturne",
+      "encens-clair"
+    ]
+  },
+  {
+    "id": "fragrance-17",
+    "slug": "figue-nocturne",
+    "sku": "AS-FRG-017",
+    "name": "Figue Nocturne",
+    "category": "fragrance",
+    "collection": "Rivage",
+    "tagline": "A composed fragrance study in fresh.",
+    "description": "Figue Nocturne is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Figue Nocturne expands the Rivage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 21200,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Botanical fragrance accord",
+      "Refillable glass flacon"
+    ],
+    "craftsmanship": [
+      "Balanced fictional accord",
+      "Small-series bottling"
+    ],
+    "dimensions": {
+      "width": 6.5,
+      "height": 12,
+      "depth": 3.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "fresh",
+      "mineral"
+    ],
+    "occasions": [
+      "travel",
+      "daily"
+    ],
+    "features": [
+      "Fictional scent concentrate",
+      "Travel-ready presentation case"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35658148/pexels-photo-35658148.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Hands holding a dark perfume bottle on green",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-close-up-of-hands-holding-perfume-bottle-35658148/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "encens-clair",
+      "bergamote-lente"
+    ]
+  },
+  {
+    "id": "fragrance-18",
+    "slug": "encens-clair",
+    "sku": "AS-FRG-018",
+    "name": "Encens Clair",
+    "category": "fragrance",
+    "collection": "Essences",
+    "tagline": "A composed fragrance study in woody.",
+    "description": "Encens Clair is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Encens Clair expands the Essences collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 20200,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Eau de parfum",
+      "Glass flacon"
+    ],
+    "craftsmanship": [
+      "Layered fictional composition",
+      "Small-batch presentation"
+    ],
+    "dimensions": {
+      "width": 6.2,
+      "height": 11.5,
+      "depth": 3.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "woody",
+      "atmospheric"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Fictional eau de parfum",
+      "Reusable presentation box"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36779952/pexels-photo-36779952.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Glass perfume bottle displayed on dark textured fabric",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/stylish-men-s-perfume-bottle-on-textured-fabric-36779952/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "bergamote-lente",
+      "santal-brume"
+    ]
+  },
+  {
+    "id": "fragrance-19",
+    "slug": "bergamote-lente",
+    "sku": "AS-FRG-019",
+    "name": "Bergamote Lente",
+    "category": "fragrance",
+    "collection": "Jardin",
+    "tagline": "A composed fragrance study in floral.",
+    "description": "Bergamote Lente is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Bergamote Lente expands the Jardin collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 18500,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Alcohol-based fragrance",
+      "Frosted glass flacon"
+    ],
+    "craftsmanship": [
+      "Fictional extrait blending",
+      "Hand-finished presentation label"
+    ],
+    "dimensions": {
+      "width": 5.8,
+      "height": 10.8,
+      "depth": 3.2,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "floral",
+      "luminous"
+    ],
+    "occasions": [
+      "daily",
+      "occasion"
+    ],
+    "features": [
+      "Fictional fragrance composition",
+      "Recyclable glass bottle"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/35458350/pexels-photo-35458350.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Pink perfume bottles and soaps arranged for display",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-display-of-perfume-bottles-and-soaps-35458350/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "santal-brume",
+      "magnolia-gris"
+    ]
+  },
+  {
+    "id": "fragrance-20",
+    "slug": "santal-brume",
+    "sku": "AS-FRG-020",
+    "name": "Santal Brume",
+    "category": "fragrance",
+    "collection": "Nocturne",
+    "tagline": "A composed fragrance study in fresh.",
+    "description": "Santal Brume is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Santal Brume expands the Nocturne collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 21800,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Botanical fragrance accord",
+      "Refillable glass flacon"
+    ],
+    "craftsmanship": [
+      "Balanced fictional accord",
+      "Small-series bottling"
+    ],
+    "dimensions": {
+      "width": 6.5,
+      "height": 12,
+      "depth": 3.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "fresh",
+      "mineral"
+    ],
+    "occasions": [
+      "travel",
+      "daily"
+    ],
+    "features": [
+      "Fictional scent concentrate",
+      "Travel-ready presentation case"
+    ],
+    "badges": [
+      "exclusive"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36459921/pexels-photo-36459921.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Perfume bottles presented in an elegant gift display",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-gift-box-display-with-perfume-bottles-36459921/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "magnolia-gris",
+      "feuille-dor"
+    ]
+  },
+  {
+    "id": "fragrance-21",
+    "slug": "magnolia-gris",
+    "sku": "AS-FRG-021",
+    "name": "Magnolia Gris",
+    "category": "fragrance",
+    "collection": "Rivage",
+    "tagline": "A composed fragrance study in woody.",
+    "description": "Magnolia Gris is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Magnolia Gris expands the Rivage collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 20000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Eau de parfum",
+      "Glass flacon"
+    ],
+    "craftsmanship": [
+      "Layered fictional composition",
+      "Small-batch presentation"
+    ],
+    "dimensions": {
+      "width": 6.2,
+      "height": 11.5,
+      "depth": 3.5,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "woody",
+      "atmospheric"
+    ],
+    "occasions": [
+      "evening",
+      "daily"
+    ],
+    "features": [
+      "Fictional eau de parfum",
+      "Reusable presentation box"
+    ],
+    "badges": [
+      "new"
+    ],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/34144749/pexels-photo-34144749.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Hands presenting a perfume bottle and decorative box",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/elegant-perfume-gift-set-with-decorative-box-34144749/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "feuille-dor",
+      "pluie-dete"
+    ]
+  },
+  {
+    "id": "fragrance-22",
+    "slug": "feuille-dor",
+    "sku": "AS-FRG-022",
+    "name": "Feuille d’Or",
+    "category": "fragrance",
+    "collection": "Essences",
+    "tagline": "A composed fragrance study in floral.",
+    "description": "Feuille d’Or is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Feuille d’Or expands the Essences collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 23000,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "limited"
+      }
+    ],
+    "materials": [
+      "Alcohol-based fragrance",
+      "Frosted glass flacon"
+    ],
+    "craftsmanship": [
+      "Fictional extrait blending",
+      "Hand-finished presentation label"
+    ],
+    "dimensions": {
+      "width": 5.8,
+      "height": 10.8,
+      "depth": 3.2,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "floral",
+      "luminous"
+    ],
+    "occasions": [
+      "daily",
+      "occasion"
+    ],
+    "features": [
+      "Fictional fragrance composition",
+      "Recyclable glass bottle"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/36801961/pexels-photo-36801961.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Dark aromatic bottles and incense sticks on white",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/modern-aromatic-bottles-with-incense-sticks-36801961/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "pluie-dete",
+      "ambre-voile"
+    ]
+  },
+  {
+    "id": "fragrance-23",
+    "slug": "pluie-dete",
+    "sku": "AS-FRG-023",
+    "name": "Pluie d’Été",
+    "category": "fragrance",
+    "collection": "Jardin",
+    "tagline": "A composed fragrance study in fresh.",
+    "description": "Pluie d’Été is a fictional Atelier Serein fragrance balancing restrained form with tactile detail.",
+    "story": "Created for the Atelier Serein demonstration, Pluie d’Été expands the Jardin collection without representing a real manufactured product.",
+    "price": {
+      "amountMinor": 19200,
+      "currency": "EUR"
+    },
+    "variants": [
+      {
+        "id": "50-ml",
+        "name": "50 ml",
+        "size": "50 ml",
+        "availability": "available"
+      },
+      {
+        "id": "100-ml",
+        "name": "100 ml",
+        "size": "100 ml",
+        "availability": "available"
+      }
+    ],
+    "materials": [
+      "Botanical fragrance accord",
+      "Refillable glass flacon"
+    ],
+    "craftsmanship": [
+      "Balanced fictional accord",
+      "Small-series bottling"
+    ],
+    "dimensions": {
+      "width": 6.5,
+      "height": 12,
+      "depth": 3.8,
+      "unit": "cm"
+    },
+    "origin": "Fictional atelier, France",
+    "care": [
+      "Store away from heat and direct sunlight",
+      "Keep cap securely closed"
+    ],
+    "styleTags": [
+      "fresh",
+      "mineral"
+    ],
+    "occasions": [
+      "travel",
+      "daily"
+    ],
+    "features": [
+      "Fictional scent concentrate",
+      "Travel-ready presentation case"
+    ],
+    "badges": [],
+    "featured": false,
+    "images": [
+      {
+        "src": "https://images.pexels.com/photos/4021778/pexels-photo-4021778.jpeg?auto=compress&cs=tinysrgb&w=1200",
+        "alt": "Dropper releasing aromatic oil into a dark glass bottle",
+        "width": 1200,
+        "height": 1500,
+        "role": "hero",
+        "sourcePage": "https://www.pexels.com/photo/close-up-of-dropper-with-essential-oil-droplet-4021778/",
+        "creator": "Pexels"
+      }
+    ],
+    "relatedSlugs": [
+      "ambre-voile",
+      "cedre-blanc"
+    ]
   }
 ]

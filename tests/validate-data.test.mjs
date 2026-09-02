@@ -100,12 +100,15 @@ describe("validateProducts", () => {
     ]));
   });
 
-  it("contains five polished products in every category", () => {
+  it("contains the expanded catalog across every category", () => {
     const products = JSON.parse(readFileSync(new URL("../data/products.json", import.meta.url), "utf8"));
-    expect(products).toHaveLength(20);
-    for (const category of ["bags", "jewelry", "watches", "fragrance"]) {
-      expect(products.filter((product) => product.category === category)).toHaveLength(5);
-    }
+    expect(products).toHaveLength(95);
+    expect(Object.fromEntries(
+      ["bags", "jewelry", "watches", "fragrance"].map((category) => [
+        category,
+        products.filter((product) => product.category === category).length,
+      ]),
+    )).toEqual({ bags: 24, jewelry: 24, watches: 24, fragrance: 23 });
     expect(products.some((item) => /\bwatche\b/i.test(item.tagline))).toBe(false);
   });
 });

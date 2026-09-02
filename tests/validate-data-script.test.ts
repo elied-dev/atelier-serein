@@ -11,7 +11,7 @@ describe("validate:data script", () => {
       encoding: "utf8",
     });
 
-    expect(output).toContain("Validated 20 products");
+    expect(output).toContain("Validated 95 products");
   });
 
   it("fails gracefully on malformed JSON", () => {
