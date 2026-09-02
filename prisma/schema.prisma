@@ -1,3 +1,54 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
 datasource db {
   provider = "postgresql"
+}
+
+enum ProductCategory {
+  bags
+  jewelry
+  watches
+  fragrance
+}
+
+enum Currency {
+  EUR
+}
+
+enum ProductBadge {
+  new
+  exclusive
+  limited
+}
+
+model Product {
+  id             String          @id
+  slug           String          @unique
+  sku            String          @unique
+  sortOrder      Int
+  name           String
+  category       ProductCategory
+  collection     String
+  tagline        String
+  description    String          @db.Text
+  story          String          @db.Text
+  amountMinor    Int
+  currency       Currency        @default(EUR)
+  variants       Json
+  materials      String[]
+  craftsmanship String[]
+  dimensions     Json
+  weightGrams    Int?
+  origin         String
+  care           String[]
+  styleTags      String[]
+  occasions      String[]
+  features       String[]
+  badges         ProductBadge[]
+  featured       Boolean         @default(false)
+  images         Json
+  relatedSlugs   String[]
 }
