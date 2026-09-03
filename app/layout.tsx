@@ -33,6 +33,19 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <link rel="preconnect" href="//cdn.use1.stg.pub.dydy.io" />
         <link rel="preconnect" href="//st.use1.stg.pub.dydy.io" />
         <link rel="preconnect" href="//recs.use1.stg.dydy.io" />
+        <Script id="dynamicyield-init" strategy="beforeInteractive">
+          {`window.DY = window.DY || {};`}
+        </Script>
+        <Script
+          src={`//cdn.use1.stg.pub.dydy.io/api/${sectionId}/api_dynamic.js`}
+          strategy="afterInteractive"
+          async={false}
+        />
+        <Script
+          src={`//cdn.use1.stg.pub.dydy.io/api/${sectionId}/api_static.js`}
+          strategy="afterInteractive"
+          async={false}
+        />
       </head>
       <body>
         <ImprovedVersionProvider enabled={isImprovedVersion(process.env.WEBMCP_IMPROVED)}>
@@ -47,18 +60,6 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           </ProductProvider>
         </ImprovedVersionProvider>
       </body>
-      <Script id="dynamicyield-init" strategy="beforeInteractive">
-        {`window.DY = window.DY || {};
-// DY.recommendationContext = { type : '{page type}', data: ['data'] };`}
-      </Script>
-      <Script
-        src={`//cdn.use1.stg.pub.dydy.io/api/${sectionId}/api_dynamic.js`}
-        strategy="beforeInteractive"
-      />
-      <Script
-        src={`//cdn.use1.stg.pub.dydy.io/api/${sectionId}/api_static.js`}
-        strategy="beforeInteractive"
-      />
     </html>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { AddToBag, ProductGallery, ProductGrid, VariantAwareAddToBag } from "@/components/commerce";
+import { DynamicYieldContextScript } from "@/components/dynamic-yield-context";
 import { productPageModel } from "@/lib/catalog";
 import { formatMoney } from "@/lib/money";
 import { getProductBySlug, listProducts } from "@/lib/product-repository";
@@ -26,6 +27,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
   return (
     <article className="product-page">
+      <DynamicYieldContextScript type="PRODUCT" data={[product.sku]} />
       <nav className="breadcrumbs" aria-label="Breadcrumb">
         <ol>
           <li><Link href="/">Home</Link></li>

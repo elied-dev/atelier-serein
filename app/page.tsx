@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProductGrid } from "@/components/commerce";
+import { DynamicYieldContextScript } from "@/components/dynamic-yield-context";
 import { listProducts } from "@/lib/product-repository";
 import { site } from "@/lib/site";
 
@@ -19,6 +20,7 @@ export default async function HomePage() {
 
   return (
     <>
+      <DynamicYieldContextScript type="HOMEPAGE" />
       <section className="hero">
         <div className="hero-copy">
           <p className="eyebrow">Maison de démonstration · Paris</p>

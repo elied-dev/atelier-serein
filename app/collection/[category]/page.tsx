@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProductGrid } from "@/components/commerce";
+import { DynamicYieldContextScript } from "@/components/dynamic-yield-context";
 import { filterProducts } from "@/lib/catalog";
 import { listProducts } from "@/lib/product-repository";
 import type { ProductCategory } from "@/lib/products";
@@ -55,6 +56,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
 
   return (
     <section className="category-page">
+      <DynamicYieldContextScript type="CATEGORY" data={[selectedCategory.toUpperCase()]} />
       <header className="category-story">
         <p className="eyebrow">{story.eyebrow}</p>
         <h1>{story.title}</h1>
