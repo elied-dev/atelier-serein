@@ -7,7 +7,6 @@ import {
   type WebMcpDependencies,
   type WebMcpTool,
 } from "@/lib/webmcp";
-import type { DemoOrder } from "@/lib/orders";
 import type { Product } from "@/lib/products";
 
 const products = productsJson as Product[];
@@ -15,12 +14,6 @@ const products = productsJson as Product[];
 function setup() {
   let lines: BagLine[] = [];
   const routes: string[] = [];
-  const orders: DemoOrder[] = [{
-    reference: "DEMO-20260411-1234",
-    createdAt: "2026-04-11T12:00:00.000Z",
-    lines: [{ productSlug: "vesper-tote", variantId: "stone", quantity: 1 }],
-    total: 285000,
-  }];
   const dependencies: WebMcpDependencies = {
     navigate: (route) => routes.push(route),
     getBag: () => lines,
@@ -31,8 +24,6 @@ function setup() {
     remove: (productSlug, variantId) => {
       lines = bagReducer(lines, { type: "remove", productSlug, variantId });
     },
-    clear: () => { lines = bagReducer(lines, { type: "clear" }); },
-    getOrders: () => orders,
   };
   const tools = createWebMcpTools(dependencies, products);
   const call = async (name: string, input: Record<string, unknown> = {}) => {
@@ -61,16 +52,9 @@ describe("WebMCP registration", () => {
 
     const cleanup = registerWebMcpTools(context, tools, true);
     expect(registered.map(({ tool }) => tool.name)).toEqual([
-      "search_catalog",
-      "browse_store",
       "get_product",
-      "show_variant",
       "get_cart",
       "update_cart",
-      "cancel_cart",
-      "proceed_to_checkout",
-      "manage_orders",
-      "search_shop_policies_and_faqs",
     ]);
     expect(registered.find(({ tool }) => tool.name === "get_cart")?.tool.annotations?.readOnlyHint).toBe(true);
 
@@ -79,34 +63,8 @@ describe("WebMCP registration", () => {
   });
 });
 
-describe("WebMCP catalog tools", () => {
-  it("searches the catalog and exposes a full-results URL", async () => {
-    const { call } = setup();
-    const result = await call("search_catalog", { query: "Vesper Tote" });
-
-    expect(result.total).toBe(1);
-    expect(result.products[0]).toMatchObject({ slug: "vesper-tote", name: "Vesper Tote" });
-    expect(result.searchUrl).toBe("/collection?q=Vesper+Tote");
-
-    const naturalQuery = await call("search_catalog", { query: "find me a leather bag" });
-    expect(naturalQuery.total).toBeGreaterThan(0);
-    expect(naturalQuery.products.every((item: { category: string }) => item.category === "bags")).toBe(true);
-  });
-
-  it("lists collections and can browse and display one", async () => {
-    const { call, routes } = setup();
-
-    expect((await call("browse_store")).collections.map((item: { slug: string }) => item.slug)).toEqual([
-      "bags", "jewelry", "watches", "fragrance",
-    ]);
-    const result = await call("browse_store", { collection: "bags", navigate: true });
-    expect(result.products).toHaveLength(8);
-    expect(result.total).toBeGreaterThan(result.products.length);
-    expect(result.products.every((item: { category: string }) => item.category === "bags")).toBe(true);
-    expect(routes).toEqual(["/collection/bags"]);
-  });
-
-  it("returns product details and displays a matching available variant", async () => {
+describe("WebMCP product tool", () => {
+  it("returns product details and can display the product", async () => {
     const { call, routes } = setup();
 
     expect(await call("get_product", { product: "" })).toMatchObject({
@@ -114,13 +72,10 @@ describe("WebMCP catalog tools", () => {
       options: [],
     });
 
-    const product = await call("get_product", { product: "vesper-tote" });
+    const product = await call("get_product", { product: "vesper-tote", navigate: true });
     expect(product).toMatchObject({ slug: "vesper-tote", name: "Vesper Tote" });
     expect(product.variants).toHaveLength(2);
-
-    const shown = await call("show_variant", { product: "vesper-tote", color: "Stone" });
-    expect(shown).toMatchObject({ status: "success", variant: { id: "stone" } });
-    expect(routes).toEqual(["/product/vesper-tote?variant=stone"]);
+    expect(routes).toEqual(["/product/vesper-tote"]);
   });
 });
 
@@ -155,42 +110,4 @@ describe("WebMCP cart tools", () => {
     expect(getLines()).toEqual([]);
   });
 
-  it("cancels the whole cart", async () => {
-    const { call, getLines } = setup();
-    await call("update_cart", { operation: "add", product: "vesper-tote", variant: "stone" });
-
-    expect(await call("cancel_cart")).toMatchObject({ status: "success", count: 0 });
-    expect(getLines()).toEqual([]);
-  });
-});
-
-describe("WebMCP checkout, orders, and store tools", () => {
-  it("only proceeds to checkout when the cart has items", async () => {
-    const { call, routes } = setup();
-
-    expect(await call("proceed_to_checkout")).toMatchObject({ status: "error" });
-    expect(routes).toEqual([]);
-
-    await call("update_cart", { operation: "add", product: "vesper-tote", variant: "stone" });
-    expect(await call("proceed_to_checkout")).toMatchObject({ status: "success" });
-    expect(routes).toEqual(["/checkout"]);
-  });
-
-  it("returns local demo orders and displays their page", async () => {
-    const { call, routes } = setup();
-    const result = await call("manage_orders");
-
-    expect(result.orders[0]).toMatchObject({ reference: "DEMO-20260411-1234", total: 285000 });
-    expect(routes).toEqual(["/orders"]);
-  });
-
-  it("answers policy questions from storefront content", async () => {
-    const { call } = setup();
-    const result = await call("search_shop_policies_and_faqs", { query: "What is your returns policy?" });
-    const shipping = await call("search_shop_policies_and_faqs", { query: "Do you offer shipping?" });
-
-    expect(result.results[0].title).toBe("Returns");
-    expect(shipping.results[0].title).toBe("Delivery");
-    expect(result.pageUrl).toBe("/policies");
-  });
 });

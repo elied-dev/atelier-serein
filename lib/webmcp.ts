@@ -1,8 +1,6 @@
 import { bagSubtotal, type BagLine } from "@/lib/bag";
-import { filterProducts, findProduct, matchesSearchQuery } from "@/lib/catalog";
-import type { DemoOrder } from "@/lib/orders";
+import { findProduct } from "@/lib/catalog";
 import type { Product, ProductVariant } from "@/lib/products";
-import { storePolicies } from "@/lib/site";
 
 export type WebMcpTool = {
   name: string;
@@ -22,11 +20,8 @@ export type WebMcpDependencies = {
   add: (line: BagLine) => void;
   setQuantity: (productSlug: string, variantId: string, quantity: number) => void;
   remove: (productSlug: string, variantId: string) => void;
-  clear: () => void;
-  getOrders: () => DemoOrder[];
 };
 
-const categories = ["bags", "jewelry", "watches", "fragrance"] as const;
 const readOnly = { readOnlyHint: true, untrustedContentHint: false };
 const changesState = { readOnlyHint: false, untrustedContentHint: false };
 const emptySchema = { type: "object", properties: {} };
@@ -121,71 +116,6 @@ export function createWebMcpTools(
 
   return [
     {
-      name: "search_catalog",
-      description: "Search this store's products, collections, and information pages. Returns matching products and a link to full product results.",
-      inputSchema: {
-        type: "object",
-        properties: { query: { type: "string", description: "Words from the shopper's request." } },
-        required: ["query"],
-      },
-      annotations: readOnly,
-      execute: ({ query }) => {
-        const q = text(query);
-        if (!q) return { status: "error", message: "Provide a search query." };
-        const matches = filterProducts({ q }, products);
-        const params = new URLSearchParams({ q });
-        return {
-          total: matches.length,
-          products: matches.slice(0, 8).map(productSummary),
-          collections: categories.filter((category) => matchesSearchQuery(q, [category])).map((slug) => ({
-            slug, name: slug[0].toUpperCase() + slug.slice(1), url: `/collection/${slug}`,
-          })),
-          articles: [],
-          pages: storePolicies.some(({ title, content }) => matchesSearchQuery(q, [title, content]))
-            ? [{ title: "Policies and FAQs", url: "/policies" }]
-            : [],
-          searchUrl: `/collection?${params}`,
-        };
-      },
-    },
-    {
-      name: "browse_store",
-      description: "List store collections or browse products in one collection. Can also display the collection page for the shopper.",
-      inputSchema: {
-        type: "object",
-        properties: {
-          collection: { type: "string", enum: categories, description: "Collection to browse." },
-          navigate: { type: "boolean", description: "Display the collection page when true." },
-        },
-      },
-      annotations: readOnly,
-      execute: ({ collection, navigate }) => {
-        const selected = normalize(collection);
-        if (!selected) {
-          return {
-            collections: categories.map((slug) => ({
-              slug,
-              name: slug[0].toUpperCase() + slug.slice(1),
-              productCount: products.filter((product) => product.category === slug).length,
-              url: `/collection/${slug}`,
-            })),
-          };
-        }
-        if (!categories.includes(selected as (typeof categories)[number])) {
-          return { status: "error", message: "Unknown collection. Choose bags, jewelry, watches, or fragrance." };
-        }
-        const route = `/collection/${selected}`;
-        const matches = products.filter((product) => product.category === selected);
-        if (navigate === true) dependencies.navigate(route);
-        return {
-          collection: selected,
-          total: matches.length,
-          products: matches.slice(0, 8).map(productSummary),
-          collectionUrl: route,
-        };
-      },
-    },
-    {
       name: "get_product",
       description: "Get full product details, variants, prices, availability, materials, and care. Can also display the product page.",
       inputSchema: {
@@ -204,33 +134,6 @@ export function createWebMcpTools(
         }
         if (navigate === true) dependencies.navigate(`/product/${resolved.product.slug}`);
         return productDetails(resolved.product);
-      },
-    },
-    {
-      name: "show_variant",
-      description: "Display a product page with a matching available variant selected by exact variant or partial color choice.",
-      inputSchema: {
-        type: "object",
-        properties: {
-          product: { type: "string", description: "Product name or slug." },
-          variant: { type: "string", description: "Exact variant ID or name." },
-          color: { type: "string", description: "Full or partial color name." },
-        },
-        required: ["product"],
-      },
-      annotations: readOnly,
-      execute: ({ product, variant, color }) => {
-        const resolved = resolveProduct(product, products);
-        if (!resolved.product) {
-          return { status: "clarification_required", message: resolved.error, options: resolved.matches?.map(productSummary) ?? [] };
-        }
-        const selected = resolveVariant(resolved.product, variant, color);
-        if (!selected.variant) {
-          return { status: "clarification_required", message: selected.error, options: variantOptions(selected.matches) };
-        }
-        const route = `/product/${resolved.product.slug}?${new URLSearchParams({ variant: selected.variant.id })}`;
-        dependencies.navigate(route);
-        return { status: "success", product: productSummary(resolved.product), variant: selected.variant, url: route };
       },
     },
     {
@@ -297,55 +200,6 @@ export function createWebMcpTools(
           }
         }
         return { status: "success", ...getCart() };
-      },
-    },
-    {
-      name: "cancel_cart",
-      description: "Remove every item from the shopper's cart.",
-      inputSchema: emptySchema,
-      annotations: changesState,
-      execute: () => {
-        dependencies.clear();
-        return { status: "success", ...getCart() };
-      },
-    },
-    {
-      name: "proceed_to_checkout",
-      description: "Display simulated checkout for the shopper after confirming that their cart contains items.",
-      inputSchema: emptySchema,
-      annotations: changesState,
-      execute: () => {
-        if (!dependencies.getBag().length) return { status: "error", message: "The cart is empty. Add an item before checkout." };
-        dependencies.navigate("/checkout");
-        return { status: "success", checkoutUrl: "/checkout" };
-      },
-    },
-    {
-      name: "manage_orders",
-      description: "Get locally stored simulated orders and display the demo order history page.",
-      inputSchema: emptySchema,
-      annotations: readOnly,
-      execute: () => {
-        dependencies.navigate("/orders");
-        return { orders: dependencies.getOrders(), ordersUrl: "/orders" };
-      },
-    },
-    {
-      name: "search_shop_policies_and_faqs",
-      description: "Search this store's fictional policies and service information, including returns, delivery, and opening hours.",
-      inputSchema: {
-        type: "object",
-        properties: { query: { type: "string", description: "Policy or service question." } },
-        required: ["query"],
-      },
-      annotations: readOnly,
-      execute: ({ query }) => {
-        const q = text(query);
-        if (!q) return { status: "error", message: "Provide a policy or service question." };
-        return {
-          results: storePolicies.filter(({ title, content }) => matchesSearchQuery(q, [title, content])),
-          pageUrl: "/policies",
-        };
       },
     },
   ];
