@@ -6,19 +6,10 @@ import { useBag } from "@/components/bag-provider";
 import { useImprovedVersion } from "@/components/improved-version-provider";
 import { useProducts } from "@/components/product-provider";
 import { readOrders } from "@/lib/orders";
-import {
-  createRecommendationRegistrar,
-  createWebMcpTools,
-  registerWebMcpTools,
-  type RecommendationToolConfig,
-} from "@/lib/webmcp";
+import { createWebMcpTools, registerWebMcpTools } from "@/lib/webmcp";
 
 type WebMcpDocument = Document & {
   modelContext?: Parameters<typeof registerWebMcpTools>[0];
-};
-
-type WebMcpWindow = Window & {
-  webMcp?: { registerRecommendation: (config: RecommendationToolConfig) => boolean };
 };
 
 export function WebMcpTools() {
@@ -37,7 +28,7 @@ export function WebMcpTools() {
     const context = (document as WebMcpDocument).modelContext;
     if (!context) return;
 
-    const cleanupTools = registerWebMcpTools(context, createWebMcpTools({
+    return registerWebMcpTools(context, createWebMcpTools({
       navigate: (route) => router.push(route),
       getBag: () => bagRef.current.lines,
       add: (line) => bagRef.current.add(line),
@@ -46,24 +37,6 @@ export function WebMcpTools() {
       clear: () => bagRef.current.clear(),
       getOrders: () => readOrders(localStorage, products),
     }, products), true);
-    const registrar = createRecommendationRegistrar(context, async (selector) => {
-      const response = await fetch("/api/recommendations", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ selector }),
-      });
-      return response.json();
-    });
-    const target = window as WebMcpWindow;
-    const bridge = { registerRecommendation: registrar.registerRecommendation };
-    target.webMcp = bridge;
-    window.dispatchEvent(new Event("webmcp:ready"));
-
-    return () => {
-      cleanupTools();
-      registrar.cleanup();
-      if (target.webMcp === bridge) delete target.webMcp;
-    };
   }, [enabled, products, router]);
 
   return null;

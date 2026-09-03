@@ -2,7 +2,6 @@ import productsJson from "@/data/products.json";
 import { describe, expect, it } from "vitest";
 import { bagReducer, type BagLine } from "@/lib/bag";
 import {
-  createRecommendationRegistrar,
   createWebMcpTools,
   registerWebMcpTools,
   type WebMcpDependencies,
@@ -77,42 +76,6 @@ describe("WebMCP registration", () => {
 
     cleanup();
     expect(registered.every(({ signal }) => signal.aborted)).toBe(true);
-  });
-});
-
-describe("Dynamic Yield WebMCP bridge", () => {
-  it("registers recommendation tools and safely replaces a repeated name", async () => {
-    const registered: Array<{ tool: WebMcpTool; signal: AbortSignal }> = [];
-    const selectors: string[] = [];
-    const registrar = createRecommendationRegistrar({
-      registerTool: (tool: WebMcpTool, options: { signal: AbortSignal }) => {
-        registered.push({ tool, signal: options.signal });
-      },
-    }, async (selector) => {
-      selectors.push(selector);
-      return { choices: [{ name: selector }] };
-    });
-
-    expect(registrar.registerRecommendation({
-      name: "recommendation",
-      description: "Call this tool first.",
-      selector: "test_api_recs",
-    })).toBe(true);
-    expect(await registered[0].tool.execute({})).toEqual({ choices: [{ name: "test_api_recs" }] });
-
-    registrar.registerRecommendation({
-      name: "recommendation",
-      description: "Replacement.",
-      selector: "homepage_bag_recs",
-    });
-
-    expect(selectors).toEqual(["test_api_recs"]);
-    expect(registered[0].signal.aborted).toBe(true);
-    expect(registered[1].signal.aborted).toBe(false);
-    expect(await registered[1].tool.execute({})).toEqual({ choices: [{ name: "homepage_bag_recs" }] });
-
-    registrar.cleanup();
-    expect(registered[1].signal.aborted).toBe(true);
   });
 });
 

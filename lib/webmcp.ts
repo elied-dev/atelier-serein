@@ -33,39 +33,6 @@ const emptySchema = { type: "object", properties: {} };
 const text = (value: unknown) => typeof value === "string" ? value.trim() : "";
 const normalize = (value: unknown) => text(value).toLocaleLowerCase();
 
-export type RecommendationToolConfig = {
-  name: string;
-  description: string;
-  selector: string;
-};
-
-export function createRecommendationRegistrar(
-  context: ModelContext,
-  getRecommendations: (selector: string) => Promise<unknown>,
-) {
-  const controllers = new Map<string, AbortController>();
-
-  return {
-    registerRecommendation(config: RecommendationToolConfig) {
-      controllers.get(config.name)?.abort();
-      const controller = new AbortController();
-      controllers.set(config.name, controller);
-      void context.registerTool({
-        name: config.name,
-        description: config.description,
-        inputSchema: emptySchema,
-        annotations: readOnly,
-        execute: () => getRecommendations(config.selector),
-      }, { signal: controller.signal });
-      return true;
-    },
-    cleanup() {
-      controllers.forEach((controller) => controller.abort());
-      controllers.clear();
-    },
-  };
-}
-
 function productSummary(product: Product) {
   return {
     slug: product.slug,
