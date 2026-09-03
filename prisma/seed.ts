@@ -1,18 +1,18 @@
 import "dotenv/config";
+import { pathToFileURL } from "node:url";
 import { isDeepStrictEqual } from "node:util";
 import { PrismaPg } from "@prisma/adapter-pg";
 import productsJson from "../data/products.json";
 import { PrismaClient } from "../generated/prisma/client";
 import { productFromRecord, productToRecord } from "../lib/product-record";
 import type { Product } from "../lib/products";
+import { validateProducts } from "../scripts/validate-data.mjs";
 
-const connectionString = process.env.DATABASE_URL_UNPOOLED;
-if (!connectionString) throw new Error("DATABASE_URL_UNPOOLED is required");
+export async function seedProducts(fixture: unknown, prisma: PrismaClient) {
+  const errors = validateProducts(fixture);
+  if (errors.length) throw new Error(`Invalid product seed fixture:\n${errors.join("\n")}`);
 
-const prisma = new PrismaClient({ adapter: new PrismaPg({ connectionString }) });
-const products = productsJson as Product[];
-
-async function main() {
+  const products = fixture as Product[];
   await prisma.$transaction(products.map((product, sortOrder) => {
     const data = productToRecord(product, sortOrder);
     return prisma.product.upsert({ where: { id: product.id }, create: data, update: data });
@@ -30,12 +30,25 @@ async function main() {
     throw new Error("Seeded products do not match data/products.json");
   }
 
-  console.log(`Seeded and verified ${stored.length} products`);
+  return stored.length;
 }
 
-main()
-  .finally(() => prisma.$disconnect())
-  .catch((error) => {
+async function main() {
+  const connectionString = process.env.DATABASE_URL_UNPOOLED;
+  if (!connectionString) throw new Error("DATABASE_URL_UNPOOLED is required");
+
+  const prisma = new PrismaClient({ adapter: new PrismaPg({ connectionString }) });
+  try {
+    const count = await seedProducts(productsJson, prisma);
+    console.log(`Seeded and verified ${count} products`);
+  } finally {
+    await prisma.$disconnect();
+  }
+}
+
+if (process.argv[1] && pathToFileURL(process.argv[1]).href === import.meta.url) {
+  main().catch((error) => {
     console.error(error instanceof Error ? error.message : error);
     process.exitCode = 1;
   });
+}
