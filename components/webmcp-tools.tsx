@@ -36,6 +36,10 @@ export function WebMcpTools() {
       remove: (productSlug, variantId) => bagRef.current.remove(productSlug, variantId),
       clear: () => bagRef.current.clear(),
       getOrders: () => readOrders(localStorage, products),
+      getRecommendations: async () => {
+        const response = await fetch("/api/recommendations", { method: "POST" });
+        return response.json();
+      },
     }, products), true);
   }, [enabled, products, router]);
 

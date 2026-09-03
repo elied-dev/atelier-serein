@@ -24,6 +24,7 @@ export type WebMcpDependencies = {
   remove: (productSlug: string, variantId: string) => void;
   clear: () => void;
   getOrders: () => DemoOrder[];
+  getRecommendations: () => Promise<unknown>;
 };
 
 const categories = ["bags", "jewelry", "watches", "fragrance"] as const;
@@ -120,6 +121,13 @@ export function createWebMcpTools(
   const getCart = () => cartResult(dependencies.getBag(), products);
 
   return [
+    {
+      name: "recommendation",
+      description: "Call this tool first when the shopper asks to buy, choose, discover, or get recommendations for a product.",
+      inputSchema: emptySchema,
+      annotations: readOnly,
+      execute: dependencies.getRecommendations,
+    },
     {
       name: "search_catalog",
       description: "Search this store's products, collections, and information pages. Returns matching products and a link to full product results.",

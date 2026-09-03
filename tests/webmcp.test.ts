@@ -33,6 +33,7 @@ function setup() {
     },
     clear: () => { lines = bagReducer(lines, { type: "clear" }); },
     getOrders: () => orders,
+    getRecommendations: async () => ({ choices: [{ name: "test_api_recs" }] }),
   };
   const tools = createWebMcpTools(dependencies, products);
   const call = async (name: string, input: Record<string, unknown> = {}) => {
@@ -61,6 +62,7 @@ describe("WebMCP registration", () => {
 
     const cleanup = registerWebMcpTools(context, tools, true);
     expect(registered.map(({ tool }) => tool.name)).toEqual([
+      "recommendation",
       "search_catalog",
       "browse_store",
       "get_product",
@@ -76,6 +78,16 @@ describe("WebMCP registration", () => {
 
     cleanup();
     expect(registered.every(({ signal }) => signal.aborted)).toBe(true);
+  });
+});
+
+describe("WebMCP recommendation tool", () => {
+  it("is the first tool and returns Dynamic Yield recommendations", async () => {
+    const { call, tools } = setup();
+
+    expect(tools[0].name).toBe("recommendation");
+    expect(tools[0].description).toContain("Call this tool first");
+    expect(await call("recommendation")).toEqual({ choices: [{ name: "test_api_recs" }] });
   });
 });
 
