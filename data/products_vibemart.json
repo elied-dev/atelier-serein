@@ -86,12 +86,12 @@
     "featured": true,
     "images": [
       {
-        "src": "https://images.pexels.com/photos/34212999/pexels-photo-34212999.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Traveler using a smartphone beside an open hard-shell carry-on suitcase",
+        "src": "https://images.pexels.com/photos/22745325/pexels-photo-22745325.jpeg",
+        "alt": "Sleek black suitcase standing against a modern urban wall",
         "width": 1200,
         "height": 1500,
         "role": "hero",
-        "sourcePage": "https://www.pexels.com/photo/travel-preparation-with-esim-activation-in-vietnam-34212999/",
+        "sourcePage": "https://www.pexels.com/photo/suitcase-near-wall-22745325/",
         "creator": "Pexels"
       }
     ],
@@ -197,12 +197,12 @@
     "featured": true,
     "images": [
       {
-        "src": "https://images.pexels.com/photos/34612272/pexels-photo-34612272.jpeg?auto=compress&cs=tinysrgb&w=1200",
-        "alt": "Group of travelers standing with several colorful suitcases",
+        "src": "https://images.pexels.com/photos/4546018/pexels-photo-4546018.jpeg",
+        "alt": "Father with two children standing beside a bright yellow suitcase",
         "width": 1200,
         "height": 1500,
         "role": "hero",
-        "sourcePage": "https://www.pexels.com/photo/travelers-with-luggage-at-outdoor-parking-area-34612272/",
+        "sourcePage": "https://www.pexels.com/photo/cheerful-father-with-kids-and-suitcase-4546018/",
         "creator": "Pexels"
       }
     ],
