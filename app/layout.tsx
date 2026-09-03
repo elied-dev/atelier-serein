@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import type { ReactNode } from "react";
+import Script from "next/script";
 import { connection } from "next/server";
 import { BagProvider } from "@/components/bag-provider";
 import { ImprovedVersionProvider } from "@/components/improved-version-provider";
@@ -22,10 +23,17 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   await connection();
+  const sectionId = process.env.SECTION_ID;
+  if (!sectionId) throw new Error("SECTION_ID is not configured");
   const products = await listProducts();
 
   return (
     <html lang="en" className={`${display.variable} ${sans.variable}`}>
+      <head>
+        <link rel="preconnect" href="//cdn.use1.stg.pub.dydy.io" />
+        <link rel="preconnect" href="//st.use1.stg.pub.dydy.io" />
+        <link rel="preconnect" href="//recs.use1.stg.dydy.io" />
+      </head>
       <body>
         <ImprovedVersionProvider enabled={isImprovedVersion(process.env.WEBMCP_IMPROVED)}>
           <ProductProvider products={products}>
@@ -39,6 +47,18 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           </ProductProvider>
         </ImprovedVersionProvider>
       </body>
+      <Script id="dynamicyield-init" strategy="beforeInteractive">
+        {`window.DY = window.DY || {};
+// DY.recommendationContext = { type : '{page type}', data: ['data'] };`}
+      </Script>
+      <Script
+        src={`//cdn.use1.stg.pub.dydy.io/api/${sectionId}/api_dynamic.js`}
+        strategy="beforeInteractive"
+      />
+      <Script
+        src={`//cdn.use1.stg.pub.dydy.io/api/${sectionId}/api_static.js`}
+        strategy="beforeInteractive"
+      />
     </html>
   );
 }
