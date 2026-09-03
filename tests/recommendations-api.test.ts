@@ -1,6 +1,12 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { POST } from "@/app/api/recommendations/route";
 
+const recommendationRequest = (selector = "test_api_recs") => new Request("http://localhost/api/recommendations", {
+  method: "POST",
+  headers: { "content-type": "application/json" },
+  body: JSON.stringify({ selector }),
+});
+
 describe("recommendations API", () => {
   afterEach(() => {
     vi.unstubAllGlobals();
@@ -11,13 +17,23 @@ describe("recommendations API", () => {
     vi.stubEnv("DY_API_KEY", "");
     vi.stubGlobal("fetch", async () => { throw new Error("Upstream must not be called"); });
 
-    const response = await POST();
+    const response = await POST(recommendationRequest());
 
     expect(response.status).toBe(500);
     expect(await response.json()).toEqual({ status: "error", message: "Dynamic Yield is not configured." });
   });
 
-  it("keeps the API key server-side and forwards the recommendation request", async () => {
+  it("rejects invalid Dynamic Yield selectors", async () => {
+    vi.stubEnv("DY_API_KEY", "server-secret");
+    vi.stubGlobal("fetch", async () => { throw new Error("Upstream must not be called"); });
+
+    const response = await POST(recommendationRequest("../not-allowed"));
+
+    expect(response.status).toBe(400);
+    expect(await response.json()).toEqual({ status: "error", message: "Invalid Dynamic Yield selector." });
+  });
+
+  it("keeps the API key server-side and forwards the selected recommendation request", async () => {
     vi.stubEnv("DY_API_KEY", "server-secret");
     let upstreamRequest: Request | undefined;
     vi.stubGlobal("fetch", async (input: RequestInfo | URL, init?: RequestInit) => {
@@ -25,7 +41,7 @@ describe("recommendations API", () => {
       return Response.json({ choices: [{ name: "test_api_recs" }] });
     });
 
-    const response = await POST();
+    const response = await POST(recommendationRequest("homepage_bag_recs"));
     const body = await response.json();
     const upstreamBody = await upstreamRequest?.json();
 
@@ -35,7 +51,7 @@ describe("recommendations API", () => {
     expect(upstreamRequest?.method).toBe("POST");
     expect(upstreamRequest?.headers.get("DY-API-Key")).toBe("server-secret");
     expect(upstreamBody).toEqual({
-      selector: { names: ["test_api_recs"] },
+      selector: { names: ["homepage_bag_recs"] },
       context: {
         page: {
           locale: "en_US",

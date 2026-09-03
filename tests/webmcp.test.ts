@@ -2,6 +2,7 @@ import productsJson from "@/data/products.json";
 import { describe, expect, it } from "vitest";
 import { bagReducer, type BagLine } from "@/lib/bag";
 import {
+  createRecommendationRegistrar,
   createWebMcpTools,
   registerWebMcpTools,
   type WebMcpDependencies,
@@ -33,7 +34,6 @@ function setup() {
     },
     clear: () => { lines = bagReducer(lines, { type: "clear" }); },
     getOrders: () => orders,
-    getRecommendations: async () => ({ choices: [{ name: "test_api_recs" }] }),
   };
   const tools = createWebMcpTools(dependencies, products);
   const call = async (name: string, input: Record<string, unknown> = {}) => {
@@ -62,7 +62,6 @@ describe("WebMCP registration", () => {
 
     const cleanup = registerWebMcpTools(context, tools, true);
     expect(registered.map(({ tool }) => tool.name)).toEqual([
-      "recommendation",
       "search_catalog",
       "browse_store",
       "get_product",
@@ -81,13 +80,39 @@ describe("WebMCP registration", () => {
   });
 });
 
-describe("WebMCP recommendation tool", () => {
-  it("is the first tool and returns Dynamic Yield recommendations", async () => {
-    const { call, tools } = setup();
+describe("Dynamic Yield WebMCP bridge", () => {
+  it("registers recommendation tools and safely replaces a repeated name", async () => {
+    const registered: Array<{ tool: WebMcpTool; signal: AbortSignal }> = [];
+    const selectors: string[] = [];
+    const registrar = createRecommendationRegistrar({
+      registerTool: (tool: WebMcpTool, options: { signal: AbortSignal }) => {
+        registered.push({ tool, signal: options.signal });
+      },
+    }, async (selector) => {
+      selectors.push(selector);
+      return { choices: [{ name: selector }] };
+    });
 
-    expect(tools[0].name).toBe("recommendation");
-    expect(tools[0].description).toContain("Call this tool first");
-    expect(await call("recommendation")).toEqual({ choices: [{ name: "test_api_recs" }] });
+    expect(registrar.registerRecommendation({
+      name: "recommendation",
+      description: "Call this tool first.",
+      selector: "test_api_recs",
+    })).toBe(true);
+    expect(await registered[0].tool.execute({})).toEqual({ choices: [{ name: "test_api_recs" }] });
+
+    registrar.registerRecommendation({
+      name: "recommendation",
+      description: "Replacement.",
+      selector: "homepage_bag_recs",
+    });
+
+    expect(selectors).toEqual(["test_api_recs"]);
+    expect(registered[0].signal.aborted).toBe(true);
+    expect(registered[1].signal.aborted).toBe(false);
+    expect(await registered[1].tool.execute({})).toEqual({ choices: [{ name: "homepage_bag_recs" }] });
+
+    registrar.cleanup();
+    expect(registered[1].signal.aborted).toBe(true);
   });
 });
 

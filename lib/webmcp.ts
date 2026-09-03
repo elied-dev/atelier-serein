@@ -24,7 +24,6 @@ export type WebMcpDependencies = {
   remove: (productSlug: string, variantId: string) => void;
   clear: () => void;
   getOrders: () => DemoOrder[];
-  getRecommendations: () => Promise<unknown>;
 };
 
 const categories = ["bags", "jewelry", "watches", "fragrance"] as const;
@@ -33,6 +32,39 @@ const changesState = { readOnlyHint: false, untrustedContentHint: false };
 const emptySchema = { type: "object", properties: {} };
 const text = (value: unknown) => typeof value === "string" ? value.trim() : "";
 const normalize = (value: unknown) => text(value).toLocaleLowerCase();
+
+export type RecommendationToolConfig = {
+  name: string;
+  description: string;
+  selector: string;
+};
+
+export function createRecommendationRegistrar(
+  context: ModelContext,
+  getRecommendations: (selector: string) => Promise<unknown>,
+) {
+  const controllers = new Map<string, AbortController>();
+
+  return {
+    registerRecommendation(config: RecommendationToolConfig) {
+      controllers.get(config.name)?.abort();
+      const controller = new AbortController();
+      controllers.set(config.name, controller);
+      void context.registerTool({
+        name: config.name,
+        description: config.description,
+        inputSchema: emptySchema,
+        annotations: readOnly,
+        execute: () => getRecommendations(config.selector),
+      }, { signal: controller.signal });
+      return true;
+    },
+    cleanup() {
+      controllers.forEach((controller) => controller.abort());
+      controllers.clear();
+    },
+  };
+}
 
 function productSummary(product: Product) {
   return {
@@ -121,13 +153,6 @@ export function createWebMcpTools(
   const getCart = () => cartResult(dependencies.getBag(), products);
 
   return [
-    {
-      name: "recommendation",
-      description: "Call this tool first when the shopper asks to buy, choose, discover, or get recommendations for a product.",
-      inputSchema: emptySchema,
-      annotations: readOnly,
-      execute: dependencies.getRecommendations,
-    },
     {
       name: "search_catalog",
       description: "Search this store's products, collections, and information pages. Returns matching products and a link to full product results.",
