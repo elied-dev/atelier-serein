@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import { connection } from "next/server";
 import { BagProvider } from "@/components/bag-provider";
@@ -12,7 +12,6 @@ import { listProducts } from "@/lib/product-repository";
 import { isImprovedVersion, site } from "@/lib/site";
 import "./globals.css";
 
-const display = Cormorant_Garamond({ subsets: ["latin"], variable: "--font-display" });
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
@@ -27,7 +26,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   const products = await listProducts();
 
   return (
-    <html lang="en" className={`${display.variable} ${sans.variable}`}>
+    <html lang="en" className={sans.variable}>
       <head>
         <link rel="preconnect" href="//cdn.dynamicyield.com" />
         <link rel="preconnect" href="//st.dynamicyield.com" />

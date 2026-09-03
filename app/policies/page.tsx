@@ -3,7 +3,7 @@ import { site, storePolicies } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Policies and FAQs",
-  description: "Policies for the fictional Atelier Serein demonstration storefront.",
+  description: "Policies for the fictional Vibemart demonstration storefront.",
 };
 
 export default function PoliciesPage() {

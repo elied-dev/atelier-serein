@@ -4,7 +4,7 @@ import { CompareView } from "@/components/product-browser";
 
 export const metadata: Metadata = {
   title: "Compare pieces",
-  description: "Compare fictional Atelier Serein pieces side by side.",
+  description: "Compare fictional Vibemart finds side by side.",
 };
 
 export default function ComparePage() {

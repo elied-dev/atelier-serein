@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Collection",
-  description: "Browse the fictional Atelier Serein collection.",
+  description: "Browse the fictional Vibemart collection.",
 };
 
 export default async function CollectionPage() {
@@ -15,9 +15,9 @@ export default async function CollectionPage() {
   return (
     <section className="collection-page">
       <header className="collection-header">
-        <p className="eyebrow">The full edit</p>
-        <h1>Collection</h1>
-        <p>Twenty fictional objects shaped around material, proportion, and quiet daily rituals.</p>
+        <p className="eyebrow">All the good stuff</p>
+        <h1>Shop all</h1>
+        <p>Explore every fictional find in the Vibemart collection.</p>
       </header>
       <Suspense fallback={<p className="browser-loading">Loading collection…</p>}>
         <ProductBrowser products={products} />

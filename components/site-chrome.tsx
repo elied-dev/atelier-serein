@@ -16,11 +16,10 @@ import {
 import { site } from "@/lib/site";
 
 const navigation = [
-  ["Collection", "/collection"],
-  ["Bags", "/collection/bags"],
-  ["Jewelry", "/collection/jewelry"],
-  ["Watches", "/collection/watches"],
-  ["Fragrance", "/collection/fragrance"],
+  ["Shop all", "/collection"],
+  ["Departments", "/#departments"],
+  ["Trending", "/#featured"],
+  ["For you", "/#personalized"],
 ] as const;
 
 export function SiteHeader() {
@@ -47,7 +46,7 @@ export function SiteHeader() {
           <SheetContent className="mobile-nav-sheet">
             <SheetHeader>
               <SheetTitle>{site.name}</SheetTitle>
-              <SheetDescription>Browse the fictional collection.</SheetDescription>
+              <SheetDescription>Something for every vibe.</SheetDescription>
             </SheetHeader>
             <nav aria-label="Mobile navigation">
               {navigation.map(([label, href]) => (
@@ -72,7 +71,7 @@ export function SiteFooter() {
       <Link href="/" className="wordmark">{site.name}</Link>
       <p>{site.demoNotice}</p>
       <nav aria-label="Footer navigation">
-        <Link href="/collection">Collection</Link>
+        <Link href="/collection">Shop all</Link>
         <Link href="/policies">Policies</Link>
         <Link href="/orders">Orders</Link>
       </nav>

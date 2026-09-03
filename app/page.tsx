@@ -5,30 +5,33 @@ import { DynamicYieldContextScript } from "@/components/dynamic-yield-context";
 import { listProducts } from "@/lib/product-repository";
 import { site } from "@/lib/site";
 
-const categories = [
-  ["Bags", "/collection/bags"],
-  ["Jewelry", "/collection/jewelry"],
-  ["Watches", "/collection/watches"],
-  ["Fragrance", "/collection/fragrance"],
+const departments = [
+  ["Travel", "Pack up and go"],
+  ["Electronics", "Smart picks for every day"],
+  ["Home", "Make your space yours"],
+  ["Clothing", "Looks for every mood"],
+  ["Outdoor", "Good days start outside"],
+  ["Beauty", "Your routine, your way"],
+  ["Kids", "Big fun for little vibes"],
+  ["Office", "Make work work for you"],
 ] as const;
 
 export default async function HomePage() {
   const products = await listProducts();
   const featured = products.filter((product) => product.featured).slice(0, 4);
   const heroImage = products[0].images[0];
-  const craftImage = products[13].images[0];
 
   return (
     <>
       <DynamicYieldContextScript type="HOMEPAGE" />
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">Maison de démonstration · Paris</p>
-          <h1>Quiet objects,<br />made to endure.</h1>
-          <p className="lede">{site.positioning} Discover a fictional collection where precise form meets tactile restraint.</p>
+          <p className="eyebrow">Welcome to Vibemart</p>
+          <h1>Something for Every Vibe</h1>
+          <p className="lede">From everyday essentials to the things that make your day, find a little bit of everything—and picks that feel made for you.</p>
           <div className="hero-actions">
-            <Link className="button button-primary" href="/collection">Explore the collection</Link>
-            <Link className="button button-quiet" href="#craft">Our approach</Link>
+            <Link className="button button-primary" href="/collection">Shop all</Link>
+            <Link className="button button-quiet" href="#departments">Browse departments</Link>
           </div>
         </div>
         <div className="hero-art">
@@ -40,47 +43,55 @@ export default async function HomePage() {
             priority
             sizes="(max-width: 820px) 100vw, 48vw"
           />
-          <span className="hero-caption">Atelier study · No. 01</span>
+          <span className="hero-caption">Find your thing</span>
+          <span className="hero-sticker" aria-hidden="true">good finds<br />this way ↓</span>
         </div>
       </section>
 
-      <section className="intro" id="craft">
-        <div className="craft-image">
-          <Image
-            src={craftImage.src}
-            alt={craftImage.alt}
-            width={craftImage.width}
-            height={craftImage.height}
-            sizes="(max-width: 820px) 100vw, 38vw"
-          />
+      <section className="section departments" id="departments">
+        <div className="section-heading">
+          <div><p className="eyebrow">Shop your way</p><h2>A little bit of everything</h2></div>
+          <p>Eight departments. Endless ways to make it yours.</p>
         </div>
-        <div className="craft-copy">
-          <p className="eyebrow">The Serein philosophy</p>
-          <h2>Luxury without noise.</h2>
-          <p>Material, proportion, and utility guide every imagined piece. Nothing is added without purpose.</p>
-        </div>
-      </section>
-
-      <section className="section" id="collections">
-        <div className="section-heading"><p className="eyebrow">Collections</p><h2>Objects for daily rituals</h2></div>
         <div className="category-grid">
-          {categories.map(([category, href], index) => (
-            <Link className="category-card" href={href} key={category}>
-              <span>0{index + 1}</span><strong>{category}</strong><span aria-hidden="true">↗</span>
+          {departments.map(([department, description], index) => (
+            <Link className="category-card" href="/collection" key={department} aria-label={`Browse ${department}`}>
+              <span>0{index + 1}</span>
+              <strong>{department}</strong>
+              <small>{description}</small>
+              <span aria-hidden="true">↗</span>
             </Link>
           ))}
         </div>
       </section>
 
+      <section className="personalized" id="personalized">
+        <div>
+          <p className="eyebrow">Made personal</p>
+          <h2>One store.<br />Your kind of picks.</h2>
+        </div>
+        <div className="personalized-copy">
+          <p>Vibemart serves everyone. Our shopping agent uses personalized merchant intelligence to understand what matters to you—then recommends a different mix for every shopper.</p>
+          <div className="vibe-tags" aria-label="Example shopper vibes">
+            <span>Weekend explorer</span>
+            <span>Tech enthusiast</span>
+            <span>Busy parent</span>
+            <span>Homebody</span>
+          </div>
+        </div>
+      </section>
+
       <section className="section" id="featured">
-        <div className="section-heading"><p className="eyebrow">Selected pieces</p><h2>The first edit</h2></div>
+        <div className="section-heading">
+          <div><p className="eyebrow">Trending now</p><h2>Good finds, right this way</h2></div>
+        </div>
         <ProductGrid products={featured} />
-        <div className="featured-link"><Link className="button button-quiet" href="/collection">View the full collection</Link></div>
+        <div className="featured-link"><Link className="button button-quiet" href="/collection">See everything</Link></div>
       </section>
 
       <section className="manifesto">
-        <p className="eyebrow">Atelier notes · 2026</p>
-        <blockquote>“Restraint is not absence.<br />It is clarity.”</blockquote>
+        <p className="eyebrow">Vibemart · Est. for everyone</p>
+        <blockquote>“Your store should<br />feel like your store.”</blockquote>
         <p>{site.demoNotice}</p>
       </section>
     </>
