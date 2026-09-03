@@ -249,9 +249,12 @@ describe("catalog", () => {
     expect(productPageModel("missing", products)).toBeUndefined();
   });
 
-  it("formats EUR minor units with native Intl", () => {
+  it("formats minor units with native Intl", () => {
     expect(formatMoney(285000, "EUR")).toBe(
       new Intl.NumberFormat("en", { style: "currency", currency: "EUR" }).format(2850),
+    );
+    expect(formatMoney(37900, "USD")).toBe(
+      new Intl.NumberFormat("en", { style: "currency", currency: "USD" }).format(379),
     );
   });
 });

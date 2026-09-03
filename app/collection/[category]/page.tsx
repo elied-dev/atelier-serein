@@ -5,12 +5,12 @@ import { ProductGrid } from "@/components/commerce";
 import { DynamicYieldContextScript } from "@/components/dynamic-yield-context";
 import { filterProducts } from "@/lib/catalog";
 import { listProducts } from "@/lib/product-repository";
-import type { ProductCategory } from "@/lib/products";
 import { site } from "@/lib/site";
 
 const categories = ["bags", "jewelry", "watches", "fragrance"] as const;
+type CollectionCategory = (typeof categories)[number];
 
-const stories: Record<ProductCategory, { eyebrow: string; title: string; copy: string }> = {
+const stories: Record<CollectionCategory, { eyebrow: string; title: string; copy: string }> = {
   bags: {
     eyebrow: "Carried forms",
     title: "Bags",
@@ -41,16 +41,16 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ category: string }> }): Promise<Metadata> {
   const category = (await params).category;
-  return categories.includes(category as ProductCategory)
-    ? { title: stories[category as ProductCategory].title, description: stories[category as ProductCategory].copy }
+  return categories.includes(category as CollectionCategory)
+    ? { title: stories[category as CollectionCategory].title, description: stories[category as CollectionCategory].copy }
     : {};
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ category: string }> }) {
   const category = (await params).category;
-  if (!categories.includes(category as ProductCategory)) notFound();
+  if (!categories.includes(category as CollectionCategory)) notFound();
 
-  const selectedCategory = category as ProductCategory;
+  const selectedCategory = category as CollectionCategory;
   const story = stories[selectedCategory];
   const products = filterProducts({ category: selectedCategory }, await listProducts());
 

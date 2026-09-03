@@ -12,16 +12,19 @@ enum ProductCategory {
   jewelry
   watches
   fragrance
+  travel
+  electronics
+  home
+  clothing
+  outdoor
+  beauty
+  kids
+  office
 }
 
 enum Currency {
   EUR
-}
-
-enum ProductBadge {
-  new
-  exclusive
-  limited
+  USD
 }
 
 model Product {
@@ -47,7 +50,7 @@ model Product {
   styleTags      String[]
   occasions      String[]
   features       String[]
-  badges         ProductBadge[]
+  badges         String[]
   featured       Boolean         @default(false)
   images         Json
   relatedSlugs   String[]

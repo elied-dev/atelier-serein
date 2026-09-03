@@ -1,10 +1,21 @@
 import { readFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 
-const categories = new Set(["bags", "jewelry", "watches", "fragrance"]);
+const categories = new Set([
+  "bags", "jewelry", "watches", "fragrance",
+  "travel", "electronics", "home", "clothing",
+  "outdoor", "beauty", "kids", "office",
+]);
+const currencies = new Set(["EUR", "USD"]);
+const units = new Set(["cm", "in"]);
 const roles = new Set(["hero", "detail", "lifestyle"]);
 const availability = new Set(["available", "limited", "preview"]);
-const badges = new Set(["new", "exclusive", "limited"]);
+const badges = new Set([
+  "new", "exclusive", "limited",
+  "best-seller", "best-value", "business-travel-pick",
+  "category-pick", "extra-capacity", "family-favorite",
+  "premium-choice", "premium-pick", "vibemart-exclusive",
+]);
 const color = /^#[0-9a-f]{6}$/i;
 const text = (value) => typeof value === "string" && value.trim().length > 0;
 const record = (value) => Boolean(value) && typeof value === "object" && !Array.isArray(value);
@@ -15,7 +26,7 @@ const describe = (value) => String(value);
 
 function validDimensions(value) {
   return record(value)
-    && value.unit === "cm"
+    && units.has(value.unit)
     && ["width", "height", "depth"].every((key) => value[key] === undefined || positiveNumber(value[key]));
 }
 
@@ -47,8 +58,8 @@ export function validateProducts(products) {
 
     if (!categories.has(product.category)) errors.push(`${label}: invalid category ${product.category}`);
 
-    if (!record(product.price) || !Number.isInteger(product.price.amountMinor) || product.price.amountMinor <= 0 || product.price.currency !== "EUR") {
-      errors.push(`${label}: price must be a positive integer in EUR`);
+    if (!record(product.price) || !Number.isInteger(product.price.amountMinor) || product.price.amountMinor <= 0 || !currencies.has(product.price.currency)) {
+      errors.push(`${label}: price must be a positive integer in EUR or USD`);
     }
 
     if (!Array.isArray(product.variants) || product.variants.length === 0) {
@@ -78,9 +89,10 @@ export function validateProducts(products) {
       if (!textArray(product[key])) errors.push(`${label}: ${key} must be an array of strings`);
     }
 
-    if (!validDimensions(product.dimensions)) errors.push(`${label}: dimensions must use cm with positive numeric values`);
+    if (!validDimensions(product.dimensions)) errors.push(`${label}: dimensions must use cm or in with positive numeric values`);
     if (product.weightGrams !== undefined && !finiteNumber(product.weightGrams)) errors.push(`${label}: weightGrams must be a finite number`);
-    if (!Array.isArray(product.badges) || product.badges.some((badge) => !badges.has(badge))) errors.push(`${label}: badges must use only new, exclusive, or limited`);
+    if (!Array.isArray(product.badges)) errors.push(`${label}: badges must be an array`);
+    else for (const badge of product.badges) if (!badges.has(badge)) errors.push(`${label}: invalid badge ${badge}`);
     if (typeof product.featured !== "boolean") errors.push(`${label}: featured must be a boolean`);
 
     if (!Array.isArray(product.images)) {

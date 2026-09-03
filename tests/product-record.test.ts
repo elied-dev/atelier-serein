@@ -1,4 +1,4 @@
-import products from "@/data/products.json";
+import products from "@/data/products_vibemart.json";
 import { describe, expect, it } from "vitest";
 import { productFromRecord, productToRecord } from "@/lib/product-record";
 import type { Product } from "@/lib/products";

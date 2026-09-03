@@ -1,4 +1,14 @@
-export type ProductCategory = "bags" | "jewelry" | "watches" | "fragrance";
+export type ProductCategory =
+  | "bags" | "jewelry" | "watches" | "fragrance"
+  | "travel" | "electronics" | "home" | "clothing"
+  | "outdoor" | "beauty" | "kids" | "office";
+export type Currency = "EUR" | "USD";
+export type DimensionUnit = "cm" | "in";
+export type ProductBadge =
+  | "new" | "exclusive" | "limited"
+  | "best-seller" | "best-value" | "business-travel-pick"
+  | "category-pick" | "extra-capacity" | "family-favorite"
+  | "premium-choice" | "premium-pick" | "vibemart-exclusive";
 export type Availability = "available" | "limited" | "preview";
 
 export type ProductImage = {
@@ -36,18 +46,18 @@ export type Product = {
   tagline: string;
   description: string;
   story: string;
-  price: { amountMinor: number; currency: "EUR" };
+  price: { amountMinor: number; currency: Currency };
   variants: ProductVariant[];
   materials: string[];
   craftsmanship: string[];
-  dimensions: { width?: number; height?: number; depth?: number; unit: "cm" };
+  dimensions: { width?: number; height?: number; depth?: number; unit: DimensionUnit };
   weightGrams?: number;
   origin: string;
   care: string[];
   styleTags: string[];
   occasions: string[];
   features: string[];
-  badges: Array<"new" | "exclusive" | "limited">;
+  badges: ProductBadge[];
   featured: boolean;
   images: ProductImage[];
   relatedSlugs: string[];

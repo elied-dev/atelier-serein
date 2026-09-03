@@ -1,7 +1,7 @@
 import type { Prisma, Product as ProductRecord } from "@/generated/prisma/client";
 import type { Product, ProductImage, ProductVariant } from "@/lib/products";
 
-export function productToRecord(product: Product, sortOrder: number): Prisma.ProductCreateInput {
+export function productToRecord(product: Product, sortOrder: number): Prisma.ProductCreateManyInput {
   return {
     id: product.id,
     slug: product.slug,
@@ -54,7 +54,7 @@ export function productFromRecord(record: ProductRecord): Product {
     styleTags: record.styleTags,
     occasions: record.occasions,
     features: record.features,
-    badges: record.badges,
+    badges: record.badges as Product["badges"],
     featured: record.featured,
     images: record.images as unknown as ProductImage[],
     relatedSlugs: record.relatedSlugs,

@@ -2,6 +2,10 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { validateProducts } from "../scripts/validate-data.mjs";
 
+const vibemartProducts = JSON.parse(
+  readFileSync(new URL("../data/products_vibemart.json", import.meta.url), "utf8"),
+);
+
 const image = {
   src: "https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?auto=compress&cs=tinysrgb&w=1200",
   alt: "Black leather bag on ivory", width: 1200, height: 1500, role: "hero"
@@ -22,6 +26,11 @@ const product = {
 describe("validateProducts", () => {
   it("accepts a complete product with a remote Pexels image", () => {
     expect(validateProducts([product])).toEqual([]);
+  });
+
+  it("accepts the complete Vibemart catalog", () => {
+    expect(vibemartProducts).toHaveLength(160);
+    expect(validateProducts(vibemartProducts)).toEqual([]);
   });
 
   it("reports duplicate identity, bad relationships, colors, and non-Pexels images", () => {
@@ -68,12 +77,12 @@ describe("validateProducts", () => {
       "vesper-tote: variant 1 must be an object",
       "vesper-tote: materials must be an array of strings",
       "vesper-tote: craftsmanship must be an array of strings",
-      "vesper-tote: dimensions must use cm with positive numeric values",
+      "vesper-tote: dimensions must use cm or in with positive numeric values",
       "vesper-tote: care must be an array of strings",
       "vesper-tote: styleTags must be an array of strings",
       "vesper-tote: occasions must be an array of strings",
       "vesper-tote: features must be an array of strings",
-      "vesper-tote: badges must use only new, exclusive, or limited",
+      "vesper-tote: invalid badge sale",
       "vesper-tote: featured must be a boolean",
       "vesper-tote: image 1 must be an object",
       "vesper-tote: invalid Pexels image URL /images/../../package.json",
