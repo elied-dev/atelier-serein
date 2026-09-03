@@ -30,21 +30,21 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   return (
     <html lang="en" className={`${display.variable} ${sans.variable}`}>
       <head>
-        <link rel="preconnect" href="//cdn.use1.stg.pub.dydy.io" />
-        <link rel="preconnect" href="//st.use1.stg.pub.dydy.io" />
-        <link rel="preconnect" href="//recs.use1.stg.dydy.io" />
-        <Script id="dynamicyield-init" strategy="beforeInteractive">
+        <link rel="preconnect" href="//cdn.dynamicyield.com" />
+        <link rel="preconnect" href="//st.dynamicyield.com" />
+        <link rel="preconnect" href="//rcom.dynamicyield.com" />
+        <Script id="dynamicyield-init" type="text/javascript" strategy="beforeInteractive">
           {`window.DY = window.DY || {};`}
         </Script>
         <Script
-          src={`//cdn.use1.stg.pub.dydy.io/api/${sectionId}/api_dynamic.js`}
-          strategy="afterInteractive"
-          async={false}
+          type="text/javascript"
+          src={`//cdn.dynamicyield.com/api/${sectionId}/api_dynamic.js`}
+          strategy="beforeInteractive"
         />
         <Script
-          src={`//cdn.use1.stg.pub.dydy.io/api/${sectionId}/api_static.js`}
-          strategy="afterInteractive"
-          async={false}
+          type="text/javascript"
+          src={`//cdn.dynamicyield.com/api/${sectionId}/api_static.js`}
+          strategy="beforeInteractive"
         />
       </head>
       <body>
