@@ -17,14 +17,14 @@ afterEach(() => {
   else process.env.SECTION_ID = originalSectionId;
 });
 
-it("renders the production Dynamic Yield bootstrap in head using SECTION_ID", async () => {
+it("defers the global Dynamic Yield APIs so the page context executes first", async () => {
   process.env.SECTION_ID = "12345";
 
   const document = await RootLayout({ children: null });
   const head = Children.toArray(document.props.children)[0];
   if (!isValidElement<{ children: ReactNode }>(head)) throw new Error("Missing head");
 
-  const [cdn, staticAssets, recommendations, initScript, dynamicScript, staticScript] = Children.toArray(
+  const [cdn, staticAssets, recommendations, dynamicScript, staticScript] = Children.toArray(
     head.props.children,
   );
   const headLinks = renderToStaticMarkup(<>{cdn}{staticAssets}{recommendations}</>);
@@ -34,23 +34,19 @@ it("renders the production Dynamic Yield bootstrap in head using SECTION_ID", as
       '<link rel="preconnect" href="//rcom.dynamicyield.com"/>',
   );
 
-  type ScriptProps = { children?: ReactNode; src?: string; strategy?: string; type?: string };
-  if (
-    !isValidElement<ScriptProps>(initScript) ||
-    !isValidElement<ScriptProps>(dynamicScript) ||
-    !isValidElement<ScriptProps>(staticScript)
-  ) throw new Error("Missing Dynamic Yield scripts");
+  type ScriptProps = { defer?: boolean; src?: string; type?: string };
+  if (!isValidElement<ScriptProps>(dynamicScript) || !isValidElement<ScriptProps>(staticScript)) {
+    throw new Error("Missing Dynamic Yield scripts");
+  }
 
-  expect(initScript.props).toMatchObject({ strategy: "beforeInteractive", type: "text/javascript" });
-  expect(initScript.props.children).toContain("window.DY = window.DY || {};");
   expect(dynamicScript.props).toMatchObject({
+    defer: true,
     src: "//cdn.dynamicyield.com/api/12345/api_dynamic.js",
-    strategy: "beforeInteractive",
     type: "text/javascript",
   });
   expect(staticScript.props).toMatchObject({
+    defer: true,
     src: "//cdn.dynamicyield.com/api/12345/api_static.js",
-    strategy: "beforeInteractive",
     type: "text/javascript",
   });
 });

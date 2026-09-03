@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import type { ReactNode } from "react";
-import Script from "next/script";
 import { connection } from "next/server";
 import { BagProvider } from "@/components/bag-provider";
 import { ImprovedVersionProvider } from "@/components/improved-version-provider";
@@ -33,18 +32,15 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <link rel="preconnect" href="//cdn.dynamicyield.com" />
         <link rel="preconnect" href="//st.dynamicyield.com" />
         <link rel="preconnect" href="//rcom.dynamicyield.com" />
-        <Script id="dynamicyield-init" type="text/javascript" strategy="beforeInteractive">
-          {`window.DY = window.DY || {};`}
-        </Script>
-        <Script
+        <script
+          defer
           type="text/javascript"
           src={`//cdn.dynamicyield.com/api/${sectionId}/api_dynamic.js`}
-          strategy="beforeInteractive"
         />
-        <Script
+        <script
+          defer
           type="text/javascript"
           src={`//cdn.dynamicyield.com/api/${sectionId}/api_static.js`}
-          strategy="beforeInteractive"
         />
       </head>
       <body>

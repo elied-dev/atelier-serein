@@ -1,4 +1,6 @@
 import productsJson from "@/data/products.json";
+import { ServerInsertedHTMLContext } from "next/navigation";
+import { type ReactNode } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { expect, it } from "vitest";
 import BagPage from "@/app/bag/page";
@@ -8,12 +10,19 @@ import type { Product } from "@/lib/products";
 
 const products = productsJson as Product[];
 
-it("sets an empty cart context when the bag has no products", () => {
-  const html = renderToStaticMarkup(
-    <ProductProvider products={products}>
-      <BagProvider><BagPage /></BagProvider>
-    </ProductProvider>,
+it("inserts the empty cart context into head instead of the page body", () => {
+  let renderHead: (() => ReactNode) | undefined;
+  const body = renderToStaticMarkup(
+    <ServerInsertedHTMLContext.Provider value={(callback) => { renderHead = callback; }}>
+      <ProductProvider products={products}>
+        <BagProvider><BagPage /></BagProvider>
+      </ProductProvider>
+    </ServerInsertedHTMLContext.Provider>,
   );
 
-  expect(html).toContain('DY.recommendationContext = {"type":"CART","data":[""]};');
+  expect(body).not.toContain("DY.recommendationContext");
+  expect(renderHead).toBeTypeOf("function");
+  expect(renderToStaticMarkup(<>{renderHead?.()}</>)).toContain(
+    'DY.recommendationContext = {"type":"CART","data":[""]};',
+  );
 });
