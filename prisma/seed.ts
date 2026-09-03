@@ -2,7 +2,7 @@ import "dotenv/config";
 import { pathToFileURL } from "node:url";
 import { isDeepStrictEqual } from "node:util";
 import { PrismaPg } from "@prisma/adapter-pg";
-import productsJson from "../data/products.json";
+import productsJson from "../data/products_vibemart.json";
 import { PrismaClient } from "../generated/prisma/client";
 import { productFromRecord, productToRecord } from "../lib/product-record";
 import type { Product } from "../lib/products";
@@ -13,21 +13,19 @@ export async function seedProducts(fixture: unknown, prisma: PrismaClient) {
   if (errors.length) throw new Error(`Invalid product seed fixture:\n${errors.join("\n")}`);
 
   const products = fixture as Product[];
-  await prisma.$transaction(products.map((product, sortOrder) => {
-    const data = productToRecord(product, sortOrder);
-    return prisma.product.upsert({ where: { id: product.id }, create: data, update: data });
-  }), { timeout: 30_000 });
+  const records = products.map(productToRecord);
+  await prisma.$transaction(async (tx) => {
+    await tx.product.deleteMany();
+    await tx.product.createMany({ data: records });
+  }, { timeout: 30_000 });
 
-  const stored = await prisma.product.findMany({
-    where: { id: { in: products.map(({ id }) => id) } },
-    orderBy: { sortOrder: "asc" },
-  });
+  const stored = await prisma.product.findMany({ orderBy: { sortOrder: "asc" } });
 
   if (stored.length !== products.length) {
     throw new Error(`Expected ${products.length} seeded products, found ${stored.length}`);
   }
   if (!isDeepStrictEqual(stored.map(productFromRecord), products)) {
-    throw new Error("Seeded products do not match data/products.json");
+    throw new Error("Seeded products do not match data/products_vibemart.json");
   }
 
   return stored.length;
